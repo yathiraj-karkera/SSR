@@ -1,0 +1,202 @@
+
+Character4.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Png/Boad1
+  rotate: true
+  xy: 176, 176
+  size: 72, 192
+  orig: 72, 192
+  offset: 0, 0
+  index: -1
+Png/Boad1_Green
+  rotate: true
+  xy: 370, 176
+  size: 72, 192
+  orig: 72, 192
+  offset: 0, 0
+  index: -1
+Png/Boad1_Red
+  rotate: true
+  xy: 564, 176
+  size: 72, 192
+  orig: 72, 192
+  offset: 0, 0
+  index: -1
+Png/Boom Blast png/01
+  rotate: false
+  xy: 2, 119
+  size: 172, 129
+  orig: 172, 129
+  offset: 0, 0
+  index: -1
+Png/Boom Blast png/02
+  rotate: false
+  xy: 758, 162
+  size: 115, 86
+  orig: 115, 86
+  offset: 0, 0
+  index: -1
+Png/Boom Blast png/04
+  rotate: false
+  xy: 206, 65
+  size: 69, 64
+  orig: 69, 64
+  offset: 0, 0
+  index: -1
+Png/Boom Blast png/D
+  rotate: false
+  xy: 176, 121
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Png/Haed
+  rotate: false
+  xy: 2, 2
+  size: 100, 115
+  orig: 100, 115
+  offset: 0, 0
+  index: -1
+Png/Haed_Green
+  rotate: true
+  xy: 875, 148
+  size: 100, 115
+  orig: 100, 115
+  offset: 0, 0
+  index: -1
+Png/Haed_Red
+  rotate: false
+  xy: 104, 2
+  size: 100, 115
+  orig: 100, 115
+  offset: 0, 0
+  index: -1
+Png/Le-Hand
+  rotate: true
+  xy: 443, 122
+  size: 52, 70
+  orig: 52, 70
+  offset: 0, 0
+  index: -1
+Png/Le-Hand_Green
+  rotate: true
+  xy: 515, 122
+  size: 52, 70
+  orig: 52, 70
+  offset: 0, 0
+  index: -1
+Png/Le-Hand_Red
+  rotate: true
+  xy: 587, 122
+  size: 52, 70
+  orig: 52, 70
+  offset: 0, 0
+  index: -1
+Png/Le_Eye
+  rotate: false
+  xy: 659, 139
+  size: 32, 35
+  orig: 32, 35
+  offset: 0, 0
+  index: -1
+Png/Le_Eye_Green
+  rotate: false
+  xy: 693, 139
+  size: 32, 35
+  orig: 32, 35
+  offset: 0, 0
+  index: -1
+Png/Le_Eye_Red
+  rotate: true
+  xy: 659, 105
+  size: 32, 35
+  orig: 32, 35
+  offset: 0, 0
+  index: -1
+Png/Re-Hand
+  rotate: false
+  xy: 206, 5
+  size: 66, 58
+  orig: 66, 58
+  offset: 0, 0
+  index: -1
+Png/Re-Hand_Green
+  rotate: false
+  xy: 277, 71
+  size: 66, 58
+  orig: 66, 58
+  offset: 0, 0
+  index: -1
+Png/Re-Hand_Red
+  rotate: false
+  xy: 345, 71
+  size: 66, 58
+  orig: 66, 58
+  offset: 0, 0
+  index: -1
+Png/Re-Leg
+  rotate: false
+  xy: 176, 131
+  size: 87, 43
+  orig: 87, 43
+  offset: 0, 0
+  index: -1
+Png/Re-Leg_Green
+  rotate: false
+  xy: 265, 131
+  size: 87, 43
+  orig: 87, 43
+  offset: 0, 0
+  index: -1
+Png/Re-Leg_Red
+  rotate: false
+  xy: 354, 131
+  size: 87, 43
+  orig: 87, 43
+  offset: 0, 0
+  index: -1
+Png/UpperLid-02
+  rotate: true
+  xy: 992, 219
+  size: 29, 30
+  orig: 29, 30
+  offset: 0, 0
+  index: -1
+Png/UpperLid-02_Green
+  rotate: true
+  xy: 992, 188
+  size: 29, 30
+  orig: 29, 30
+  offset: 0, 0
+  index: -1
+Png/UpperLid-02_Red
+  rotate: true
+  xy: 992, 157
+  size: 29, 30
+  orig: 29, 30
+  offset: 0, 0
+  index: -1
+Png/UpperLid-03
+  rotate: false
+  xy: 413, 112
+  size: 20, 17
+  orig: 20, 17
+  offset: 0, 0
+  index: -1
+Png/UpperLid-03_Green
+  rotate: false
+  xy: 727, 157
+  size: 20, 17
+  orig: 20, 17
+  offset: 0, 0
+  index: -1
+Png/UpperLid-03_Red
+  rotate: false
+  xy: 696, 120
+  size: 20, 17
+  orig: 20, 17
+  offset: 0, 0
+  index: -1

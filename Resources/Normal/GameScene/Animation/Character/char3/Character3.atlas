@@ -1,0 +1,230 @@
+
+Character3.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+000
+  rotate: true
+  xy: 142, 16
+  size: 54, 63
+  orig: 54, 63
+  offset: 0, 0
+  index: -1
+Cap
+  rotate: true
+  xy: 985, 54
+  size: 72, 32
+  orig: 72, 32
+  offset: 0, 0
+  index: -1
+EarPhone
+  rotate: false
+  xy: 2, 2
+  size: 10, 13
+  orig: 10, 13
+  offset: 0, 0
+  index: -1
+EyeBrowsBlue
+  rotate: true
+  xy: 1019, 100
+  size: 26, 3
+  orig: 26, 3
+  offset: 0, 0
+  index: -1
+EyeBrowsGreen
+  rotate: true
+  xy: 1019, 72
+  size: 26, 3
+  orig: 26, 3
+  offset: 0, 0
+  index: -1
+EyeBrowsRed
+  rotate: true
+  xy: 1019, 44
+  size: 26, 3
+  orig: 26, 3
+  offset: 0, 0
+  index: -1
+Eyes
+  rotate: false
+  xy: 782, 47
+  size: 21, 7
+  orig: 21, 7
+  offset: 0, 0
+  index: -1
+LeftHandBlue
+  rotate: false
+  xy: 207, 21
+  size: 64, 49
+  orig: 64, 49
+  offset: 0, 0
+  index: -1
+LeftHandGreen
+  rotate: false
+  xy: 273, 21
+  size: 64, 49
+  orig: 64, 49
+  offset: 0, 0
+  index: -1
+LeftHandRed
+  rotate: false
+  xy: 339, 21
+  size: 64, 49
+  orig: 64, 49
+  offset: 0, 0
+  index: -1
+LeftLegBlue
+  rotate: false
+  xy: 535, 54
+  size: 73, 72
+  orig: 73, 72
+  offset: 0, 0
+  index: -1
+LeftLegGreen
+  rotate: false
+  xy: 610, 54
+  size: 73, 72
+  orig: 73, 72
+  offset: 0, 0
+  index: -1
+LeftLegRed
+  rotate: false
+  xy: 685, 54
+  size: 73, 72
+  orig: 73, 72
+  offset: 0, 0
+  index: -1
+Mouth
+  rotate: false
+  xy: 265, 4
+  size: 21, 15
+  orig: 21, 15
+  offset: 0, 0
+  index: -1
+MusicPlayerBlue
+  rotate: false
+  xy: 738, 28
+  size: 20, 24
+  orig: 20, 24
+  offset: 0, 0
+  index: -1
+MusicPlayerGreen
+  rotate: false
+  xy: 738, 2
+  size: 20, 24
+  orig: 20, 24
+  offset: 0, 0
+  index: -1
+MusicPlayerRed
+  rotate: false
+  xy: 760, 30
+  size: 20, 24
+  orig: 20, 24
+  offset: 0, 0
+  index: -1
+RightHandBlue
+  rotate: true
+  xy: 405, 30
+  size: 40, 69
+  orig: 40, 69
+  offset: 0, 0
+  index: -1
+RightHandGreen
+  rotate: true
+  xy: 531, 12
+  size: 40, 69
+  orig: 40, 69
+  offset: 0, 0
+  index: -1
+RightHandRed
+  rotate: true
+  xy: 602, 12
+  size: 40, 69
+  orig: 40, 69
+  offset: 0, 0
+  index: -1
+RightLegBlue
+  rotate: false
+  xy: 760, 56
+  size: 73, 70
+  orig: 73, 70
+  offset: 0, 0
+  index: -1
+RightLegGreen
+  rotate: false
+  xy: 835, 56
+  size: 73, 70
+  orig: 73, 70
+  offset: 0, 0
+  index: -1
+RightLegRed
+  rotate: false
+  xy: 910, 56
+  size: 73, 70
+  orig: 73, 70
+  offset: 0, 0
+  index: -1
+SpacsRed
+  rotate: false
+  xy: 673, 33
+  size: 63, 19
+  orig: 63, 19
+  offset: 0, 0
+  index: -1
+SpecsBlue
+  rotate: false
+  xy: 673, 12
+  size: 63, 19
+  orig: 63, 19
+  offset: 0, 0
+  index: -1
+SpecsGreen
+  rotate: false
+  xy: 405, 9
+  size: 63, 19
+  orig: 63, 19
+  offset: 0, 0
+  index: -1
+TorsoBlue
+  rotate: true
+  xy: 142, 72
+  size: 54, 129
+  orig: 54, 129
+  offset: 0, 0
+  index: -1
+TorsoGreen
+  rotate: true
+  xy: 273, 72
+  size: 54, 129
+  orig: 54, 129
+  offset: 0, 0
+  index: -1
+TorsoRed
+  rotate: true
+  xy: 404, 72
+  size: 54, 129
+  orig: 54, 129
+  offset: 0, 0
+  index: -1
+Wire
+  rotate: true
+  xy: 207, 3
+  size: 16, 56
+  orig: 16, 56
+  offset: 0, 0
+  index: -1
+smoke
+  rotate: true
+  xy: 476, 31
+  size: 39, 53
+  orig: 39, 53
+  offset: 0, 0
+  index: -1
+smoke-grey
+  rotate: false
+  xy: 2, 17
+  size: 138, 109
+  orig: 138, 109
+  offset: 0, 0
+  index: -1

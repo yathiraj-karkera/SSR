@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Character</key>
+	<array>
+		<dict>
+			<key>DisplayName</key>
+			<string>Little dynamite</string>
+			<key>FileName</key>
+			<string>Character2</string>
+			<key>Name</key>
+			<string>char2/Character2</string>
+			<key>UnlockTask</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Crazy Cub</string>
+			<key>FileName</key>
+			<string>Character1</string>
+			<key>Name</key>
+			<string>char1/Character1</string>
+			<key>UnlockTask</key>
+			<string>Play 15 days in a row</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Spooky Pooky</string>
+			<key>FileName</key>
+			<string>Character4</string>
+			<key>Name</key>
+			<string>char4/Character4</string>
+			<key>UnlockTask</key>
+			<string>Play 5000 times</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Super Sausage</string>
+			<key>FileName</key>
+			<string>Character3</string>
+			<key>Name</key>
+			<string>char3/Character3</string>
+			<key>UnlockTask</key>
+			<string>Play 10000 times</string>
+		</dict>
+		<dict>
+			<key>DisplayName</key>
+			<string>Retard Potato </string>
+			<key>FileName</key>
+			<string>Character5</string>
+			<key>Name</key>
+			<string>char5/Character5</string>
+			<key>UnlockTask</key>
+			<string>Pass 5000 Obstacles</string>
+		</dict>
+	</array>
+</dict>
+</plist>

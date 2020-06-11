@@ -1,0 +1,580 @@
+
+Character2.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Mini BlobBlast/1
+  rotate: false
+  xy: 2, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1 R(1)
+  rotate: false
+  xy: 702, 356
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1 R(2)
+  rotate: false
+  xy: 842, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1 R(3)
+  rotate: false
+  xy: 982, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1 R(4)
+  rotate: false
+  xy: 702, 135
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1 R(5)
+  rotate: false
+  xy: 842, 356
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1 R(6)
+  rotate: false
+  xy: 982, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1 R(7)
+  rotate: false
+  xy: 1122, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/10
+  rotate: false
+  xy: 422, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/11
+  rotate: false
+  xy: 142, 135
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/12
+  rotate: false
+  xy: 282, 356
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/13
+  rotate: false
+  xy: 422, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/14
+  rotate: false
+  xy: 562, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/15
+  rotate: false
+  xy: 282, 135
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/16
+  rotate: false
+  xy: 422, 356
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/17
+  rotate: false
+  xy: 562, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/18
+  rotate: false
+  xy: 702, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/19
+  rotate: false
+  xy: 422, 135
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1G (1)
+  rotate: false
+  xy: 842, 135
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1G (2)
+  rotate: false
+  xy: 982, 356
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1G (3)
+  rotate: false
+  xy: 1122, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1G (4)
+  rotate: false
+  xy: 1262, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1G (5)
+  rotate: false
+  xy: 982, 135
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1G (6)
+  rotate: false
+  xy: 1122, 356
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/1G (7)
+  rotate: false
+  xy: 1262, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/2
+  rotate: false
+  xy: 2, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/20
+  rotate: false
+  xy: 562, 356
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/21
+  rotate: false
+  xy: 702, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/22
+  rotate: false
+  xy: 842, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/23
+  rotate: false
+  xy: 562, 135
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/3
+  rotate: false
+  xy: 142, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/4
+  rotate: false
+  xy: 2, 356
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/5
+  rotate: false
+  xy: 142, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/6
+  rotate: false
+  xy: 282, 798
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/7
+  rotate: false
+  xy: 2, 135
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/8
+  rotate: false
+  xy: 142, 356
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/9
+  rotate: false
+  xy: 282, 577
+  size: 138, 219
+  orig: 138, 219
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/Blink1
+  rotate: false
+  xy: 1595, 998
+  size: 47, 19
+  orig: 47, 19
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/Blink2
+  rotate: true
+  xy: 1262, 366
+  size: 47, 19
+  orig: 47, 19
+  offset: 0, 0
+  index: -1
+Mini BlobBlast/Blink3
+  rotate: false
+  xy: 287, 114
+  size: 47, 19
+  orig: 47, 19
+  offset: 0, 0
+  index: -1
+MionBlobBlue/Eye-BlinkBlue0
+  rotate: false
+  xy: 1469, 952
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobBlue/Eye-BlinkBlue1
+  rotate: false
+  xy: 1189, 289
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobBlue/Eye-BlinkBlue2
+  rotate: false
+  xy: 1334, 519
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobBlue/EyeBrowBlue
+  rotate: true
+  xy: 1181, 220
+  size: 31, 6
+  orig: 31, 6
+  offset: 0, 0
+  index: -1
+MionBlobBlue/EyesBlue
+  rotate: false
+  xy: 141, 76
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobBlue/HairBlue
+  rotate: false
+  xy: 1528, 980
+  size: 36, 15
+  orig: 36, 15
+  offset: 0, 0
+  index: -1
+MionBlobBlue/HeadBlue
+  rotate: false
+  xy: 1262, 512
+  size: 70, 63
+  orig: 70, 63
+  offset: 0, 0
+  index: -1
+MionBlobBlue/Left-HandBlue
+  rotate: false
+  xy: 1528, 997
+  size: 65, 20
+  orig: 65, 20
+  offset: 0, 0
+  index: -1
+MionBlobBlue/LeftLegBlue
+  rotate: false
+  xy: 2, 2
+  size: 61, 28
+  orig: 61, 28
+  offset: 0, 0
+  index: -1
+MionBlobBlue/MouthBlue
+  rotate: true
+  xy: 1325, 496
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+MionBlobBlue/NoseBlue
+  rotate: true
+  xy: 129, 55
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+MionBlobBlue/Right-HandBlue
+  rotate: false
+  xy: 1469, 980
+  size: 57, 37
+  orig: 57, 37
+  offset: 0, 0
+  index: -1
+MionBlobBlue/Right-LegBlue
+  rotate: false
+  xy: 69, 39
+  size: 58, 29
+  orig: 58, 29
+  offset: 0, 0
+  index: -1
+MionBlobBlue/TorsoBlue
+  rotate: false
+  xy: 2, 32
+  size: 65, 101
+  orig: 65, 101
+  offset: 0, 0
+  index: -1
+MionBlobGreen/Eye-BlinkGreen0
+  rotate: false
+  xy: 201, 107
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobGreen/Eye-BlinkGreen1
+  rotate: false
+  xy: 1402, 785
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobGreen/Eye-BlinkGreen2
+  rotate: true
+  xy: 1144, 171
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobGreen/EyeBrowGreen
+  rotate: true
+  xy: 1248, 323
+  size: 31, 6
+  orig: 31, 6
+  offset: 0, 0
+  index: -1
+MionBlobGreen/EyesGreen
+  rotate: true
+  xy: 1284, 439
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobGreen/HairGreen
+  rotate: false
+  xy: 1512, 963
+  size: 36, 15
+  orig: 36, 15
+  offset: 0, 0
+  index: -1
+MionBlobGreen/HeadGreen
+  rotate: false
+  xy: 69, 70
+  size: 70, 63
+  orig: 70, 63
+  offset: 0, 0
+  index: -1
+MionBlobGreen/Left-HandGreen
+  rotate: true
+  xy: 1122, 147
+  size: 65, 20
+  orig: 65, 20
+  offset: 0, 0
+  index: -1
+MionBlobGreen/LeftLegGreen
+  rotate: false
+  xy: 1262, 482
+  size: 61, 28
+  orig: 61, 28
+  offset: 0, 0
+  index: -1
+MionBlobGreen/MouthGreen
+  rotate: false
+  xy: 69, 32
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+MionBlobGreen/NoseGreen
+  rotate: false
+  xy: 65, 24
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+MionBlobGreen/Right-HandGreen
+  rotate: false
+  xy: 1122, 214
+  size: 57, 37
+  orig: 57, 37
+  offset: 0, 0
+  index: -1
+MionBlobGreen/Right-LegGreen
+  rotate: false
+  xy: 141, 104
+  size: 58, 29
+  orig: 58, 29
+  offset: 0, 0
+  index: -1
+MionBlobGreen/TorsoGreen
+  rotate: false
+  xy: 1402, 916
+  size: 65, 101
+  orig: 65, 101
+  offset: 0, 0
+  index: -1
+MionBlobRed/Eye-BlinkRed0
+  rotate: false
+  xy: 1469, 924
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobRed/Eye-BlinkRed1
+  rotate: false
+  xy: 1189, 261
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobRed/Eye-BlinkRed2
+  rotate: false
+  xy: 244, 107
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobRed/EyeBrowRed
+  rotate: true
+  xy: 1232, 284
+  size: 31, 6
+  orig: 31, 6
+  offset: 0, 0
+  index: -1
+MionBlobRed/EyesRed
+  rotate: false
+  xy: 1402, 757
+  size: 41, 26
+  orig: 41, 26
+  offset: 0, 0
+  index: -1
+MionBlobRed/HairRed
+  rotate: true
+  xy: 1445, 775
+  size: 36, 15
+  orig: 36, 15
+  offset: 0, 0
+  index: -1
+MionBlobRed/HeadRed
+  rotate: true
+  xy: 1402, 844
+  size: 70, 63
+  orig: 70, 63
+  offset: 0, 0
+  index: -1
+MionBlobRed/Left-HandRed
+  rotate: true
+  xy: 1262, 415
+  size: 65, 20
+  orig: 65, 20
+  offset: 0, 0
+  index: -1
+MionBlobRed/LeftLegRed
+  rotate: false
+  xy: 1334, 547
+  size: 61, 28
+  orig: 61, 28
+  offset: 0, 0
+  index: -1
+MionBlobRed/MouthRed
+  rotate: false
+  xy: 1122, 140
+  size: 14, 5
+  orig: 14, 5
+  offset: 0, 0
+  index: -1
+MionBlobRed/NoseRed
+  rotate: false
+  xy: 1377, 539
+  size: 13, 6
+  orig: 13, 6
+  offset: 0, 0
+  index: -1
+MionBlobRed/Right-HandRed
+  rotate: false
+  xy: 1189, 317
+  size: 57, 37
+  orig: 57, 37
+  offset: 0, 0
+  index: -1
+MionBlobRed/Right-LegRed
+  rotate: false
+  xy: 1402, 813
+  size: 58, 29
+  orig: 58, 29
+  offset: 0, 0
+  index: -1
+MionBlobRed/TorsoRed
+  rotate: false
+  xy: 1122, 253
+  size: 65, 101
+  orig: 65, 101
+  offset: 0, 0
+  index: -1

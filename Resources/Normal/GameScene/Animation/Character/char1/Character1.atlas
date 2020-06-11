@@ -1,0 +1,321 @@
+
+Character1.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Blue/Ear-Blue
+  rotate: false
+  xy: 1423, 317
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+Blue/EyeBrow-Blue
+  rotate: false
+  xy: 2, 10
+  size: 24, 6
+  orig: 24, 6
+  offset: 0, 0
+  index: -1
+Blue/Hair-Blue
+  rotate: false
+  xy: 1423, 335
+  size: 35, 17
+  orig: 35, 17
+  offset: 0, 0
+  index: -1
+Blue/Head-Blue
+  rotate: false
+  xy: 1866, 441
+  size: 68, 69
+  orig: 68, 69
+  offset: 0, 0
+  index: -1
+Blue/LeftHand-Blue
+  rotate: false
+  xy: 1296, 325
+  size: 64, 27
+  orig: 64, 27
+  offset: 0, 0
+  index: -1
+Blue/LeftLeg-Blue
+  rotate: false
+  xy: 749, 273
+  size: 58, 45
+  orig: 58, 45
+  offset: 0, 0
+  index: -1
+Blue/Mouth-Blue
+  rotate: false
+  xy: 809, 273
+  size: 58, 45
+  orig: 58, 45
+  offset: 0, 0
+  index: -1
+Blue/Right-Leg_Blue
+  rotate: false
+  xy: 1936, 378
+  size: 54, 51
+  orig: 54, 51
+  offset: 0, 0
+  index: -1
+Blue/RightHand-Blue
+  rotate: false
+  xy: 1165, 283
+  size: 59, 35
+  orig: 59, 35
+  offset: 0, 0
+  index: -1
+Blue/Torso-Blue
+  rotate: false
+  xy: 1936, 431
+  size: 39, 79
+  orig: 39, 79
+  offset: 0, 0
+  index: -1
+EYE-Green
+  rotate: false
+  xy: 1866, 359
+  size: 18, 9
+  orig: 18, 9
+  offset: 0, 0
+  index: -1
+Ear-Green
+  rotate: false
+  xy: 1534, 336
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+EyeBrow-Green
+  rotate: false
+  xy: 2, 2
+  size: 24, 6
+  orig: 24, 6
+  offset: 0, 0
+  index: -1
+Hair-Green
+  rotate: false
+  xy: 1460, 335
+  size: 35, 17
+  orig: 35, 17
+  offset: 0, 0
+  index: -1
+Head-Green
+  rotate: false
+  xy: 598, 249
+  size: 68, 69
+  orig: 68, 69
+  offset: 0, 0
+  index: -1
+LeftHand-Green
+  rotate: true
+  xy: 2018, 446
+  size: 64, 27
+  orig: 64, 27
+  offset: 0, 0
+  index: -1
+LeftLeg-Green
+  rotate: false
+  xy: 869, 273
+  size: 58, 45
+  orig: 58, 45
+  offset: 0, 0
+  index: -1
+Mouth-Green
+  rotate: false
+  xy: 929, 273
+  size: 58, 45
+  orig: 58, 45
+  offset: 0, 0
+  index: -1
+Red/Ear-Red
+  rotate: false
+  xy: 1443, 317
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+Red/EyeBrow-Red
+  rotate: true
+  xy: 185, 259
+  size: 24, 6
+  orig: 24, 6
+  offset: 0, 0
+  index: -1
+Red/Hair-Red
+  rotate: false
+  xy: 1497, 335
+  size: 35, 17
+  orig: 35, 17
+  offset: 0, 0
+  index: -1
+Red/Head-Red
+  rotate: false
+  xy: 1866, 370
+  size: 68, 69
+  orig: 68, 69
+  offset: 0, 0
+  index: -1
+Red/LeftHand-Red
+  rotate: false
+  xy: 668, 250
+  size: 64, 27
+  orig: 64, 27
+  offset: 0, 0
+  index: -1
+Red/LeftLeg-Red
+  rotate: false
+  xy: 989, 273
+  size: 58, 45
+  orig: 58, 45
+  offset: 0, 0
+  index: -1
+Red/Mouth-Red
+  rotate: false
+  xy: 1049, 273
+  size: 58, 45
+  orig: 58, 45
+  offset: 0, 0
+  index: -1
+Red/Right-Leg_Red
+  rotate: false
+  xy: 1992, 378
+  size: 54, 51
+  orig: 54, 51
+  offset: 0, 0
+  index: -1
+Red/RightHand-Red
+  rotate: false
+  xy: 1226, 283
+  size: 59, 35
+  orig: 59, 35
+  offset: 0, 0
+  index: -1
+Red/Torso-Red
+  rotate: true
+  xy: 668, 279
+  size: 39, 79
+  orig: 39, 79
+  offset: 0, 0
+  index: -1
+Right-Leg_Green
+  rotate: false
+  xy: 1109, 267
+  size: 54, 51
+  orig: 54, 51
+  offset: 0, 0
+  index: -1
+RightHand-Green
+  rotate: false
+  xy: 1362, 317
+  size: 59, 35
+  orig: 59, 35
+  offset: 0, 0
+  index: -1
+Torso-Green
+  rotate: false
+  xy: 1977, 431
+  size: 39, 79
+  orig: 39, 79
+  offset: 0, 0
+  index: -1
+shock/1Schoked
+  rotate: false
+  xy: 2, 93
+  size: 181, 190
+  orig: 181, 190
+  offset: 0, 0
+  index: -1
+shock/1SchokedB
+  rotate: false
+  xy: 198, 320
+  size: 181, 190
+  orig: 181, 190
+  offset: 0, 0
+  index: -1
+shock/1SchokedR
+  rotate: false
+  xy: 381, 320
+  size: 181, 190
+  orig: 181, 190
+  offset: 0, 0
+  index: -1
+shock/2SchokedSkeleton
+  rotate: false
+  xy: 564, 320
+  size: 181, 190
+  orig: 181, 190
+  offset: 0, 0
+  index: -1
+shock/3SchokedCharacter
+  rotate: false
+  xy: 747, 320
+  size: 181, 190
+  orig: 181, 190
+  offset: 0, 0
+  index: -1
+shock/3SchokedCharacterB
+  rotate: false
+  xy: 930, 320
+  size: 181, 190
+  orig: 181, 190
+  offset: 0, 0
+  index: -1
+shock/3SchokedCharacterR
+  rotate: false
+  xy: 1113, 320
+  size: 181, 190
+  orig: 181, 190
+  offset: 0, 0
+  index: -1
+shock/4SchokedFalling
+  rotate: false
+  xy: 1296, 354
+  size: 188, 156
+  orig: 188, 156
+  offset: 0, 0
+  index: -1
+shock/4SchokedFallingB
+  rotate: false
+  xy: 1486, 354
+  size: 188, 156
+  orig: 188, 156
+  offset: 0, 0
+  index: -1
+shock/4SchokedFallingR
+  rotate: false
+  xy: 1676, 354
+  size: 188, 156
+  orig: 188, 156
+  offset: 0, 0
+  index: -1
+shock/5SchokedDead
+  rotate: false
+  xy: 2, 18
+  size: 198, 73
+  orig: 198, 73
+  offset: 0, 0
+  index: -1
+shock/5SchokedDeadB
+  rotate: false
+  xy: 198, 245
+  size: 198, 73
+  orig: 198, 73
+  offset: 0, 0
+  index: -1
+shock/5SchokedDeadR
+  rotate: false
+  xy: 398, 245
+  size: 198, 73
+  orig: 198, 73
+  offset: 0, 0
+  index: -1
+shock/Electricuted
+  rotate: false
+  xy: 2, 285
+  size: 194, 225
+  orig: 194, 225
+  offset: 0, 0
+  index: -1

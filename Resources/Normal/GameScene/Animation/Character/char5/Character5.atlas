@@ -1,0 +1,391 @@
+
+Character5.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Blue Ninja/Belt-Stripe-1
+  rotate: false
+  xy: 549, 31
+  size: 33, 12
+  orig: 33, 12
+  offset: 0, 0
+  index: -1
+Blue Ninja/Belt-Stripe-2
+  rotate: false
+  xy: 549, 45
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Blue Ninja/Belt_knot
+  rotate: false
+  xy: 324, 2
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+Blue Ninja/Hair
+  rotate: false
+  xy: 2, 3
+  size: 29, 10
+  orig: 29, 10
+  offset: 0, 0
+  index: -1
+Blue Ninja/Head-stripe-1
+  rotate: true
+  xy: 762, 48
+  size: 15, 23
+  orig: 15, 23
+  offset: 0, 0
+  index: -1
+Blue Ninja/Head-stripe-2
+  rotate: false
+  xy: 603, 45
+  size: 25, 18
+  orig: 25, 18
+  offset: 0, 0
+  index: -1
+Blue Ninja/Head_knot
+  rotate: true
+  xy: 837, 48
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+Blue Ninja/L-eyebro
+  rotate: true
+  xy: 890, 103
+  size: 20, 5
+  orig: 20, 5
+  offset: 0, 0
+  index: -1
+Blue Ninja/L-hand
+  rotate: false
+  xy: 405, 25
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+Blue Ninja/L-leg
+  rotate: false
+  xy: 127, 17
+  size: 69, 58
+  orig: 69, 58
+  offset: 0, 0
+  index: -1
+Blue Ninja/L_eye
+  rotate: false
+  xy: 584, 29
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+Blue Ninja/Mouth
+  rotate: false
+  xy: 198, 12
+  size: 40, 21
+  orig: 40, 21
+  offset: 0, 0
+  index: -1
+Blue Ninja/Nose
+  rotate: true
+  xy: 33, 2
+  size: 11, 4
+  orig: 11, 4
+  offset: 0, 0
+  index: -1
+Blue Ninja/R-eye
+  rotate: false
+  xy: 684, 47
+  size: 24, 16
+  orig: 24, 16
+  offset: 0, 0
+  index: -1
+Blue Ninja/R-eyebrow
+  rotate: true
+  xy: 384, 2
+  size: 21, 12
+  orig: 21, 12
+  offset: 0, 0
+  index: -1
+Blue Ninja/R-hand
+  rotate: false
+  xy: 240, 25
+  size: 53, 47
+  orig: 53, 47
+  offset: 0, 0
+  index: -1
+Blue Ninja/R-leg
+  rotate: false
+  xy: 606, 65
+  size: 69, 58
+  orig: 69, 58
+  offset: 0, 0
+  index: -1
+Blue Ninja/Sword
+  rotate: true
+  xy: 2, 15
+  size: 60, 123
+  orig: 60, 123
+  offset: 0, 0
+  index: -1
+Blue Ninja/body
+  rotate: false
+  xy: 606, 125
+  size: 96, 129
+  orig: 96, 129
+  offset: 0, 0
+  index: -1
+Blue Ninja/bubble
+  rotate: false
+  xy: 198, 35
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+Blue Ninja/fx1
+  rotate: true
+  xy: 240, 74
+  size: 180, 181
+  orig: 180, 181
+  offset: 0, 0
+  index: -1
+Blue Ninja/splat
+  rotate: false
+  xy: 2, 77
+  size: 236, 177
+  orig: 236, 177
+  offset: 0, 0
+  index: -1
+Green Ninja/Belt-Stripe-1
+  rotate: false
+  xy: 398, 11
+  size: 33, 12
+  orig: 33, 12
+  offset: 0, 0
+  index: -1
+Green Ninja/Belt-Stripe-2
+  rotate: false
+  xy: 576, 45
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Green Ninja/Belt_knot
+  rotate: false
+  xy: 344, 2
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+Green Ninja/Head-stripe-1
+  rotate: true
+  xy: 787, 48
+  size: 15, 23
+  orig: 15, 23
+  offset: 0, 0
+  index: -1
+Green Ninja/Head-stripe-2
+  rotate: false
+  xy: 630, 45
+  size: 25, 18
+  orig: 25, 18
+  offset: 0, 0
+  index: -1
+Green Ninja/Head_knot
+  rotate: true
+  xy: 855, 48
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+Green Ninja/L-hand
+  rotate: false
+  xy: 453, 25
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+Green Ninja/L-leg
+  rotate: false
+  xy: 677, 65
+  size: 69, 58
+  orig: 69, 58
+  offset: 0, 0
+  index: -1
+Green Ninja/R-leg
+  rotate: false
+  xy: 677, 65
+  size: 69, 58
+  orig: 69, 58
+  offset: 0, 0
+  index: -1
+Green Ninja/L_eye
+  rotate: false
+  xy: 602, 29
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+Green Ninja/Mouth
+  rotate: false
+  xy: 240, 2
+  size: 40, 21
+  orig: 40, 21
+  offset: 0, 0
+  index: -1
+Green Ninja/Nose
+  rotate: true
+  xy: 39, 2
+  size: 11, 4
+  orig: 11, 4
+  offset: 0, 0
+  index: -1
+Green Ninja/R-eye
+  rotate: false
+  xy: 710, 47
+  size: 24, 16
+  orig: 24, 16
+  offset: 0, 0
+  index: -1
+Green Ninja/R-hand
+  rotate: false
+  xy: 295, 25
+  size: 53, 47
+  orig: 53, 47
+  offset: 0, 0
+  index: -1
+Green Ninja/Sword
+  rotate: false
+  xy: 900, 131
+  size: 60, 123
+  orig: 60, 123
+  offset: 0, 0
+  index: -1
+Green Ninja/body
+  rotate: false
+  xy: 704, 125
+  size: 96, 129
+  orig: 96, 129
+  offset: 0, 0
+  index: -1
+Red Ninja/Belt-Stripe-1
+  rotate: false
+  xy: 433, 11
+  size: 33, 12
+  orig: 33, 12
+  offset: 0, 0
+  index: -1
+Red Ninja/Belt-Stripe-2
+  rotate: false
+  xy: 549, 2
+  size: 25, 27
+  orig: 25, 27
+  offset: 0, 0
+  index: -1
+Red Ninja/Belt_knot
+  rotate: false
+  xy: 364, 2
+  size: 18, 21
+  orig: 18, 21
+  offset: 0, 0
+  index: -1
+Red Ninja/Head-stripe-1
+  rotate: true
+  xy: 812, 48
+  size: 15, 23
+  orig: 15, 23
+  offset: 0, 0
+  index: -1
+Red Ninja/Head-stripe-2
+  rotate: false
+  xy: 657, 45
+  size: 25, 18
+  orig: 25, 18
+  offset: 0, 0
+  index: -1
+Red Ninja/Head_knot
+  rotate: false
+  xy: 873, 47
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+Red Ninja/L-hand
+  rotate: false
+  xy: 501, 25
+  size: 46, 47
+  orig: 46, 47
+  offset: 0, 0
+  index: -1
+Red Ninja/L-leg
+  rotate: false
+  xy: 748, 65
+  size: 69, 58
+  orig: 69, 58
+  offset: 0, 0
+  index: -1
+Red Ninja/L_eye
+  rotate: false
+  xy: 620, 29
+  size: 16, 14
+  orig: 16, 14
+  offset: 0, 0
+  index: -1
+Red Ninja/Mouth
+  rotate: false
+  xy: 282, 2
+  size: 40, 21
+  orig: 40, 21
+  offset: 0, 0
+  index: -1
+Red Ninja/Nose
+  rotate: true
+  xy: 45, 2
+  size: 11, 4
+  orig: 11, 4
+  offset: 0, 0
+  index: -1
+Red Ninja/R-eye
+  rotate: false
+  xy: 736, 47
+  size: 24, 16
+  orig: 24, 16
+  offset: 0, 0
+  index: -1
+Red Ninja/R-hand
+  rotate: false
+  xy: 350, 25
+  size: 53, 47
+  orig: 53, 47
+  offset: 0, 0
+  index: -1
+Red Ninja/R-leg
+  rotate: false
+  xy: 819, 65
+  size: 69, 58
+  orig: 69, 58
+  offset: 0, 0
+  index: -1
+Red Ninja/Sword
+  rotate: false
+  xy: 962, 131
+  size: 60, 123
+  orig: 60, 123
+  offset: 0, 0
+  index: -1
+Red Ninja/body
+  rotate: false
+  xy: 802, 125
+  size: 96, 129
+  orig: 96, 129
+  offset: 0, 0
+  index: -1
+Red Ninja/fx1
+  rotate: true
+  xy: 423, 74
+  size: 180, 181
+  orig: 180, 181
+  offset: 0, 0
+  index: -1

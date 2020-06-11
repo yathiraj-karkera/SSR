@@ -1,0 +1,209 @@
+
+wall.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Blue/1
+  rotate: false
+  xy: 944, 629
+  size: 9, 113
+  orig: 9, 113
+  offset: 0, 0
+  index: -1
+Blue/21
+  rotate: false
+  xy: 116, 100
+  size: 11, 174
+  orig: 11, 174
+  offset: 0, 0
+  index: -1
+Blue/7
+  rotate: false
+  xy: 129, 174
+  size: 6, 174
+  orig: 6, 174
+  offset: 0, 0
+  index: -1
+Blue/RGB-Lights-Croppings
+  rotate: false
+  xy: 2, 499
+  size: 112, 495
+  orig: 112, 495
+  offset: 0, 0
+  index: -1
+Blue/Tallest-lightobj
+  rotate: false
+  xy: 116, 276
+  size: 11, 221
+  orig: 11, 221
+  offset: 0, 0
+  index: -1
+Blue/star4
+  rotate: false
+  xy: 230, 744
+  size: 256, 250
+  orig: 256, 250
+  offset: 0, 0
+  index: -1
+Blue/star5
+  rotate: false
+  xy: 230, 526
+  size: 221, 216
+  orig: 221, 216
+  offset: 0, 0
+  index: -1
+Blue/star6
+  rotate: false
+  xy: 267, 322
+  size: 88, 85
+  orig: 88, 85
+  offset: 0, 0
+  index: -1
+Blue/star7
+  rotate: true
+  xy: 174, 406
+  size: 91, 89
+  orig: 91, 89
+  offset: 0, 0
+  index: -1
+Green/1
+  rotate: false
+  xy: 227, 200
+  size: 9, 113
+  orig: 9, 113
+  offset: 0, 0
+  index: -1
+Green/21
+  rotate: true
+  xy: 230, 500
+  size: 11, 174
+  orig: 11, 174
+  offset: 0, 0
+  index: -1
+Green/7
+  rotate: true
+  xy: 627, 518
+  size: 6, 173
+  orig: 6, 173
+  offset: 0, 0
+  index: -1
+Green/LightBase
+  rotate: false
+  xy: 899, 595
+  size: 43, 147
+  orig: 43, 147
+  offset: 0, 0
+  index: -1
+Green/RGB-Lights-Croppings
+  rotate: false
+  xy: 2, 2
+  size: 112, 495
+  orig: 112, 495
+  offset: 0, 0
+  index: -1
+Green/Tallest-lightobj
+  rotate: true
+  xy: 230, 513
+  size: 11, 219
+  orig: 11, 219
+  offset: 0, 0
+  index: -1
+Green/star4
+  rotate: false
+  xy: 488, 744
+  size: 256, 250
+  orig: 256, 250
+  offset: 0, 0
+  index: -1
+Green/star5
+  rotate: false
+  xy: 453, 526
+  size: 221, 216
+  orig: 221, 216
+  offset: 0, 0
+  index: -1
+Green/star6
+  rotate: false
+  xy: 137, 228
+  size: 88, 85
+  orig: 88, 85
+  offset: 0, 0
+  index: -1
+Green/star7
+  rotate: false
+  xy: 265, 409
+  size: 91, 89
+  orig: 91, 89
+  offset: 0, 0
+  index: -1
+Red/1
+  rotate: false
+  xy: 955, 629
+  size: 9, 113
+  orig: 9, 113
+  offset: 0, 0
+  index: -1
+Red/21
+  rotate: true
+  xy: 451, 513
+  size: 11, 174
+  orig: 11, 174
+  offset: 0, 0
+  index: -1
+Red/7
+  rotate: true
+  xy: 406, 505
+  size: 6, 174
+  orig: 6, 174
+  offset: 0, 0
+  index: -1
+Red/LightBase
+  rotate: false
+  xy: 129, 350
+  size: 43, 147
+  orig: 43, 147
+  offset: 0, 0
+  index: -1
+Red/RGB-Lights-Croppings
+  rotate: false
+  xy: 116, 499
+  size: 112, 495
+  orig: 112, 495
+  offset: 0, 0
+  index: -1
+Red/Tallest-lightobj
+  rotate: false
+  xy: 1004, 773
+  size: 11, 221
+  orig: 11, 221
+  offset: 0, 0
+  index: -1
+Red/star4
+  rotate: false
+  xy: 746, 744
+  size: 256, 250
+  orig: 256, 250
+  offset: 0, 0
+  index: -1
+Red/star5
+  rotate: false
+  xy: 676, 526
+  size: 221, 216
+  orig: 221, 216
+  offset: 0, 0
+  index: -1
+Red/star6
+  rotate: false
+  xy: 137, 141
+  size: 88, 85
+  orig: 88, 85
+  offset: 0, 0
+  index: -1
+Red/star7
+  rotate: false
+  xy: 174, 315
+  size: 91, 89
+  orig: 91, 89
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,12 @@
+# view AndroidManifest.xml #generated:28
+-keep class com.twitter.sdk.android.tweetcomposer.ComposerActivity { <init>(...); }
+
+# view res/layout/tw__activity_composer.xml #generated:21
+-keep class com.twitter.sdk.android.tweetcomposer.ComposerView { <init>(...); }
+
+# view AndroidManifest.xml #generated:33
+-keep class com.twitter.sdk.android.tweetcomposer.TweetUploadService { <init>(...); }
+
+# view res/layout/tw__composer_view.xml #generated:58
+-keep class com.twitter.sdk.android.tweetcomposer.internal.util.ObservableScrollView { <init>(...); }
+

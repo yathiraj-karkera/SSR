@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Background</key>
+	<array>
+		<dict>
+			<key>BgName</key>
+			<string>Daylight</string>
+			<key>Path</key>
+			<string>BG_Assets/Daylight_BG/</string>
+			<key>UnlockTask</key>
+			<string>free</string>
+		</dict>
+		<dict>
+			<key>BgName</key>
+			<string>Night</string>
+			<key>Path</key>
+			<string>BG_Assets/Night/</string>
+			<key>UnlockTask</key>
+			<string>Play 7 days in a row</string>
+		</dict>
+		<dict>
+			<key>BgName</key>
+			<string>Jungle_Day</string>
+			<key>Path</key>
+			<string>BG_Assets/Jungle_Day/</string>
+			<key>UnlockTask</key>
+			<string>Revive 100 Times</string>
+		</dict>
+		<dict>
+			<key>BgName</key>
+			<string>Jungle_Night</string>
+			<key>Path</key>
+			<string>BG_Assets/Jungle_Night/</string>
+			<key>UnlockTask</key>
+			<string>Score 500 in one go</string>
+		</dict>
+		<dict>
+			<key>BgName</key>
+			<string>Desort_Day</string>
+			<key>Path</key>
+			<string>BG_Assets/Desort_Day/</string>
+			<key>UnlockTask</key>
+			<string>Play 1000 times</string>
+		</dict>
+		<dict>
+			<key>BgName</key>
+			<string>Desort_Night</string>
+			<key>Path</key>
+			<string>BG_Assets/Desort_Night/</string>
+			<key>UnlockTask</key>
+			<string>Pass 2000 Obstacles</string>
+		</dict>
+	</array>
+</dict>
+</plist>

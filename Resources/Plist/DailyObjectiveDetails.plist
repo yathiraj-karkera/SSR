@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DailyObjects</key>
+	<array>
+		<dict>
+			<key>keyName</key>
+			<string>Type1</string>
+			<key>keyValue</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>keyName</key>
+			<string>Type2</string>
+			<key>keyValue</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>keyName</key>
+			<string>Type3</string>
+			<key>keyValue</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>keyName</key>
+			<string>Type4</string>
+			<key>keyValue</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>keyName</key>
+			<string>Type5</string>
+			<key>keyValue</key>
+			<string>4</string>
+		</dict>
+	</array>
+	<key>Type1</key>
+	<array>
+		<dict>
+			<key>charDetails</key>
+			<string>A,W,E,S,O,M,E</string>
+			<key>keyValue</key>
+			<string>0</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Awesome"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>B,A,R,B,E,R,S,H,O,P</string>
+			<key>keyValue</key>
+			<string>1</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Barbershop"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>B,U,Z,Z</string>
+			<key>keyValue</key>
+			<string>2</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Buzz"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>G,Y,M</string>
+			<key>keyValue</key>
+			<string>3</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "GYM"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>Z,A,P</string>
+			<key>keyValue</key>
+			<string>4</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "ZAP"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>F,R,I,E,N,D,S</string>
+			<key>keyValue</key>
+			<string>5</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Friends"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>C,L,I,M,B</string>
+			<key>keyValue</key>
+			<string>6</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Climb"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>M,A,S,T,I</string>
+			<key>keyValue</key>
+			<string>7</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Masti"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>B,R,A,V,E</string>
+			<key>keyValue</key>
+			<string>8</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Brave"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>J,U,M,P</string>
+			<key>keyValue</key>
+			<string>9</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Jump"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>G,R,E,A,T</string>
+			<key>keyValue</key>
+			<string>10</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Great"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>S,T,R,O,N,G</string>
+			<key>keyValue</key>
+			<string>11</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Strong"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>A,W,E,S,O,M,E</string>
+			<key>keyValue</key>
+			<string>12</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Awesome"</string>
+		</dict>
+		<dict>
+			<key>charDetails</key>
+			<string>S,I,X</string>
+			<key>keyValue</key>
+			<string>13</string>
+			<key>text</key>
+			<string>Collect the alphabets and make "Six"</string>
+		</dict>
+	</array>
+	<key>Type2</key>
+	<array>
+		<dict>
+			<key>ColorCode</key>
+			<integer>0</integer>
+			<key>keyValue</key>
+			<integer>0</integer>
+			<key>noOfWalls</key>
+			<integer>200</integer>
+			<key>text</key>
+			<string>Pass 200 Walls</string>
+		</dict>
+		<dict>
+			<key>ColorCode</key>
+			<integer>3</integer>
+			<key>keyValue</key>
+			<integer>1</integer>
+			<key>noOfWalls</key>
+			<integer>50</integer>
+			<key>text</key>
+			<string>Pass 50  Blue Walls</string>
+		</dict>
+		<dict>
+			<key>ColorCode</key>
+			<integer>2</integer>
+			<key>keyValue</key>
+			<integer>2</integer>
+			<key>noOfWalls</key>
+			<integer>50</integer>
+			<key>text</key>
+			<string>Pass 50 Green Walls</string>
+		</dict>
+		<dict>
+			<key>ColorCode</key>
+			<integer>1</integer>
+			<key>keyValue</key>
+			<integer>3</integer>
+			<key>noOfWalls</key>
+			<integer>50</integer>
+			<key>text</key>
+			<string>Pass 50 Red Walls</string>
+		</dict>
+		<dict>
+			<key>ColorCode</key>
+			<integer>1</integer>
+			<key>keyValue</key>
+			<integer>4</integer>
+			<key>noOfWalls</key>
+			<integer>100</integer>
+			<key>text</key>
+			<string>Pass 100 Red Walls</string>
+		</dict>
+		<dict>
+			<key>ColorCode</key>
+			<integer>2</integer>
+			<key>keyValue</key>
+			<integer>5</integer>
+			<key>noOfWalls</key>
+			<integer>100</integer>
+			<key>text</key>
+			<string>Pass 100 Green Walls</string>
+		</dict>
+		<dict>
+			<key>ColorCode</key>
+			<integer>3</integer>
+			<key>keyValue</key>
+			<integer>6</integer>
+			<key>noOfWalls</key>
+			<integer>100</integer>
+			<key>text</key>
+			<string>Pass 100  Blue Walls</string>
+		</dict>
+		<dict>
+			<key>ColorCode</key>
+			<integer>0</integer>
+			<key>keyValue</key>
+			<integer>7</integer>
+			<key>noOfWalls</key>
+			<integer>100</integer>
+			<key>text</key>
+			<string>Pass 100 Walls</string>
+		</dict>
+	</array>
+</dict>
+</plist>
