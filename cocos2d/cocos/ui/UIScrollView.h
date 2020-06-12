@@ -1,6 +1,5 @@
 /****************************************************************************
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -57,8 +56,6 @@ typedef enum
     SCROLLVIEW_EVENT_BOUNCE_BOTTOM,
     SCROLLVIEW_EVENT_BOUNCE_LEFT,
     SCROLLVIEW_EVENT_BOUNCE_RIGHT,
-	SCROLLVIEW_EVENT_SCROLLING_BEGAN,
-	SCROLLVIEW_EVENT_SCROLLING_ENDED,
     SCROLLVIEW_EVENT_AUTOSCROLL_ENDED
 }ScrollviewEventType;
 
@@ -105,8 +102,6 @@ public:
         BOUNCE_LEFT,
         BOUNCE_RIGHT,
         CONTAINER_MOVED,
-		SCROLLING_BEGAN,
-		SCROLLING_ENDED,
         AUTOSCROLL_ENDED
     };
 
@@ -162,19 +157,9 @@ public:
     Layout* getInnerContainer()const;
 
     /**
-     * Immediately stops inner container scroll (auto scrolling is not affected).
-     */
-    virtual void stopScroll();
-
-    /**
      * Immediately stops inner container scroll initiated by any of the "scrollTo*" member functions
      */
     virtual void stopAutoScroll();
-
-    /**
-     * Immediately stops inner container scroll if any.
-     */
-    virtual void stopOverallScroll();
 
     /**
      * Scroll inner container to bottom boundary of scrollview.
@@ -255,19 +240,6 @@ public:
      * @param attenuated Whether scroll speed attenuate or not.
      */
     virtual void scrollToPercentBothDirection(const Vec2& percent, float timeInSec, bool attenuated);
-	
-	/**
-	 * @return How far the scroll view is scrolled in the vertical axis
-	 */
-    float getScrolledPercentVertical() const;
-	/**
-	 * @return How far the scroll view is scrolled in the horizontal axis
-	 */
-    float getScrolledPercentHorizontal() const;
-	/**
-	 * @return How far the scroll view is scrolled in both axes, combined as a Vec2
-	 */
-    Vec2 getScrolledPercentBothDirection() const;
 
     /**
      * Move inner container to bottom boundary of scrollview.
@@ -581,11 +553,6 @@ public:
     virtual void onEnter() override;
 
     /**
-     * @lua NA
-     */
-    virtual void onExit() override;
-
-    /**
      *  When a widget is in a layout, you could call this method to get the next focused widget within a specified direction.
      *  If the widget is not in a layout, it will return itself
      *@param direction the direction to look for the next focused widget in a layout
@@ -593,15 +560,6 @@ public:
      *@return the next focused widget in a layout
      */
     virtual Widget* findNextFocusedWidget(FocusDirection direction, Widget* current) override;
-	
-	/**
-	 * @return Whether the user is currently dragging the ScrollView to scroll it
-	 */
-	bool isScrolling() const { return _scrolling; }
-	/**
-	 * @return Whether the ScrollView is currently scrolling because of a bounceback or inertia slowdown.
-	 */
-	bool isAutoScrolling() const { return _autoScrolling; }
 
 CC_CONSTRUCTOR_ACCESS:
     virtual bool init() override;
@@ -661,11 +619,10 @@ protected:
     
     void processScrollEvent(MoveDirection dir, bool bounce);
     void processScrollingEvent();
-	void processScrollingEndedEvent();
     void dispatchEvent(ScrollviewEventType scrollEventType, EventType eventType);
     
     void updateScrollBar(const Vec2& outOfBoundary);
-	
+
 protected:
     virtual float getAutoScrollStopEpsilon() const;
     bool fltEqualZero(const Vec2& point) const;
@@ -687,8 +644,6 @@ protected:
     std::list<float> _touchMoveTimeDeltas;
     long long _touchMovePreviousTimestamp;
     float _touchTotalTimeThreshold;
-	
-	bool _scrolling;
     
     bool _autoScrolling;
     bool _autoScrollAttenuate;

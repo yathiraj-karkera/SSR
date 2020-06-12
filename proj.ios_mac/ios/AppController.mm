@@ -1,7 +1,6 @@
 /****************************************************************************
  Copyright (c) 2010-2013 cocos2d-x.org
- Copyright (c) 2013-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2013-2017 Chukong Technologies Inc.
  
  http://www.cocos2d-x.org
  
@@ -28,6 +27,15 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
+
+//#include "PluginFacebook/PluginFacebook.h"
+//#include "PluginShare/PluginShare.h"
+//#include "PluginIAP/PluginIAP.h"
+//#include "PluginAdMob/PluginAdMob.h"
+//#include "PluginSdkboxPlay/PluginSdkboxPlay.h"
+//#include "PluginFirebase/PluginFirebase.h"
 
 @implementation AppController
 
@@ -40,6 +48,14 @@
 static AppDelegate s_sharedApplication;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+//    sdkbox::PluginShare::init();
+//    sdkbox::IAP::init();
+//    sdkbox::PluginAdMob::init();
+//    
+//    sdkbox::PluginSdkboxPlay::init();
+//    
+//    sdkbox::Firebase::Analytics::init();
     
     cocos2d::Application *app = cocos2d::Application::getInstance();
     
@@ -78,10 +94,88 @@ static AppDelegate s_sharedApplication;
     cocos2d::Director::getInstance()->setOpenGLView(glview);
     
     //run the cocos2d-x game scene
+    BOOL ret = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                        didFinishLaunchingWithOptions:launchOptions];
+    
+ 
+    
+    
+      
     app->run();
+    
+    
+    
+    
+    
+    
+    //-- Set Notification
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+    {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    }
+    else
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
+    }
 
-    return YES;
+    
+    // [launchOptions valueForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    //sdkbox::PluginFacebook::init();
+    return ret;
 }
+
+
+
+// This code block is invoked when application is in foreground (active-mode)
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    
+    UIAlertView *notificationAlert = [[UIAlertView alloc] initWithTitle:@"Notification"    message:@"This local notification"
+                                                               delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    
+   // [notificationAlert show];
+    // NSLog(@"didReceiveLocalNotification");
+}
+
+
+
+
+-(IBAction)startLocalNotification {  // Bind this method to UIButton action
+    NSLog(@"startLocalNotification");
+    
+//    UILocalNotification *notification = [[UILocalNotification alloc] init];
+//    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:7];
+//    notification.alertBody = @"This is local notification!";
+//    notification.timeZone = [NSTimeZone defaultTimeZone];
+//    notification.soundName = UILocalNotificationDefaultSoundName;
+//    notification.applicationIconBadgeNumber = 10;
+//    
+//    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -99,14 +193,37 @@ static AppDelegate s_sharedApplication;
      */
     // We don't need to call this method any more. It will interrupt user defined game pause&resume logic
     /* cocos2d::Director::getInstance()->resume(); */
+    [FBSDKAppEvents activateApp];
+    
 }
-
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                                  openURL:url
+                                                        sourceApplication:sourceApplication
+                                                               annotation:annotation
+                    ];
+    // Add any custom logic here.
+    return handled;
+}
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
      */
+    
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.fireDate = [[NSDate date] dateByAddingTimeInterval:160];
+    notification.alertBody = @"We have missed your Craziness, Come back!!";
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
     cocos2d::Application::getInstance()->applicationDidEnterBackground();
+    
+    
+    
+    
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

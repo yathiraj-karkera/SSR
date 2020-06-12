@@ -4,6 +4,9 @@
             "gameId": "1493045", 
             "testMode": true
         }, 
+        "Appodeal": {
+            "app_key": "7acb75c06e543c3c49452f4acb0711377d77b63993cbad49"
+        }, 
         "SdkboxAds": {
             "units": [
                 "AdColony", 
@@ -67,14 +70,14 @@
         }, 
         "Share": {
             "platforms": {
-                "SMS": {}, 
+                "Facebook": {}, 
                 "Twitter": {
                     "params": {
-                        "secret": "0mxHbmO8QFHSLnfJVVbGTStjaW6IlcRC6xofSWeFecLcj4jsLn", 
-                        "key": "s5xddoPxy4xIbzAhqrecESSlW"
+                        "secret": "nlmUdPNcFGLWhyLu9cD794EDuDrVQnjd0YjTpB6sX8oHIQRrne", 
+                        "key": "EuovpLL0UhSGB7Jv5eKFJNMqO"
                     }
                 }, 
-                "Facebook": {}, 
+                "SMS": {}, 
                 "Mail": {}
             }
         }, 
@@ -128,8 +131,8 @@
             }
         }, 
         "AdMob": {
-            "testdevice": "FE20924C46522E2E204587EB339897C6,kGADSimulatorID", 
             "test": false, 
+            "testdevice": "FE20924C46522E2E204587EB339897C6,kGADSimulatorID", 
             "ads": {
                 "next_level": {
                     "type": "interstitial", 
@@ -141,18 +144,18 @@
                 }, 
                 "gameover": {
                     "type": "interstitial", 
-                    "id": "ca-app-pub-1329374026572143/1092476511"
+                    "id": "ca-app-pub-2651571553765116/5309661228"
                 }, 
                 "home": {
                     "width": 300, 
                     "type": "banner", 
                     "id": "ca-app-pub-1329374026572143/2685130917", 
                     "alignment": "bottom", 
-                    "height": 100
+                    "height": 50
                 }, 
                 "rewarded": {
                     "type": "rewarded_video", 
-                    "id": "ca-app-pub-1329374026572143/8251968111"
+                    "id": "ca-app-pub-2651571553765116/8158475407"
                 }, 
                 "top_banner": {
                     "type": "banner", 
@@ -162,45 +165,144 @@
             }, 
             "appid": "ca-app-pub-1329374026572143~7139010117"
         }, 
+        "Firebase": {}, 
+        "Facebook": {
+            "debug": false
+        }, 
         "sdkboxplay": {
             "leaderboards": [
                 {
-                    "id": "CgkI2uKny_QJEAIQBw", 
+                    "id": "CggI2LqIyQ8QAhAB", 
                     "name": "ldb1"
                 }
             ], 
             "achievements": [
                 {
                     "incremental": false, 
-                    "id": "CgkI0sux8sMWEAIQAg", 
-                    "name": "ten-games"
+                    "id": "CggI2LqIyQ8QAhAC", 
+                    "name": "Numero_uno"
                 }, 
                 {
                     "incremental": false, 
-                    "id": "CgkI0sux8sMWEAIQAw", 
-                    "name": "hunter"
+                    "id": "CggI2LqIyQ8QAhAD", 
+                    "name": "Crawler"
                 }, 
                 {
                     "incremental": false, 
-                    "id": "CgkI0sux8sMWEAIQBA", 
-                    "name": "craftsman"
+                    "id": "CggI2LqIyQ8QAhAE", 
+                    "name": "Elementary"
                 }, 
                 {
-                    "incremental": true, 
-                    "id": "CgkI0sux8sMWEAIQBQ", 
-                    "name": "incremental"
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAF", 
+                    "name": "First_Aid"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAG", 
+                    "name": "Novice"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAH", 
+                    "name": "Seeker"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAI", 
+                    "name": "Collector"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAJ", 
+                    "name": "Scrabbler"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAK", 
+                    "name": "Word_King"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAL", 
+                    "name": "Reviver"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAM", 
+                    "name": "Walking_Dead"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAN", 
+                    "name": "Reckoning"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAO", 
+                    "name": "Top_Dog"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAP", 
+                    "name": "Regular"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAQ", 
+                    "name": "Loyalist"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAR", 
+                    "name": "God-Like"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAS", 
+                    "name": "Star"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAT", 
+                    "name": "Super_Star"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAU", 
+                    "name": "Inhuman"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAW", 
+                    "name": "Societal"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAV", 
+                    "name": "Noob"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAX", 
+                    "name": "Social_Butterfly"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAY", 
+                    "name": "All_Time_Great"
+                }, 
+                {
+                    "incremental": false, 
+                    "id": "CggI2LqIyQ8QAhAZ", 
+                    "name": "Champion"
                 }
             ], 
+            "clound_save": false, 
             "connect_on_start": false, 
             "show_achievement_notification": true, 
             "cloud_save": false, 
             "debug": true
-        }, 
-        "Facebook": {
-            "debug": false
-        }, 
-        "Appodeal": {
-            "app_key": "7acb75c06e543c3c49452f4acb0711377d77b63993cbad49"
         }, 
         "Chartboost": {
             "id": "4f7b433509b6025804000002", 
@@ -219,32 +321,79 @@
         }, 
         "iap": {
             "items": {
-                "coin_package2": {
-                    "id": "com.cocos2dx.plugintest3"
+                "Unlock_Desert_Night": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.bg6"
                 }, 
-                "coin_package": {
-                    "id": "com.cocos2dx.plugintest2"
-                }, 
-                "subs": {
-                    "type": "subs", 
-                    "id": "subscription1"
+                "Unlock_Retard_Potato": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.character2"
                 }, 
                 "double_coin": {
                     "type": "non_consumable", 
                     "id": "com.cocos2dx.non2"
                 }, 
+                "subs": {
+                    "type": "subs", 
+                    "id": "subscription1"
+                }, 
+                "coin_package2": {
+                    "id": "com.ghostchillies.testapp.testconsumable"
+                }, 
+                "Unlock_all_the_characters": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.characterpack"
+                }, 
+                "Unlock_all_the_levels": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.levelspack"
+                }, 
                 "remove_ads": {
                     "type": "non_consumable", 
-                    "id": "com.cocos2dx.non1"
+                    "id": "com.ghostchillies.superswitchrun.removeads"
+                }, 
+                "Unlock_Barren_Land": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.bg5"
+                }, 
+                "Unlock_Super_Sausage": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.character4"
+                }, 
+                "Unlock_Crazy_Cub": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.character5"
+                }, 
+                "Unlock_Wilderness": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.bg4"
+                }, 
+                "Unlock_in_to_the_wood": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.bg3"
+                }, 
+                "Unlock_Spooky_Pooky": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.character3"
+                }, 
+                "coin_package": {
+                    "id": "com.ghostchillies.testapp.testconsumable"
+                }, 
+                "Unlock_megalopolis": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.bg2"
                 }
             }, 
-            "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq7eIGu7dRcBRBSC05cYvxjBMd7cqq9w6++1er+cqO2tyWPtWB4vuTkliq4k/Fkylx5UMfptdOYOW8ENgQyVucs/NyuOAGmve4j5JFhLPcLa6LjO2HUSY6zk04DRR9Zw7YPET4WAezZTz8jYMGhPG08HYltVj8cmSpSFWd1nI0pGOJoLQIMkIkXplgnPQRbMpuOu70vnQQBS1RFcoFT7OjaV8U0cfJzMoS1TMkGqaJKks2T+qOBNTtkXzge92EnvYIkhpCfN98dj6aQmETNp5yj5Fa+jcbAVF8dy5xymJwioL89XQKfKkGR+P6ESMoBEPfIZYIlMU8EUwmC+UKGLujQIDAQAB"
+            "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3a4K09YDtrUoTHNQTdpKCUbPlZEpfOdRClzNBKEMCPrWi1KlhRGzq9VZe7nrRgcUSh+UhBp5kAkbRgPB8HMUv+qwjslsVYD/9Z1W9y5NyN9fhisKHc1wiTzq80Gx2z/mmi7PVU+ENrxiwEFfsgo0FaTMi8kMcwhyj6ash2EJdkalRtoDHIxWmokyj3Nn7pV+/RPGL8Vl76izp0jVKYadOgdPqr3kG6FUHONXg17nqkW0RvcW0MUZ+v5XF7NfeGoxL5QAValkFu8eysCdhsRKnBYLVm+KowmmZp4OSh3ctlRFDSquROO9vCnfqEHnxn1lpm/ks/FuA3fFhlGnorBduwIDAQAB"
         }
     }, 
     "ios": {
         "UnityAds": {
             "gameId": "1493044", 
             "testMode": true
+        }, 
+        "Appodeal": {
+            "app_key": "2cfc9cc638980eb7f5ff35d6eb63dbe404503151ccc451ed"
         }, 
         "SdkboxAds": {
             "debug": true, 
@@ -311,14 +460,14 @@
         }, 
         "Share": {
             "platforms": {
-                "SMS": {}, 
+                "Facebook": {}, 
                 "Twitter": {
                     "params": {
-                        "secret": "0mxHbmO8QFHSLnfJVVbGTStjaW6IlcRC6xofSWeFecLcj4jsLn", 
-                        "key": "s5xddoPxy4xIbzAhqrecESSlW"
+                        "secret": "7lZUXBv5M06VQOjf57sGHJlrCt8DYXEBuYSyO9GalewIJCPKfF", 
+                        "key": "g8sSLNExrCTMLou8MDxl5n3lC"
                     }
                 }, 
-                "Facebook": {}, 
+                "SMS": {}, 
                 "Mail": {}
             }
         }, 
@@ -348,8 +497,8 @@
             }
         }, 
         "AdMob": {
-            "testdevice": "kGADSimulatorID", 
             "test": false, 
+            "testdevice": "kGADSimulatorID", 
             "safearea": true, 
             "ads": {
                 "next_level": {
@@ -362,18 +511,18 @@
                 }, 
                 "gameover": {
                     "type": "interstitial", 
-                    "id": "ca-app-pub-1329374026572143/4185543717"
+                    "id": "ca-app-pub-2651571553765116/8179367143"
                 }, 
                 "home": {
                     "width": 300, 
                     "type": "banner", 
-                    "id": "ca-app-pub-3940256099942544/2934735716", 
+                    "id": "ca-app-pub-1329374026572143/3847466511", 
                     "alignment": "bottom", 
                     "height": 50
                 }, 
                 "rewarded": {
                     "type": "rewarded_video", 
-                    "id": "ca-app-pub-1329374026572143/7991602916"
+                    "id": "ca-app-pub-2651571553765116/6099998718"
                 }, 
                 "top_banner": {
                     "type": "banner", 
@@ -383,64 +532,142 @@
             }, 
             "appid": "ca-app-pub-1329374026572143~2708810518"
         }, 
+        "Firebase": {}, 
+        "Facebook": {
+            "debug": true
+        }, 
         "sdkboxplay": {
             "leaderboards": [
                 {
-                    "id": "ldb1", 
+                    "id": "com.ghostchillies.superswitchrun.highscore", 
                     "name": "ldb1"
                 }
             ], 
             "achievements": [
                 {
                     "incremental": false, 
-                    "id": "tengames", 
-                    "name": "ten-games"
+                    "id": "com.ghostchillies.superswitchrun.numerouno", 
+                    "name": "Numero_uno"
                 }, 
                 {
                     "incremental": false, 
-                    "id": "hunter", 
-                    "name": "hunter"
+                    "id": "com.ghostchillies.superswitchrun.crawler", 
+                    "name": "Crawler"
                 }, 
                 {
                     "incremental": false, 
-                    "id": "craftsman", 
-                    "name": "craftsman"
+                    "id": "com.ghostchillies.superswitchrun.elementary", 
+                    "name": "Elementary"
                 }, 
                 {
                     "incremental": true, 
-                    "id": "Incremental", 
-                    "name": "incremental"
+                    "id": "com.ghostchillies.superswitchrun.firstaid", 
+                    "name": "First_Aid"
                 }, 
                 {
                     "incremental": false, 
-                    "id": "hidden_incremental", 
-                    "name": "hidden"
+                    "id": "com.ghostchillies.superswitchrun.novice", 
+                    "name": "Novice"
                 }, 
                 {
                     "incremental": true, 
-                    "id": "flip_cards1", 
-                    "name": "flip_cards1"
+                    "id": "com.ghostchillies.superswitchrun.collector", 
+                    "name": "Collector"
                 }, 
                 {
                     "incremental": true, 
-                    "id": "flip_cards2", 
-                    "name": "flip_cards2"
+                    "id": "com.ghostchillies.superswitchrun.scrabbler", 
+                    "name": "Scrabbler"
                 }, 
                 {
                     "incremental": true, 
-                    "id": "flip_cards3", 
-                    "name": "flip_cards3"
+                    "id": "com.ghostchillies.superswitchrun.wordking", 
+                    "name": "Word_King"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.reviver", 
+                    "name": "Reviver"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.walkingdead", 
+                    "name": "Walking_Dead"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.reckoning", 
+                    "name": "Reckoning"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.topdog", 
+                    "name": "Top_Dog"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.regular", 
+                    "name": "Regular"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.loyalist", 
+                    "name": "Loyalist"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.godlike", 
+                    "name": "God-Like"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.star", 
+                    "name": "Star"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.superstar", 
+                    "name": "Super_Star"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.inhuman", 
+                    "name": "Inhuman"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.noob", 
+                    "name": "Noob"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.societal", 
+                    "name": "Societal"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.socialbutterfly", 
+                    "name": "Social_Butterfly"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.alltimegreat", 
+                    "name": "All_Time_Great"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.champion", 
+                    "name": "Champion"
+                }, 
+                {
+                    "incremental": true, 
+                    "id": "com.ghostchillies.superswitchrun.seeker", 
+                    "name": "Seeker"
                 }
             ], 
             "debug": true, 
             "connect_on_start": false, 
             "show_achievement_notification": true
-        }, 
-        "Facebook": {
-            "debug": true
-        }, 
-        "Appodeal": {
-            "app_key": "2cfc9cc638980eb7f5ff35d6eb63dbe404503151ccc451ed"
         }, 
         "Chartboost": {
             "id": "4f21c409cd1cb2fb7000001b", 
@@ -459,19 +686,63 @@
         }, 
         "iap": {
             "items": {
-                "remove_ads": {
+                "Unlock_Desert_Night": {
                     "type": "non_consumable", 
-                    "id": "com.cocos2dx.non1"
+                    "id": "com.ghostchillies.superswitchrun.bg6"
                 }, 
-                "coin_package": {
-                    "id": "com.cocos2dx.plugintest2"
+                "Unlock_Retard_Potato": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.character2"
                 }, 
                 "double_coin": {
                     "type": "non_consumable", 
                     "id": "com.cocos2dx.non2"
                 }, 
+                "Unlock_Spooky_Pooky": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.character3"
+                }, 
                 "coin_package2": {
-                    "id": "com.cocos2dx.plugintest3"
+                    "id": "com.ghostchillies.testapp.testconsumable"
+                }, 
+                "Unlock_all_the_characters": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.characterpack"
+                }, 
+                "Unlock_all_the_levels": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.levelspack"
+                }, 
+                "remove_ads": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.removeads"
+                }, 
+                "Unlock_Barren_Land": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.bg5"
+                }, 
+                "Unlock_Super_Sausage": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.character4"
+                }, 
+                "Unlock_Crazy_Cub": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.character5"
+                }, 
+                "Unlock_Wilderness": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.bg4"
+                }, 
+                "Unlock_in_to_the_wood": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.bg3"
+                }, 
+                "coin_package": {
+                    "id": "com.ghostchillies.testapp.testconsumable"
+                }, 
+                "Unlock_megalopolis": {
+                    "type": "non_consumable", 
+                    "id": "com.ghostchillies.superswitchrun.bg2"
                 }
             }
         }

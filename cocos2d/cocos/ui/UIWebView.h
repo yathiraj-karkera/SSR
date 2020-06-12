@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2014-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2014-2017 Chukong Technologies Inc.
  
  http://www.cocos2d-x.org
  
@@ -217,20 +216,6 @@ public:
      * Toggle visibility of WebView.
      */
     virtual void setVisible(bool visible) override;
-    /**
-     * SetOpacity of webview.
-     */
-    virtual void setOpacityWebView(float opacity);
-    
-    /**
-     * getOpacity of webview.
-     */
-    virtual float getOpacityWebView() const;
-    
-    /**
-     * set the background transparent
-     */
-    virtual void setBackgroundTransparent();
     virtual void onEnter() override;
     virtual void onExit() override;
     

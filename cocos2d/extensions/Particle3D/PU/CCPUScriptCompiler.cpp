@@ -1,7 +1,6 @@
 /****************************************************************************
  Copyright (C) 2013 Henry van Merode. All rights reserved.
- Copyright (c) 2015-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2015-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -81,7 +80,7 @@ void PUObjectAbstractNode::setVariable(const std::string &inName, const std::str
 
 std::pair<bool,std::string> PUObjectAbstractNode::getVariable(const std::string &inName) const
 {
-    std::unordered_map<std::string,std::string>::const_iterator i = _env.find(inName);
+    std::map<std::string,std::string>::const_iterator i = _env.find(inName);
     if(i != _env.end())
         return std::make_pair(true, i->second);
 
@@ -96,7 +95,7 @@ std::pair<bool,std::string> PUObjectAbstractNode::getVariable(const std::string 
     return std::make_pair(false, "");
 }
 
-const std::unordered_map<std::string,std::string> &PUObjectAbstractNode::getVariables() const
+const map<std::string,std::string> &PUObjectAbstractNode::getVariables() const
 {
     return _env;
 }
@@ -185,7 +184,7 @@ PUScriptCompiler::PUScriptCompiler():_current(nullptr),_nodes(nullptr), _PUParti
 }
 PUScriptCompiler::~PUScriptCompiler()
 {
-    for (const auto& iter : _compiledScripts){
+    for (auto iter : _compiledScripts){
         for (auto miter : iter.second){
             delete miter;
         }
@@ -314,7 +313,7 @@ void PUScriptCompiler::visit(PUConcreteNode *node)
             impl->file = node->file;
             impl->abstract = false;
 
-            std::list<PUConcreteNode*> temp;
+            list<PUConcreteNode*> temp;
             temp.push_back(node);
             for(const auto& child : node->children)
             {

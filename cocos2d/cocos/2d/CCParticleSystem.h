@@ -2,8 +2,7 @@
 Copyright (c) 2008-2010 Ricardo Quesada
 Copyright (c) 2010-2012 cocos2d-x.org
 Copyright (c) 2011      Zynga Inc.
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -774,9 +773,6 @@ public:
     virtual void stop() override;
     /// @} end of PlayableProtocol
     
-    void setSourcePositionCompatible(bool sourcePositionCompatible) { _sourcePositionCompatible = sourcePositionCompatible; }
-    bool isSourcePositionCompatible() const { return _sourcePositionCompatible; }
-    
 CC_CONSTRUCTOR_ACCESS:
     /**
      * @js ctor
@@ -988,9 +984,6 @@ protected:
     
     /** is the emitter paused */
     bool _paused;
-    
-    /** is sourcePosition compatible */
-    bool _sourcePositionCompatible;
 
     static Vector<ParticleSystem*> __allInstances;
     

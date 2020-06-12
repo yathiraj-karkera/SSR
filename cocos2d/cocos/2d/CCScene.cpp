@@ -2,8 +2,7 @@
 Copyright (c) 2008-2010 Ricardo Quesada
 Copyright (c) 2010-2012 cocos2d-x.org
 Copyright (c) 2011      Zynga Inc.
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -34,7 +33,6 @@ THE SOFTWARE.
 #include "base/ccUTF8.h"
 #include "renderer/CCRenderer.h"
 #include "renderer/CCFrameBuffer.h"
-#include "platform/CCDataManager.h"
 
 #if CC_USE_PHYSICS
 #include "physics/CCPhysicsWorld.h"
@@ -77,19 +75,6 @@ Scene::Scene()
     _event->retain();
     
     Camera::_visitingCamera = nullptr;
-
-#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
-    DataManager::onSceneLoaderBegin();
-#endif
-}
-
-void Scene::onEnter()
-{
-    Node::onEnter();
-    
-#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
-    DataManager::onSceneLoaderEnd();
-#endif
 }
 
 Scene::~Scene()

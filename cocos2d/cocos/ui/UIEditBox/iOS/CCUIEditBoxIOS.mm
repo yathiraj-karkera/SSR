@@ -3,7 +3,6 @@
  Copyright (c) 2012 James Chen
  Copyright (c) 2013-2015 zilongshanren
  Copyright (c) 2015 Mazyad Alabduljaleel
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
  
  http://www.cocos2d-x.org
  
@@ -294,8 +293,7 @@
         if (self.keyboardReturnType == cocos2d::ui::EditBox::KeyboardReturnType::NEXT) {
             action = cocos2d::ui::EditBoxDelegate::EditBoxEndAction::TAB_TO_NEXT;
         } else if (self.keyboardReturnType == cocos2d::ui::EditBox::KeyboardReturnType::GO ||
-                   self.keyboardReturnType == cocos2d::ui::EditBox::KeyboardReturnType::SEND ||
-                   self.keyboardReturnType == cocos2d::ui::EditBox::KeyboardReturnType::SEARCH) {
+                 self.keyboardReturnType == cocos2d::ui::EditBox::KeyboardReturnType::SEND) {
             action = cocos2d::ui::EditBoxDelegate::EditBoxEndAction::RETURN;
         }
     }
@@ -444,7 +442,6 @@
 {
     CCLOG("textFieldShouldBeginEditing...");
     _editState = YES;
-    _returnPressed = NO;
     
     auto view = cocos2d::Director::getInstance()->getOpenGLView();
     CCEAGLView *eaglview = (CCEAGLView *)view->getEAGLView();

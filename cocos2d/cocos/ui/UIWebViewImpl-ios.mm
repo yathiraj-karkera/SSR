@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2014-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2014-2017 Chukong Technologies Inc.
  
  http://www.cocos2d-x.org
  
@@ -69,17 +68,11 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
 @property(nonatomic, readonly, getter=canGoBack) BOOL canGoBack;
 @property(nonatomic, readonly, getter=canGoForward) BOOL canGoForward;
 
-+ (instancetype)newWebViewWrapper;
++ (instancetype)webViewWrapper;
 
 - (void)setVisible:(bool)visible;
 
 - (void)setBounces:(bool)bounces;
-
-- (void)setOpacityWebView:(float)opacity;
-
-- (float)getOpacityWebView;
-
-- (void)setBackgroundTransparent;
 
 - (void)setFrameWithX:(float)x y:(float)y width:(float)width height:(float)height;
 
@@ -116,8 +109,8 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
     
 }
 
-+ (instancetype) newWebViewWrapper {
-    return [[self alloc] init];
++ (instancetype)webViewWrapper {
+    return [[[self alloc] init] autorelease];
 }
 
 - (instancetype)init {
@@ -134,7 +127,6 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
 - (void)dealloc {
     self.uiWebView.delegate = nil;
     [self.uiWebView removeFromSuperview];
-    [self.uiWebView release];
     self.uiWebView = nil;
     self.jsScheme = nil;
     [super dealloc];
@@ -142,7 +134,7 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
 
 - (void)setupWebView {
     if (!self.uiWebView) {
-        self.uiWebView = [[UIWebView alloc] init];
+        self.uiWebView = [[[UIWebView alloc] init] autorelease];
         self.uiWebView.delegate = self;
     }
     if (!self.uiWebView.superview) {
@@ -153,28 +145,11 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
 }
 
 - (void)setVisible:(bool)visible {
-    if (!self.uiWebView) {[self setupWebView];}
     self.uiWebView.hidden = !visible;
 }
 
 - (void)setBounces:(bool)bounces {
   self.uiWebView.scrollView.bounces = bounces;
-}
-
-- (void)setOpacityWebView:(float)opacity {
-    if (!self.uiWebView) {[self setupWebView];}
-    self.uiWebView.alpha=opacity;
-    [self.uiWebView setOpaque:NO];
-}
-
--(float) getOpacityWebView{
-    return self.uiWebView.alpha;
-}
-
--(void) setBackgroundTransparent{
-    if (!self.uiWebView) {[self setupWebView];}
-    [self.uiWebView setOpaque:NO];
-    [self.uiWebView setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)setFrameWithX:(float)x y:(float)y width:(float)width height:(float)height {
@@ -257,8 +232,6 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
     self.uiWebView.scalesPageToFit = scalesPageToFit;
 }
 
-
-
 #pragma mark - UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *url = [[request URL] absoluteString];
@@ -297,8 +270,9 @@ namespace experimental {
     namespace ui{
 
 WebViewImpl::WebViewImpl(WebView *webView)
-        : _uiWebViewWrapper([UIWebViewWrapper newWebViewWrapper]),
+        : _uiWebViewWrapper([UIWebViewWrapper webViewWrapper]),
         _webView(webView) {
+    [_uiWebViewWrapper retain];
             
     _uiWebViewWrapper.shouldStartLoading = [this](std::string url) {
         if (this->_webView->_onShouldStartLoading) {
@@ -423,19 +397,6 @@ void WebViewImpl::draw(cocos2d::Renderer *renderer, cocos2d::Mat4 const &transfo
 void WebViewImpl::setVisible(bool visible){
     [_uiWebViewWrapper setVisible:visible];
 }
-        
-void WebViewImpl::setOpacityWebView(float opacity){
-    [_uiWebViewWrapper setOpacityWebView: opacity];
-}
-        
-float WebViewImpl::getOpacityWebView() const{
-    return [_uiWebViewWrapper getOpacityWebView];
-}
-
-void WebViewImpl::setBackgroundTransparent(){
-    [_uiWebViewWrapper setBackgroundTransparent];
-}
-
         
     } // namespace ui
 } // namespace experimental

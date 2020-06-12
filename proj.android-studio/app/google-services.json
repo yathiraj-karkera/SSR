@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "994730815195",
+    "firebase_url": "https://ssr-test-ee385.firebaseio.com",
+    "project_id": "ssr-test-ee385",
+    "storage_bucket": "ssr-test-ee385.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994730815195:android:577cce13deb796567ba6fe",
+        "android_client_info": {
+          "package_name": "com.ghostchillies.superswitchrun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994730815195-mt43fhgjgdun71shp0vn6n57g1gog3v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBRPsInYtK0usr9s8uI9ZfuQqxbkW7U-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994730815195-mt43fhgjgdun71shp0vn6n57g1gog3v3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "994730815195-q68na8vni7q1kqf112dvq5av73hatp42.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ghostchillies.superswitchrun"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

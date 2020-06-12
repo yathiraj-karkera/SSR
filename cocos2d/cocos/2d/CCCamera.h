@@ -1,6 +1,5 @@
 /****************************************************************************
-Copyright (c) 2014-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2014-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -121,8 +120,8 @@ public:
     Camera::Type getType() const { return _type; }
 
     /**get & set Camera flag*/
-    CameraFlag getCameraFlag() const { return _cameraFlag; }
-    void setCameraFlag(CameraFlag flag) { _cameraFlag = flag; }
+    CameraFlag getCameraFlag() const { return (CameraFlag)_cameraFlag; }
+    void setCameraFlag(CameraFlag flag) { _cameraFlag = (unsigned short)flag; }
 
     /**
     * Make Camera looks at target
@@ -309,7 +308,7 @@ protected:
     static Camera* _visitingCamera;
     static experimental::Viewport _defaultViewport;
 
-    Scene* _scene = nullptr; //Scene camera belongs to
+    Scene* _scene; //Scene camera belongs to
     Mat4 _projection;
     mutable Mat4 _view;
     mutable Mat4 _viewInv;
@@ -322,17 +321,17 @@ protected:
     float _aspectRatio;
     float _nearPlane;
     float _farPlane;
-    mutable bool  _viewProjectionDirty = true;
-    bool _viewProjectionUpdated = false; //Whether or not the viewprojection matrix was updated since the last frame.
-    CameraFlag _cameraFlag = CameraFlag::DEFAULT; // camera flag
+    mutable bool  _viewProjectionDirty;
+    bool _viewProjectionUpdated; //Whether or not the viewprojection matrix was updated since the last frame.
+    unsigned short _cameraFlag; // camera flag
     mutable Frustum _frustum;   // camera frustum
-    mutable bool _frustumDirty = true;
-    int8_t  _depth = -1;                 //camera depth, the depth of camera with CameraFlag::DEFAULT flag is 0 by default, a camera with larger depth is drawn on top of camera with smaller depth
+    mutable bool _frustumDirty;
+    int8_t  _depth;                 //camera depth, the depth of camera with CameraFlag::DEFAULT flag is 0 by default, a camera with larger depth is drawn on top of camera with smaller depth
 
-    CameraBackgroundBrush* _clearBrush = nullptr; //brush used to clear the back ground
+    CameraBackgroundBrush* _clearBrush; //brush used to clear the back ground
 
     experimental::Viewport _viewport;
-    experimental::FrameBuffer* _fbo = nullptr;
+    experimental::FrameBuffer* _fbo;
     GLint _oldViewport[4];
 };
 

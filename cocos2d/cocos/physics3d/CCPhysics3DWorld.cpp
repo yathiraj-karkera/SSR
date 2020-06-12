@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2015-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2015-2017 Chukong Technologies Inc.
  
  http://www.cocos2d-x.org
  
@@ -33,16 +32,16 @@
 NS_CC_BEGIN
 
 Physics3DWorld::Physics3DWorld()
-: _needCollisionChecking(false)
-, _collisionCheckingFlag(false)
-, _needGhostPairCallbackChecking(false)
-, _btPhyiscsWorld(nullptr)
+: _btPhyiscsWorld(nullptr)
 , _collisionConfiguration(nullptr)
 , _dispatcher(nullptr)
 , _broadphase(nullptr)
 , _solver(nullptr)
 , _ghostCallback(nullptr)
 , _debugDrawer(nullptr)
+, _needCollisionChecking(false)
+, _collisionCheckingFlag(false)
+, _needGhostPairCallbackChecking(false)
 {
     
 }

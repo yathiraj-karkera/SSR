@@ -414,11 +414,6 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
     
     int i = 0;
     for (UITouch *touch in touches) {
-        if (i >= IOS_MAX_TOUCHES_COUNT) {
-            CCLOG("warning: touches more than 10, should adjust IOS_MAX_TOUCHES_COUNT");
-            break;
-        }
-
         ids[i] = touch;
         xs[i] = [touch locationInView: [touch view]].x * self.contentScaleFactor;
         ys[i] = [touch locationInView: [touch view]].y * self.contentScaleFactor;
@@ -439,11 +434,6 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
     
     int i = 0;
     for (UITouch *touch in touches) {
-        if (i >= IOS_MAX_TOUCHES_COUNT) {
-            CCLOG("warning: touches more than 10, should adjust IOS_MAX_TOUCHES_COUNT");
-            break;
-        }
-
         ids[i] = touch;
         xs[i] = [touch locationInView: [touch view]].x * self.contentScaleFactor;
         ys[i] = [touch locationInView: [touch view]].y * self.contentScaleFactor;
@@ -469,11 +459,6 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
     
     int i = 0;
     for (UITouch *touch in touches) {
-        if (i >= IOS_MAX_TOUCHES_COUNT) {
-            CCLOG("warning: touches more than 10, should adjust IOS_MAX_TOUCHES_COUNT");
-            break;
-        }
-
         ids[i] = touch;
         xs[i] = [touch locationInView: [touch view]].x * self.contentScaleFactor;
         ys[i] = [touch locationInView: [touch view]].y * self.contentScaleFactor;
@@ -492,11 +477,6 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
     
     int i = 0;
     for (UITouch *touch in touches) {
-        if (i >= IOS_MAX_TOUCHES_COUNT) {
-            CCLOG("warning: touches more than 10, should adjust IOS_MAX_TOUCHES_COUNT");
-            break;
-        }
-        
         ids[i] = touch;
         xs[i] = [touch locationInView: [touch view]].x * self.contentScaleFactor;
         ys[i] = [touch locationInView: [touch view]].y * self.contentScaleFactor;

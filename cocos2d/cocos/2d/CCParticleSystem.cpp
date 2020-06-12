@@ -2,8 +2,7 @@
 Copyright (c) 2008-2010 Ricardo Quesada
 Copyright (c) 2010-2012 cocos2d-x.org
 Copyright (c) 2011      Zynga Inc.
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -224,7 +223,6 @@ ParticleSystem::ParticleSystem()
 , _yCoordFlipped(1)
 , _positionType(PositionType::FREE)
 , _paused(false)
-, _sourcePositionCompatible(true) // In the furture this member's default value maybe false or be removed.
 {
     modeA.gravity.setZero();
     modeA.speed = 0;
@@ -374,12 +372,7 @@ bool ParticleSystem::initWithDictionary(ValueMap& dictionary, const std::string&
             // position
             float x = dictionary["sourcePositionx"].asFloat();
             float y = dictionary["sourcePositiony"].asFloat();
-	    if(!_sourcePositionCompatible) {
-                this->setSourcePosition(Vec2(x, y));
-	    }
-            else {
-		this->setPosition(Vec2(x, y));
-	    }
+            this->setPosition(x,y);            
             _posVar.x = dictionary["sourcePositionVariancex"].asFloat();
             _posVar.y = dictionary["sourcePositionVariancey"].asFloat();
 

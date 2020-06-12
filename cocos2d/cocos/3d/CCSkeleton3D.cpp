@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2014-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2014-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -202,7 +201,7 @@ void Bone3D::updateLocalMat()
         Quaternion quat(Quaternion::ZERO);
         
         float total = 0.f;
-        for (const auto& it: _blendStates) {
+        for (auto it: _blendStates) {
             total += it.weight;
         }
         if (total)

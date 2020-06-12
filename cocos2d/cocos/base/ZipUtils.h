@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -28,9 +27,11 @@ THE SOFTWARE.
 #define __SUPPORT_ZIPUTILS_H__
 /// @cond DO_NOT_SHOW
 
-#include "platform/CCPlatformMacros.h"
-#include "platform/CCFileUtils.h"
 #include <string>
+#include "platform/CCPlatformConfig.h"
+#include "platform/CCPlatformMacros.h"
+#include "platform/CCPlatformDefine.h"
+#include "platform/CCFileUtils.h"
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
 #include "platform/android/CCFileUtils-android.h"
@@ -264,16 +265,6 @@ typedef struct unz_file_info_s unz_file_info;
         * @since v2.0.5
         */
         bool fileExists(const std::string &fileName) const;
-
-
-        /**
-         * Get files and folders in pathname
-         *
-         * @param dirname
-         * @return
-         */
-        std::vector<std::string> listFiles(const std::string &pathname) const;
-
 
         /**
         * Get resource file data from a zip file.

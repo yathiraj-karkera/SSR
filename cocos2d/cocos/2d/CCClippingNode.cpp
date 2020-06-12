@@ -1,8 +1,7 @@
 /*
  * Copyright (c) 2012      Pierre-David Bélanger
  * Copyright (c) 2012      cocos2d-x.org
- * Copyright (c) 2013-2016 Chukong Technologies Inc.
- * Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ * Copyright (c) 2013-2017 Chukong Technologies Inc.
  *
  * cocos2d-x: http://www.cocos2d-x.org
  *
@@ -57,8 +56,8 @@ static void setProgram(Node *n, GLProgram *p)
 
 ClippingNode::ClippingNode()
 : _stencil(nullptr)
-, _originStencilProgram(nullptr)
 , _stencilStateManager(new StencilStateManager())
+, _originStencilProgram(nullptr)
 {
 }
 

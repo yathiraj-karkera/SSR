@@ -31,10 +31,9 @@
 #ifndef SPINE_PATHCONSTRAINT_H_
 #define SPINE_PATHCONSTRAINT_H_
 
-#include "spine/dll.h"
-#include "spine/PathConstraintData.h"
-#include "spine/Bone.h"
-#include "spine/Slot.h"
+#include <spine/PathConstraintData.h>
+#include <spine/Bone.h>
+#include <spine/Slot.h>
 #include "PathAttachment.h"
 
 #ifdef __cplusplus
@@ -93,11 +92,11 @@ typedef struct spPathConstraint {
 
 #define SP_PATHCONSTRAINT_
 
-SP_API spPathConstraint* spPathConstraint_create (spPathConstraintData* data, const struct spSkeleton* skeleton);
-SP_API void spPathConstraint_dispose (spPathConstraint* self);
+spPathConstraint* spPathConstraint_create (spPathConstraintData* data, const struct spSkeleton* skeleton);
+void spPathConstraint_dispose (spPathConstraint* self);
 
-SP_API void spPathConstraint_apply (spPathConstraint* self);
-SP_API float* spPathConstraint_computeWorldPositions(spPathConstraint* self, spPathAttachment* path, int spacesCount, int/*bool*/ tangents, int/*bool*/percentPosition, int/**/percentSpacing);
+void spPathConstraint_apply (spPathConstraint* self);
+float* spPathConstraint_computeWorldPositions(spPathConstraint* self, spPathAttachment* path, int spacesCount, int/*bool*/ tangents, int/*bool*/percentPosition, int/**/percentSpacing);
 
 #ifdef SPINE_SHORT_NAMES
 typedef spPathConstraint PathConstraint;

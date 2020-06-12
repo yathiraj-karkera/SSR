@@ -31,15 +31,14 @@
 #ifndef SPINE_SKELETONDATA_H_
 #define SPINE_SKELETONDATA_H_
 
-#include "spine/dll.h"
-#include "spine/BoneData.h"
-#include "spine/SlotData.h"
-#include "spine/Skin.h"
-#include "spine/EventData.h"
-#include "spine/Animation.h"
-#include "spine/IkConstraintData.h"
-#include "spine/TransformConstraintData.h"
-#include "spine/PathConstraintData.h"
+#include <spine/BoneData.h>
+#include <spine/SlotData.h>
+#include <spine/Skin.h>
+#include <spine/EventData.h>
+#include <spine/Animation.h>
+#include <spine/IkConstraintData.h>
+#include <spine/TransformConstraintData.h>
+#include <spine/PathConstraintData.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -76,26 +75,26 @@ typedef struct spSkeletonData {
 	spPathConstraintData** pathConstraints;
 } spSkeletonData;
 
-SP_API spSkeletonData* spSkeletonData_create ();
-SP_API void spSkeletonData_dispose (spSkeletonData* self);
+spSkeletonData* spSkeletonData_create ();
+void spSkeletonData_dispose (spSkeletonData* self);
 
-SP_API spBoneData* spSkeletonData_findBone (const spSkeletonData* self, const char* boneName);
-SP_API int spSkeletonData_findBoneIndex (const spSkeletonData* self, const char* boneName);
+spBoneData* spSkeletonData_findBone (const spSkeletonData* self, const char* boneName);
+int spSkeletonData_findBoneIndex (const spSkeletonData* self, const char* boneName);
 
-SP_API spSlotData* spSkeletonData_findSlot (const spSkeletonData* self, const char* slotName);
-SP_API int spSkeletonData_findSlotIndex (const spSkeletonData* self, const char* slotName);
+spSlotData* spSkeletonData_findSlot (const spSkeletonData* self, const char* slotName);
+int spSkeletonData_findSlotIndex (const spSkeletonData* self, const char* slotName);
 
-SP_API spSkin* spSkeletonData_findSkin (const spSkeletonData* self, const char* skinName);
+spSkin* spSkeletonData_findSkin (const spSkeletonData* self, const char* skinName);
 
-SP_API spEventData* spSkeletonData_findEvent (const spSkeletonData* self, const char* eventName);
+spEventData* spSkeletonData_findEvent (const spSkeletonData* self, const char* eventName);
 
-SP_API spAnimation* spSkeletonData_findAnimation (const spSkeletonData* self, const char* animationName);
+spAnimation* spSkeletonData_findAnimation (const spSkeletonData* self, const char* animationName);
 
-SP_API spIkConstraintData* spSkeletonData_findIkConstraint (const spSkeletonData* self, const char* constraintName);
+spIkConstraintData* spSkeletonData_findIkConstraint (const spSkeletonData* self, const char* constraintName);
 
-SP_API spTransformConstraintData* spSkeletonData_findTransformConstraint (const spSkeletonData* self, const char* constraintName);
+spTransformConstraintData* spSkeletonData_findTransformConstraint (const spSkeletonData* self, const char* constraintName);
 
-SP_API spPathConstraintData* spSkeletonData_findPathConstraint (const spSkeletonData* self, const char* constraintName);
+spPathConstraintData* spSkeletonData_findPathConstraint (const spSkeletonData* self, const char* constraintName);
 
 #ifdef SPINE_SHORT_NAMES
 typedef spSkeletonData SkeletonData;

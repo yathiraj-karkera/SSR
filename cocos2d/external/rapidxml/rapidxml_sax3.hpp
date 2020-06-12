@@ -569,6 +569,9 @@ namespace rapidxml
                 return;// return 0;      // Do not produce comment node
             }
 
+            // Remember value start
+            Ch *value = text;
+
             // Skip until end of comment
             while (text[0] != Ch('-') || text[1] != Ch('-') || text[2] != Ch('>'))
             {
@@ -593,6 +596,9 @@ namespace rapidxml
         template<int Flags>
         void parse_doctype(Ch *&text)
         {
+            // Remember value start
+            Ch *value = text;
+
             // Skip to >
             while (*text != Ch('>'))
             {
@@ -674,6 +680,9 @@ namespace rapidxml
 
                 // Skip whitespace between pi target and pi
                 skip<whitespace_pred, Flags>(text, endptr_);
+
+                // Remember start of pi
+                Ch *value = text;
 
                 // Skip to '?>'
                 while (text[0] != Ch('?') || text[1] != Ch('>'))
@@ -798,6 +807,7 @@ namespace rapidxml
             }
 
             // Skip until end of cdata
+            Ch *value = text;
             while (text[0] != Ch(']') || text[1] != Ch(']') || text[2] != Ch('>'))
             {
                 if (!text[0])

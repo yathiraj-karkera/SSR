@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/MyGame3.iml" filepath="$PROJECT_DIR$/.idea/modules/app/MyGame3.iml" group="proj.android-studio/MyGame3" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SSR-proj.android-studio.iml" filepath="$PROJECT_DIR$/.idea/modules/SSR-proj.android-studio.iml" group="proj.android-studio" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1134075203/facebook_lib.iml" filepath="$PROJECT_DIR$/.idea/modules/-1134075203/facebook_lib.iml" group="proj.android-studio/facebook_lib" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1568768935/gps.iml" filepath="$PROJECT_DIR$/.idea/modules/-1568768935/gps.iml" group="proj.android-studio/gps" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1071592563/libcocos2dx.iml" filepath="$PROJECT_DIR$/.idea/modules/1071592563/libcocos2dx.iml" group="proj.android-studio/libcocos2dx" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/proj.android-studio.iml" filepath="$PROJECT_DIR$/.idea/proj.android-studio.iml" group="proj.android-studio" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/proj.android-studio-MyGame3.iml" filepath="$PROJECT_DIR$/.idea/modules/app/proj.android-studio-MyGame3.iml" group="proj.android-studio/MyGame3" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2016363330/proj.android-studio-facebook_lib.iml" filepath="$PROJECT_DIR$/.idea/modules/-2016363330/proj.android-studio-facebook_lib.iml" group="proj.android-studio/facebook_lib" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/520400184/proj.android-studio-gps.iml" filepath="$PROJECT_DIR$/.idea/modules/520400184/proj.android-studio-gps.iml" group="proj.android-studio/gps" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2086006510/proj.android-studio-libcocos2dx.iml" filepath="$PROJECT_DIR$/.idea/modules/-2086006510/proj.android-studio-libcocos2dx.iml" group="proj.android-studio/libcocos2dx" />
+    </modules>
+  </component>
+</project>

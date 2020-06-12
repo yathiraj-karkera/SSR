@@ -31,9 +31,8 @@
 #ifndef SPINE_ATTACHMENTLOADER_H_
 #define SPINE_ATTACHMENTLOADER_H_
 
-#include "spine/dll.h"
-#include "spine/Attachment.h"
-#include "spine/Skin.h"
+#include <spine/Attachment.h>
+#include <spine/Skin.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -53,16 +52,16 @@ typedef struct spAttachmentLoader {
 #endif
 } spAttachmentLoader;
 
-SP_API void spAttachmentLoader_dispose (spAttachmentLoader* self);
+void spAttachmentLoader_dispose (spAttachmentLoader* self);
 
 /* Called to create each attachment. Returns 0 to not load an attachment. If 0 is returned and _spAttachmentLoader_setError was
  * called, an error occurred. */
-SP_API spAttachment* spAttachmentLoader_createAttachment (spAttachmentLoader* self, spSkin* skin, spAttachmentType type, const char* name,
+spAttachment* spAttachmentLoader_createAttachment (spAttachmentLoader* self, spSkin* skin, spAttachmentType type, const char* name,
 		const char* path);
 /* Called after the attachment has been fully configured. */
-SP_API void spAttachmentLoader_configureAttachment (spAttachmentLoader* self, spAttachment* attachment);
+void spAttachmentLoader_configureAttachment (spAttachmentLoader* self, spAttachment* attachment);
 /* Called just before the attachment is disposed. This can release allocations made in spAttachmentLoader_configureAttachment. */
-SP_API void spAttachmentLoader_disposeAttachment (spAttachmentLoader* self, spAttachment* attachment);
+void spAttachmentLoader_disposeAttachment (spAttachmentLoader* self, spAttachment* attachment);
 
 #ifdef SPINE_SHORT_NAMES
 typedef spAttachmentLoader AttachmentLoader;

@@ -31,8 +31,6 @@
 #ifndef SPINE_BONEDATA_H_
 #define SPINE_BONEDATA_H_
 
-#include "spine/dll.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -69,8 +67,8 @@ struct spBoneData {
 #endif
 };
 
-SP_API spBoneData* spBoneData_create (int index, const char* name, spBoneData* parent);
-SP_API void spBoneData_dispose (spBoneData* self);
+spBoneData* spBoneData_create (int index, const char* name, spBoneData* parent);
+void spBoneData_dispose (spBoneData* self);
 
 #ifdef SPINE_SHORT_NAMES
 typedef spBoneData BoneData;

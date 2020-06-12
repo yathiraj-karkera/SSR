@@ -1,6 +1,5 @@
 /****************************************************************************
-Copyright (c) 2015-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2015-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -275,20 +274,17 @@ bool Terrain::initHeightMap(const std::string& heightMap)
 
 Terrain::Terrain()
 : _alphaMap(nullptr)
+, _stateBlock(nullptr)
 , _lightMap(nullptr)
 , _lightDir(-1.f, -1.f, 0.f)
-, _stateBlock(nullptr)
-#if CC_ENABLE_CACHE_TEXTURE_DATA
-, _backToForegroundListener(nullptr)
-#endif
 {
     _stateBlock = RenderState::StateBlock::create();
     CC_SAFE_RETAIN(_stateBlock);
 
     _customCommand.setTransparent(false);
     _customCommand.set3D(true);
-#if CC_ENABLE_CACHE_TEXTURE_DATA
-    _backToForegroundListener = EventListenerCustom::create(EVENT_RENDERER_RECREATED,
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+    auto _backToForegroundListener = EventListenerCustom::create(EVENT_RENDERER_RECREATED,
         [this](EventCustom*)
     {
         reload();
@@ -513,7 +509,7 @@ Terrain::~Terrain()
         glDeleteBuffers(1,&(_chunkLodIndicesSkirtSet[i]._chunkIndices._indices));
     }
 
-#if CC_ENABLE_CACHE_TEXTURE_DATA
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
     Director::getInstance()->getEventDispatcher()->removeEventListener(_backToForegroundListener);
 #endif
 }
@@ -1335,7 +1331,7 @@ bool Terrain::Chunk::getIntersectPointWithRay(const Ray& ray, Vec3& intersectPoi
 
     float minDist = FLT_MAX;
     bool isFind = false;
-    for (const auto& triangle : _trianglesList)
+    for (auto triangle : _trianglesList)
     {
         Vec3 p;
         if (triangle.getIntersectPoint(ray, p))

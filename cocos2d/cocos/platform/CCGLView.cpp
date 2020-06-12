@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -92,7 +91,7 @@ namespace {
 }
 
 //default context attributions are set as follows
-GLContextAttrs GLView::_glContextAttrs = {8, 8, 8, 8, 24, 8, 0};
+GLContextAttrs GLView::_glContextAttrs = {5, 6, 5, 0, 16, 0};
 
 void GLView::setGLContextAttrs(GLContextAttrs& glContextAttrs)
 {
@@ -105,12 +104,12 @@ GLContextAttrs GLView::getGLContextAttrs()
 }
 
 GLView::GLView()
-: _screenSize(0,0)
-, _designResolutionSize(0,0)
-, _scaleX(1.0f)
+: _scaleX(1.0f)
 , _scaleY(1.0f)
 , _resolutionPolicy(ResolutionPolicy::UNKNOWN)
 , _vrImpl(nullptr)
+, _designResolutionSize(0,0)
+, _screenSize(0,0)
 {
 }
 
@@ -197,7 +196,7 @@ const Size& GLView::getDesignResolutionSize() const
     return _designResolutionSize;
 }
 
-Size GLView::getFrameSize() const
+const Size& GLView::getFrameSize() const
 {
     return _screenSize;
 }
@@ -218,11 +217,6 @@ Rect GLView::getVisibleRect() const
     ret.size = getVisibleSize();
     ret.origin = getVisibleOrigin();
     return ret;
-}
-
-Rect GLView::getSafeAreaRect() const
-{
-    return getVisibleRect();
 }
 
 Size GLView::getVisibleSize() const

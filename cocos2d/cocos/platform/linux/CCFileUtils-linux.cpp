@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2011      Laschweinski
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -43,8 +42,6 @@ THE SOFTWARE.
 
 using namespace std;
 
-#define DECLARE_GUARD std::lock_guard<std::recursive_mutex> mutexGuard(_mutex)
-
 NS_CC_BEGIN
 
 FileUtils* FileUtils::getInstance()
@@ -67,7 +64,6 @@ FileUtilsLinux::FileUtilsLinux()
 
 bool FileUtilsLinux::init()
 {
-    DECLARE_GUARD;
     // get application path
     char fullpath[256] = {0};
     ssize_t length = readlink("/proc/self/exe", fullpath, sizeof(fullpath)-1);
@@ -78,7 +74,7 @@ bool FileUtilsLinux::init()
 
     fullpath[length] = '\0';
     std::string appPath = fullpath;
-    _defaultResRootPath = appPath.substr(0, appPath.find_last_of('/'));
+    _defaultResRootPath = appPath.substr(0, appPath.find_last_of("/"));
     _defaultResRootPath += CC_RESOURCE_FOLDER_LINUX;
 
     // Set writable path to $XDG_CONFIG_HOME or ~/.config/<app name>/ if $XDG_CONFIG_HOME not exists.
@@ -91,7 +87,7 @@ bool FileUtilsLinux::init()
         xdgConfigPath  = xdg_config_path;
     }
     _writablePath = xdgConfigPath;
-    _writablePath += appPath.substr(appPath.find_last_of('/'));
+    _writablePath += appPath.substr(appPath.find_last_of("/"));
     _writablePath += "/";
 
     return FileUtils::init();
@@ -99,7 +95,6 @@ bool FileUtilsLinux::init()
 
 string FileUtilsLinux::getWritablePath() const
 {
-    DECLARE_GUARD;
     struct stat st;
     stat(_writablePath.c_str(), &st);
     if (!S_ISDIR(st.st_mode)) {
@@ -111,7 +106,6 @@ string FileUtilsLinux::getWritablePath() const
 
 bool FileUtilsLinux::isFileExistInternal(const std::string& strFilePath) const
 {
-    DECLARE_GUARD;
     if (strFilePath.empty())
     {
         return false;
@@ -124,7 +118,7 @@ bool FileUtilsLinux::isFileExistInternal(const std::string& strFilePath) const
     }
 
     struct stat sts;
-    return (stat(strPath.c_str(), &sts) == 0) && S_ISREG(sts.st_mode);
+    return (stat(strPath.c_str(), &sts) != -1) ? true : false;
 }
 
 NS_CC_END

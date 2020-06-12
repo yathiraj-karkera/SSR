@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -35,7 +34,7 @@ THE SOFTWARE.
 #include "platform/android/jni/JniHelper.h"
 #include "platform/CCFileUtils.h"
 
-static const std::string helperClassName = "org.cocos2dx.lib.Cocos2dxHelper";
+static const std::string helperClassName = "org/cocos2dx/lib/Cocos2dxHelper";
 
 NS_CC_BEGIN
 
@@ -88,8 +87,8 @@ public:
                       const FontDefinition& textDefinition )
     {
            JniMethodInfo methodInfo;
-           if (! JniHelper::getStaticMethodInfo(methodInfo, "org.cocos2dx.lib.Cocos2dxBitmap", "createTextBitmapShadowStroke",
-               "([BLjava/lang/String;IIIIIIIIFZFFFFZIIIIFZI)Z"))
+           if (! JniHelper::getStaticMethodInfo(methodInfo, "org/cocos2dx/lib/Cocos2dxBitmap", "createTextBitmapShadowStroke",
+               "([BLjava/lang/String;IIIIIIIIZFFFFZIIIIFZI)Z"))
            {
                CCLOG("%s %d: error to get methodInfo", __FILE__, __LINE__);
                return false;
@@ -122,7 +121,7 @@ public:
            if(!methodInfo.env->CallStaticBooleanMethod(methodInfo.classID, methodInfo.methodID, strArray,
                jstrFont, textDefinition._fontSize, textDefinition._fontFillColor.r, textDefinition._fontFillColor.g, 
                textDefinition._fontFillColor.b, textDefinition._fontAlpha,
-               eAlignMask, nWidth, nHeight, textDefinition._lineSpacing,
+               eAlignMask, nWidth, nHeight, 
                textDefinition._shadow._shadowEnabled, textDefinition._shadow._shadowOffset.width, -textDefinition._shadow._shadowOffset.height, 
                textDefinition._shadow._shadowBlur, textDefinition._shadow._shadowOpacity, 
                textDefinition._stroke._strokeEnabled, textDefinition._stroke._strokeColor.r, textDefinition._stroke._strokeColor.g, 

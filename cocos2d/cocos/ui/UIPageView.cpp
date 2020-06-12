@@ -1,6 +1,5 @@
 /****************************************************************************
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -507,34 +506,6 @@ const Color3B& PageView::getIndicatorIndexNodesColor() const
 {
     CCASSERT(_indicator != nullptr, "");
     return _indicator->getIndexNodesColor();
-}
-    
-void PageView::setIndicatorSelectedIndexOpacity(GLubyte opacity)
-{
-    if(_indicator != nullptr)
-    {
-        _indicator->setSelectedIndexOpacity(opacity);
-    }
-}
-
-GLubyte PageView::getIndicatorSelectedIndexOpacity() const
-{
-    CCASSERT(_indicator != nullptr, "");
-    return _indicator->getSelectedIndexOpacity();
-}
-
-void PageView::setIndicatorIndexNodesOpacity(GLubyte opacity)
-{
-    if(_indicator != nullptr)
-    {
-        _indicator->setIndexNodesOpacity(opacity);
-    }
-}
-
-GLubyte PageView::getIndicatorIndexNodesOpacity() const
-{
-    CCASSERT(_indicator != nullptr, "");
-    return _indicator->getIndexNodesOpacity();
 }
 
 void PageView::setIndicatorIndexNodesScale(float indexNodesScale)

@@ -1,7 +1,6 @@
 /****************************************************************************
  Copyright (c) 2012 cocos2d-x.org
  Copyright (c) 2010 Sangwoo Im
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
  
  http://www.cocos2d-x.org
  
@@ -197,7 +196,6 @@ public:
 
     void setTouchEnabled(bool enabled);
 	bool isTouchEnabled() const;
-    void setSwallowTouches(bool needSwallow);
     bool isDragging() const {return _dragging;}
     bool isTouchMoved() const { return _touchMoved; }
     bool isBounceable() const { return _bounceable; }

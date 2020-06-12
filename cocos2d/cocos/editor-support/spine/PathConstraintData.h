@@ -31,9 +31,8 @@
 #ifndef SPINE_PATHCONSTRAINTDATA_H_
 #define SPINE_PATHCONSTRAINTDATA_H_
 
-#include "spine/dll.h"
-#include "spine/BoneData.h"
-#include "spine/SlotData.h"
+#include <spine/BoneData.h>
+#include <spine/SlotData.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -81,8 +80,8 @@ typedef struct spPathConstraintData {
 #endif
 } spPathConstraintData;
 
-SP_API spPathConstraintData* spPathConstraintData_create (const char* name);
-SP_API void spPathConstraintData_dispose (spPathConstraintData* self);
+spPathConstraintData* spPathConstraintData_create (const char* name);
+void spPathConstraintData_dispose (spPathConstraintData* self);
 
 #ifdef SPINE_SHORT_NAMES
 typedef spPathConstraintData PathConstraintData;

@@ -1,6 +1,5 @@
 /****************************************************************************
  Copyright (c) 2015-2016 cocos2d-x.org
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
 
  http://www.cocos2d-x.org
 
@@ -57,7 +56,16 @@ namespace cocos2d { namespace network {
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Implement Downloader
-    Downloader::Downloader() : Downloader(DownloaderHints{6, 45, ".tmp"}) { }
+    Downloader::Downloader()
+    {
+        DownloaderHints hints =
+        {
+            6,
+            45,
+            ".tmp"
+        };
+        new(this)Downloader(hints);
+    }
 
     Downloader::Downloader(const DownloaderHints& hints)
     {

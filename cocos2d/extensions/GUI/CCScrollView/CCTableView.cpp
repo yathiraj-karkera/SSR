@@ -1,7 +1,6 @@
 /****************************************************************************
  Copyright (c) 2012 cocos2d-x.org
  Copyright (c) 2010 Sangwoo Im
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
 
  http://www.cocos2d-x.org
 
@@ -130,7 +129,7 @@ void TableView::reloadData()
         cell->reset();
         if (cell->getParent() == this->getContainer())
         {
-            this->getContainer()->removeChild(cell, false);
+            this->getContainer()->removeChild(cell, true);
         }
     }
 
@@ -427,7 +426,7 @@ void TableView::_moveCellOutOfSight(TableViewCell *cell)
     
     if (cell->getParent() == this->getContainer())
     {
-        this->getContainer()->removeChild(cell, false);
+        this->getContainer()->removeChild(cell, true);
     }
 }
 

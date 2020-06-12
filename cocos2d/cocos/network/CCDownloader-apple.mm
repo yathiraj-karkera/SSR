@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2015-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2015-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -415,9 +414,9 @@ namespace cocos2d { namespace network {
             std::string errorString;
 
             const int64_t buflen = [wrapper totalBytesReceived];
-            std::vector<unsigned char> data((size_t)buflen);
-            char* buf = (char*)data.data();
+            char buf[buflen];
             [wrapper transferDataToBuffer:buf lengthOfBuffer:buflen];
+            std::vector<unsigned char> data(buf, buf + buflen);
 
             _outer->onTaskFinish(*[wrapper get],
                                  cocos2d::network::DownloadTask::ERROR_NO_ERROR,
@@ -614,10 +613,11 @@ namespace cocos2d { namespace network {
 {
 //    NSLog(@"DownloaderAppleImpl downloadTask: \"%@\" received: %lld total: %lld", downloadTask.originalRequest.URL, totalBytesWritten, totalBytesExpectedToWrite);
 
-    if (nullptr == _outer || totalBytesExpectedToWrite == NSURLSessionTransferSizeUnknown)
+    if (nullptr == _outer)
     {
         return;
     }
+
     DownloadTaskWrapper *wrapper = [self.taskDict objectForKey:downloadTask];
 
     std::function<int64_t(void *, int64_t)> transferDataToBuffer;   // just a placeholder

@@ -2,8 +2,7 @@
 Copyright (c) 2008-2010 Ricardo Quesada
 Copyright (c) 2010-2012 cocos2d-x.org
 Copyright (c) 2011      Zynga Inc.
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -34,7 +33,7 @@ THE SOFTWARE.
 /**
  * @file
  * cocos2d (cc) configuration file.
- */
+*/
 
 /** @def CC_ENABLE_STACKABLE_ACTIONS
  * If enabled, actions that alter the position property (eg: MoveBy, JumpBy, BezierBy, etc..) will be stacked.
@@ -59,7 +58,7 @@ THE SOFTWARE.
  * It is recommended to enable whenever possible to improve speed.
  * If you are migrating your code from GL ES 1.1, then keep it disabled. Once all your code works as expected, turn it on.
 
- * Enabled by default.
+ * Default value: Enabled by default
 
  * @since v2.0.0
  */
@@ -190,12 +189,12 @@ THE SOFTWARE.
 #endif
 
 /** @def CC_LABEL_DEBUG_DRAW
- * If enabled, all subclasses of Label will draw a bounding box.
- * Useful for debugging purposes only. It is recommended to leave it disabled.
- * To enable set it to a value different than 0. Disabled by default:
- * 0 -- disabled
- * 1 -- draw bounding box
- */
+* If enabled, all subclasses of Label will draw a bounding box.
+* Useful for debugging purposes only. It is recommended to leave it disabled.
+* To enable set it to a value different than 0. Disabled by default:
+* 0 -- disabled
+* 1 -- draw bounding box
+*/
 #ifndef CC_LABEL_DEBUG_DRAW
 #define CC_LABEL_DEBUG_DRAW 0
 #endif
@@ -257,21 +256,9 @@ THE SOFTWARE.
 #define CC_USE_PHYSICS 1
 #endif
 
-#if (CC_USE_PHYSICS)
-/** Use chipmunk physics 2d engine. */
-#ifndef CC_ENABLE_CHIPMUNK_INTEGRATION
-#define CC_ENABLE_CHIPMUNK_INTEGRATION 1
-#endif
-
-/** or use box2d physics 2d engine. */
-#ifndef CC_ENABLE_BOX2D_INTEGRATION
-#define CC_ENABLE_BOX2D_INTEGRATION 0
-#endif
-#endif // CC_USE_PHYSICS
-
 /** Use 3d physics integration API. */
 #ifndef CC_USE_3D_PHYSICS
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_MAC || CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_LINUX /*|| CC_TARGET_PLATFORM == CC_PLATFORM_WINRT*/)
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS || CC_TARGET_PLATFORM == CC_PLATFORM_MAC || CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_LINUX || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
 #define CC_USE_3D_PHYSICS 1
 #endif
 #endif
@@ -294,7 +281,7 @@ THE SOFTWARE.
 #endif
 
 /** Support PNG or not. If your application don't use png format picture, you can undefine this macro to save package size.
- */
+*/
 #ifndef CC_USE_PNG
 #define CC_USE_PNG  1
 #endif // CC_USE_PNG
@@ -319,7 +306,7 @@ THE SOFTWARE.
 #endif
 #endif // CC_USE_WEBP
 
-/** Support WIC (Windows Image Component) or not. Replaces PNG, TIFF and JPEG
+ /** Support WIC (Windows Image Component) or not. Replaces PNG, TIFF and JPEG
  */
 #ifndef CC_USE_WIC
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
@@ -336,10 +323,11 @@ THE SOFTWARE.
 #endif
 
 /** When CC_ENABLE_SCRIPT_BINDING and CC_ENABLE_GC_FOR_NATIVE_OBJECTS are both 1
- * then the Garbage collector will release the native objects, only when the JS/Lua objects
- * are collected.
- * The benefit is that users don't need to retain/release the JS/Lua objects manually.
- * Disabled by default.
+ then the Garbage collector will release the native objects, only when the JS/Lua objets
+ are collected.
+ The benefit is that users don't need to retain/release the JS/Lua objects manually.
+
+ By default this behavior is disabled by default
  */
 #ifdef CC_ENABLE_SCRIPT_BINDING
   #ifndef CC_ENABLE_GC_FOR_NATIVE_OBJECTS
@@ -409,14 +397,5 @@ THE SOFTWARE.
 #ifndef CC_ENABLE_PREMULTIPLIED_ALPHA
 # define CC_ENABLE_PREMULTIPLIED_ALPHA 1
 #endif
-
-/** @def CC_STRIP_FPS
- * Whether to strip FPS related data and functions, such as cc_fps_images_png
- */
-#ifndef CC_STRIP_FPS
-#define CC_STRIP_FPS 0
-#endif
-
-#define CC_LABEL_MAX_LENGTH ((1<<16)/4)
 
 #endif // __CCCONFIG_H__

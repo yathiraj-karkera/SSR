@@ -36,12 +36,9 @@ LOCAL_CFLAGS+= -O2
 
 LOCAL_C_INCLUDES:= \
 	$(LOCAL_PATH)/Tremolo
-	
-LOCAL_EXPORT_C_INCLUDES := \
-	$(LOCAL_PATH)
 
 LOCAL_ARM_MODE := arm
 
-LOCAL_MODULE := ext_vorbisidec
+LOCAL_MODULE := libvorbisidec
 
 include $(BUILD_STATIC_LIBRARY)

@@ -1,8 +1,7 @@
 /****************************************************************************
  Copyright (c) 2012      greathqy
  Copyright (c) 2012      cocos2d-x.org
- Copyright (c) 2013-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2013-2017 Chukong Technologies Inc.
  
  http://www.cocos2d-x.org
  
@@ -403,8 +402,6 @@ HttpClient::HttpClient()
 , _threadCount(0)
 , _cookie(nullptr)
 , _requestSentinel(new HttpRequest())
-, _clearRequestPredicate(nullptr)
-, _clearResponsePredicate(nullptr)
 {
     CCLOG("In the constructor of HttpClient!");
     memset(_responseMessage, 0, RESPONSE_BUFFER_SIZE * sizeof(char));
@@ -576,39 +573,6 @@ void HttpClient::processResponse(HttpResponse* response, char* responseMessage)
     {
         response->setSucceed(true);
     }
-}
-    
-void HttpClient::clearResponseAndRequestQueue()
-{
-    _requestQueueMutex.lock();
-    if (_requestQueue.size())
-    {
-        for (auto it = _requestQueue.begin(); it != _requestQueue.end();)
-        {
-            if(!_clearRequestPredicate ||
-               _clearRequestPredicate((*it)))
-            {
-                (*it)->release();
-                it =_requestQueue.erase(it);
-            }
-            else
-            {
-                it++;
-            }
-        }
-    }
-    _requestQueueMutex.unlock();
-    
-    _responseQueueMutex.lock();
-    if (_clearResponsePredicate)
-    {
-        _responseQueue.erase(std::remove_if(_responseQueue.begin(), _responseQueue.end(), _clearResponsePredicate), _responseQueue.end());
-    }
-    else
-    {
-        _responseQueue.clear();
-    }
-    _responseQueueMutex.unlock();
 }
 
 void HttpClient::increaseThreadCount()

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "4179762520",
+    "firebase_url": "https://super-switch-run-27269927.firebaseio.com",
+    "project_id": "super-switch-run-27269927",
+    "storage_bucket": "super-switch-run-27269927.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4179762520:android:13896aa2200dad30",
+        "android_client_info": {
+          "package_name": "com.ghostchillies.superswitchrun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4179762520-e7cojmfm1cvu7qgcot63r3a9drggcse6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQAucz7j2tQj6FgX-yQ5JEPqQ_xfMnADU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4179762520-e7cojmfm1cvu7qgcot63r3a9drggcse6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "4179762520-hi1bfld73urm813tkjj72ti86lt11c3r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ghostchillies.superswitchrun",
+                "app_store_id": "1276997017"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,8 +2,7 @@
 Copyright (c) 2008-2010 Ricardo Quesada
 Copyright (c) 2010-2012 cocos2d-x.org
 Copyright (c) 2011      Zynga Inc.
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -215,8 +214,8 @@ void TextureCache::addImageAsync(const std::string &path, const std::function<vo
     if (_loadingThread == nullptr)
     {
         // create a new thread to load images
-        _needQuit = false;
         _loadingThread = new (std::nothrow) std::thread(&TextureCache::loadImage, this);
+        _needQuit = false;
     }
 
     if (0 == _asyncRefCount)
@@ -232,8 +231,10 @@ void TextureCache::addImageAsync(const std::string &path, const std::function<vo
     
     // add async struct into queue
     _asyncStructQueue.push_back(data);
-    std::unique_lock<std::mutex> ul(_requestMutex);
+    _requestMutex.lock();
     _requestQueue.push_back(data);
+    _requestMutex.unlock();
+
     _sleepCondition.notify_one();
 }
 
@@ -269,10 +270,12 @@ void TextureCache::unbindAllImageAsync()
 void TextureCache::loadImage()
 {
     AsyncStruct *asyncStruct = nullptr;
+    std::mutex signalMutex;
+    std::unique_lock<std::mutex> signal(signalMutex);
     while (!_needQuit)
     {
-        std::unique_lock<std::mutex> ul(_requestMutex);
         // pop an AsyncStruct from request queue
+        _requestMutex.lock();
         if (_requestQueue.empty())
         {
             asyncStruct = nullptr;
@@ -282,15 +285,12 @@ void TextureCache::loadImage()
             asyncStruct = _requestQueue.front();
             _requestQueue.pop_front();
         }
+        _requestMutex.unlock();
 
         if (nullptr == asyncStruct) {
-            if (_needQuit) {
-                break;
-            }
-            _sleepCondition.wait(ul);
+            _sleepCondition.wait(signal);
             continue;
         }
-        ul.unlock();
 
         // load image
         asyncStruct->loadSuccess = asyncStruct->image.initWithImageFileThreadSafe(asyncStruct->filename);
@@ -660,10 +660,8 @@ std::string TextureCache::getTextureFilePath(cocos2d::Texture2D* texture) const
 void TextureCache::waitForQuit()
 {
     // notify sub thread to quick
-    std::unique_lock<std::mutex> ul(_requestMutex);
     _needQuit = true;
     _sleepCondition.notify_one();
-    ul.unlock();
     if (_loadingThread) _loadingThread->join();
 }
 

@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -90,7 +89,6 @@ extern "C"
     
 #if CC_USE_JPEG
 #include "jpeglib.h"
-#include <setjmp.h>
 #endif // CC_USE_JPEG
 }
 #include "base/s3tc.h"
@@ -437,7 +435,7 @@ namespace
         int offset;
     }tImageSource;
  
-#if CC_USE_PNG
+#ifdef CC_USE_PNG
     static void pngReadCallback(png_structp png_ptr, png_bytep data, png_size_t length)
     {
         tImageSource* isource = (tImageSource*)png_get_io_ptr(png_ptr);
@@ -1145,18 +1143,9 @@ bool Image::initWithPngData(const unsigned char * data, ssize_t dataLen)
         png_read_end(png_ptr, nullptr);
 
         // premultiplied alpha for RGBA8888
-        if (color_type == PNG_COLOR_TYPE_RGB_ALPHA)
+        if (PNG_PREMULTIPLIED_ALPHA_ENABLED && color_type == PNG_COLOR_TYPE_RGB_ALPHA)
         {
-            if (PNG_PREMULTIPLIED_ALPHA_ENABLED)
-            {
-                premultipliedAlpha();
-            }
-            else
-            {
-#if CC_ENABLE_PREMULTIPLIED_ALPHA != 0
-                _hasPremultipliedAlpha = true;
-#endif
-            }
+            premultipliedAlpha();
         }
 
         if (row_pointers != nullptr)
@@ -2232,6 +2221,7 @@ bool Image::saveImageToPNG(const std::string& filePath, bool isToRGB)
         FILE *fp;
         png_structp png_ptr;
         png_infop info_ptr;
+        png_colorp palette;
         png_bytep *row_pointers;
 
         fp = fopen(FileUtils::getInstance()->getSuitableFOpen(filePath).c_str(), "wb");
@@ -2272,7 +2262,10 @@ bool Image::saveImageToPNG(const std::string& filePath, bool isToRGB)
             png_set_IHDR(png_ptr, info_ptr, _width, _height, 8, PNG_COLOR_TYPE_RGB,
                 PNG_INTERLACE_NONE, PNG_COMPRESSION_TYPE_BASE, PNG_FILTER_TYPE_BASE);
         }
-        
+
+        palette = (png_colorp)png_malloc(png_ptr, PNG_MAX_PALETTE_LENGTH * sizeof (png_color));
+        png_set_PLTE(png_ptr, info_ptr, palette, PNG_MAX_PALETTE_LENGTH);
+
         png_write_info(png_ptr, info_ptr);
 
         png_set_packing(png_ptr);
@@ -2352,6 +2345,9 @@ bool Image::saveImageToPNG(const std::string& filePath, bool isToRGB)
         }
 
         png_write_end(png_ptr, info_ptr);
+
+        png_free(png_ptr, palette);
+        palette = nullptr;
 
         png_destroy_write_struct(&png_ptr, &info_ptr);
 

@@ -3,8 +3,7 @@
  Copyright (c) 2009      Valentin Milea
  Copyright (c) 2010-2012 cocos2d-x.org
  Copyright (c) 2011      Zynga Inc.
- Copyright (c) 2013-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2013-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -164,15 +163,15 @@ public:
      *
      * @param localZOrder The local Z order value.
      */
-    virtual void setLocalZOrder(std::int32_t localZOrder);
+    virtual void setLocalZOrder(int localZOrder);
 
-    CC_DEPRECATED_ATTRIBUTE virtual void setZOrder(std::int32_t localZOrder) { setLocalZOrder(localZOrder); }
+    CC_DEPRECATED_ATTRIBUTE virtual void setZOrder(int localZOrder) { setLocalZOrder(localZOrder); }
     
     /* 
      Helper function used by `setLocalZOrder`. Don't use it unless you know what you are doing.
      @js NA
      */
-    virtual void _setLocalZOrder(std::int32_t z);
+    virtual void _setLocalZOrder(int z);
 
     /** !!! ONLY FOR INTERNAL USE
     * Sets the arrival order when this node has a same ZOrder with other children.
@@ -194,9 +193,9 @@ public:
      * @return The local (relative to its siblings) Z order.
      */
 
-    virtual std::int32_t getLocalZOrder() const { return _localZOrder; }
+    virtual int getLocalZOrder() const { return _localZOrder; }
 
-    CC_DEPRECATED_ATTRIBUTE virtual std::int32_t getZOrder() const { return getLocalZOrder(); }
+    CC_DEPRECATED_ATTRIBUTE virtual int getZOrder() const { return getLocalZOrder(); }
 
     /**
      Defines the order in which the nodes are renderer.
@@ -521,7 +520,7 @@ public:
      * It's like a pin in the node where it is "attached" to its parent.
      * The anchorPoint is normalized, like a percentage. (0,0) means the bottom-left corner and (1,1) means the top-right corner.
      * But you can use values higher than (1,1) and lower than (0,0) too.
-     * The default anchorPoint is (0,0), so it starts in the lower left corner of the node.
+     * The default anchorPoint is (0.5,0.5), so it starts in the center of the node.
      * @note If node has a physics body, the anchor must be in the middle, you can't change this to other value.
      *
      * @param anchorPoint   The anchor point of node.
@@ -933,7 +932,7 @@ public:
 
     /**
      * Sorts the children array once before drawing, instead of every time when a child is added or reordered.
-     * This approach can improve the performance massively.
+     * This approach can improves the performance massively.
      * @note Don't call this manually unless a child added needs to be removed in the same frame.
      */
     virtual void sortAllChildren();
@@ -948,11 +947,11 @@ public:
         static_assert(std::is_base_of<Node, _T>::value, "Node::sortNodes: Only accept derived of Node!");
 #if CC_64BITS
         std::sort(std::begin(nodes), std::end(nodes), [](_T* n1, _T* n2) {
-            return (n1->_localZOrder$Arrival < n2->_localZOrder$Arrival);
+            return (n1->_localZOrderAndArrival < n2->_localZOrderAndArrival);
         });
 #else
-        std::sort(std::begin(nodes), std::end(nodes), [](_T* n1, _T* n2) {
-            return (n1->_localZOrder == n2->_localZOrder && n1->_orderOfArrival < n2->_orderOfArrival) || n1->_localZOrder < n2->_localZOrder;
+        std::stable_sort(std::begin(nodes), std::end(nodes), [](_T* n1, _T* n2) {
+            return n1->_localZOrder < n2->_localZOrder;
         });
 #endif
     }
@@ -1343,7 +1342,7 @@ public:
      * @js NA
      * @lua NA
      */
-    bool isScheduled(SEL_SCHEDULE selector) const;
+    bool isScheduled(SEL_SCHEDULE selector);
 
     /**
      * Checks whether a lambda function is scheduled.
@@ -1353,7 +1352,7 @@ public:
      * @js NA
      * @lua NA
      */
-    bool isScheduled(const std::string &key) const;
+    bool isScheduled(const std::string &key);
 
     /**
      * Schedules the "update" method.
@@ -1941,27 +1940,12 @@ protected:
     mutable bool _additionalTransformDirty; ///< transform dirty ?
     bool _transformUpdated;         ///< Whether or not the Transform object was updated since the last frame
 
-#if CC_LITTLE_ENDIAN
-    union {
-        struct {
-            std::uint32_t _orderOfArrival;
-            std::int32_t _localZOrder;
-        };
-        std::int64_t _localZOrder$Arrival;
-    };
-#else
-    union {
-        struct {
-            std::int32_t _localZOrder;
-            std::uint32_t _orderOfArrival;
-        };
-        std::int64_t _localZOrder$Arrival;
-    };
-#endif
+    std::int64_t _localZOrderAndArrival; /// cache, for 64bits compress optimize.
+    int _localZOrder; /// < Local order (relative to its siblings) used to sort the node
 
     float _globalZOrder;            ///< Global order used to sort the node
 
-    static std::uint32_t s_globalOrderOfArrival;
+    static unsigned int s_globalOrderOfArrival;
 
     Vector<Node*> _children;        ///< array of children nodes
     Node *_parent;                  ///< weak reference to parent node

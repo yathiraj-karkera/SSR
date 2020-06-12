@@ -1,6 +1,5 @@
 ﻿/****************************************************************************
- Copyright (c) 2015-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2015-2017 Chukong Technologies Inc.
  
  http://www.cocos2d-x.org
  
@@ -119,9 +118,9 @@ public:
     
 CC_CONSTRUCTOR_ACCESS:
     Physics3DObject()
-    : _isEnabled(true)
-    , _type(PhysicsObjType::UNKNOWN)
+    : _type(PhysicsObjType::UNKNOWN)
     , _userData(nullptr)
+    , _isEnabled(true)
     , _physicsWorld(nullptr)
     , _mask(-1)
     {

@@ -1,7 +1,6 @@
 /****************************************************************************
  Copyright (c) 2010-2012 cocos2d-x.org
- Copyright (c) 2013-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2013-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -26,8 +25,6 @@
 
 #include "platform/CCPlatformConfig.h"
 #if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
-
-#include <mach/mach_time.h>
 
 #import "platform/ios/CCDirectorCaller-ios.h"
 
@@ -54,7 +51,7 @@ static id s_sharedDirectorCaller;
 {
     if (s_sharedDirectorCaller == nil)
     {
-        s_sharedDirectorCaller = [[CCDirectorCaller alloc] init];
+        s_sharedDirectorCaller = [CCDirectorCaller new];
     }
     
     return s_sharedDirectorCaller;
@@ -67,17 +64,20 @@ static id s_sharedDirectorCaller;
     s_sharedDirectorCaller = nil;
 }
 
+-(void) alloc
+{
+        interval = 1;
+}
 
 - (instancetype)init
 {
-    if (self = [super init])
+    self = [super init];
+    if (self)
     {
         isAppActive = [UIApplication sharedApplication].applicationState == UIApplicationStateActive;
         NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
         [nc addObserver:self selector:@selector(appDidBecomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
         [nc addObserver:self selector:@selector(appDidBecomeInactive) name:UIApplicationWillResignActiveNotification object:nil];
-        
-        self.interval = 1;
     }
     return self;
 }
@@ -91,11 +91,6 @@ static id s_sharedDirectorCaller;
 
 - (void)appDidBecomeActive
 {
-    // initialize initLastDisplayTime, or the dt will be invalid when
-    // - the app is lauched
-    // - the app resumes from background
-    [self initLastDisplayTime];
-
     isAppActive = YES;
 }
 
@@ -106,7 +101,7 @@ static id s_sharedDirectorCaller;
 
 -(void) startMainLoop
 {
-    // Director::setAnimationInterval() is called, we should invalidate it first
+        // Director::setAnimationInterval() is called, we should invalidate it first
     [self stopMainLoop];
     
     displayLink = [NSClassFromString(@"CADisplayLink") displayLinkWithTarget:self selector:@selector(doCaller:)];
@@ -141,21 +136,8 @@ static id s_sharedDirectorCaller;
             glFlush();
         
         [EAGLContext setCurrentContext: cocos2dxContext];
-
-        CFTimeInterval dt = ((CADisplayLink*)displayLink).timestamp - lastDisplayTime;
-        lastDisplayTime = ((CADisplayLink*)displayLink).timestamp;
-        director->mainLoop(dt);
+        director->mainLoop();
     }
-}
-
--(void)initLastDisplayTime
-{
-    struct mach_timebase_info timeBaseInfo;
-    mach_timebase_info(&timeBaseInfo);
-    CGFloat clockFrequency = (CGFloat)timeBaseInfo.denom / (CGFloat)timeBaseInfo.numer;
-    clockFrequency *= 1000000000.0;
-    // convert absolute time to seconds and should minus one frame time interval
-    lastDisplayTime = (mach_absolute_time() / clockFrequency) - ((1.0 / 60) * self.interval);
 }
 
 @end

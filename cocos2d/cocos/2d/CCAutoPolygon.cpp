@@ -2,8 +2,7 @@
 Copyright (c) 2008-2010 Ricardo Quesada
 Copyright (c) 2010-2012 cocos2d-x.org
 Copyright (c) 2011      Zynga Inc.
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
  
 http://www.cocos2d-x.org
 
@@ -51,9 +50,9 @@ static unsigned short quadIndices9[]={
 const static float PRECISION = 10.0f;
 
 PolygonInfo::PolygonInfo()
-: _isVertsOwner(true)
-, _rect(Rect::ZERO)
+: _rect(Rect::ZERO)
 , _filename("")
+, _isVertsOwner(true)
 {
     triangles.verts = nullptr;
     triangles.indices = nullptr;
@@ -63,8 +62,8 @@ PolygonInfo::PolygonInfo()
 
 PolygonInfo::PolygonInfo(const PolygonInfo& other)
 : triangles()
-, _isVertsOwner(true)
 , _rect()
+, _isVertsOwner(true)
 {
     _filename = other._filename;
     _isVertsOwner = true;

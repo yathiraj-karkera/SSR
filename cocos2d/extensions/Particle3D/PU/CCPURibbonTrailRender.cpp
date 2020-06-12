@@ -1,7 +1,6 @@
 /****************************************************************************
  Copyright (C) 2013 Henry van Merode. All rights reserved.
- Copyright (c) 2015-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2015-2017 Chukong Technologies Inc.
  
  http://www.cocos2d-x.org
  
@@ -73,7 +72,7 @@ void PURibbonTrailRender::render( Renderer* renderer, const Mat4 &transform, Par
 
     const PUParticleSystem3D::ParticlePoolMap &emitterPool = static_cast<PUParticleSystem3D *>(particleSystem)->getEmittedEmitterParticlePool();
     if (!emitterPool.empty()){
-        for (const auto& iter : emitterPool){
+        for (auto iter : emitterPool){
             updateParticles(iter.second);
             needDraw = true;
         }
@@ -81,7 +80,7 @@ void PURibbonTrailRender::render( Renderer* renderer, const Mat4 &transform, Par
 
     const PUParticleSystem3D::ParticlePoolMap &systemPool = static_cast<PUParticleSystem3D *>(particleSystem)->getEmittedSystemParticlePool();
     if (!systemPool.empty()){
-        for (const auto& iter : systemPool){
+        for (auto iter : systemPool){
             updateParticles(iter.second);
             needDraw = true;
         }

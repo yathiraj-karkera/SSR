@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2015-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2015-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -38,8 +37,6 @@
 // In the file:
 // member function with suffix "Proc" designed called in DownloaderCURL::_threadProc
 // member function without suffix designed called in main thread
-
-#define CC_CURL_POLL_TIMEOUT_MS 50 //wait until DNS query done
 
 namespace cocos2d { namespace network {
     using namespace std;
@@ -383,14 +380,11 @@ namespace cocos2d { namespace network {
             }
 
             static const long LOW_SPEED_LIMIT = 1;
-            static const long LOW_SPEED_TIME = 10;
+            static const long LOW_SPEED_TIME = 5;
             curl_easy_setopt(handle, CURLOPT_LOW_SPEED_LIMIT, LOW_SPEED_LIMIT);
             curl_easy_setopt(handle, CURLOPT_LOW_SPEED_TIME, LOW_SPEED_TIME);
 
-            curl_easy_setopt(handle, CURLOPT_SSL_VERIFYHOST, 0);
-            curl_easy_setopt(handle, CURLOPT_SSL_VERIFYPEER, 0);
-
-            static const int MAX_REDIRS = 5;
+            static const int MAX_REDIRS = 2;
             if (MAX_REDIRS)
             {
                 curl_easy_setopt(handle, CURLOPT_FOLLOWLOCATION, true);
@@ -513,7 +507,7 @@ namespace cocos2d { namespace network {
                     // do wait action
                     if(maxfd == -1)
                     {
-                        this_thread::sleep_for(chrono::milliseconds(CC_CURL_POLL_TIMEOUT_MS));
+                        this_thread::sleep_for(chrono::milliseconds(timeoutMS));
                         rc = 0;
                     }
                     else
@@ -816,7 +810,7 @@ namespace cocos2d { namespace network {
                 coTask._fp = nullptr;
                 do
                 {
-                    if (0 == coTask._fileName.length() || DownloadTask::ERROR_NO_ERROR != coTask._errCode)
+                    if (0 == coTask._fileName.length())
                     {
                         break;
                     }

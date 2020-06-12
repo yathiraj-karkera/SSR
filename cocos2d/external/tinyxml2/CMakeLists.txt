@@ -1,32 +1,14 @@
-cmake_minimum_required(VERSION 3.6)
-
-set(lib_name tinyxml2)
-set(target_name ext_${lib_name})
-
-project(${lib_name})
-
-set(${target_name}_src
+set(TINYXML2_SRC
   tinyxml2.cpp
 )
 
-add_library(${target_name} STATIC
-  ${${target_name}_src}
+add_library(tinyxml2 STATIC
+  ${TINYXML2_SRC}
 )
 
-target_include_directories(${target_name} PUBLIC .)
-
-include(../cmake/CocosExternalConfig.cmake)
-if(WINDOWS)
-  if(BUILD_SHARED_LIBS)
-    target_compile_definitions(${target_name} PRIVATE _USRDLL)
-  else()
-    target_compile_definitions(${target_name} PRIVATE CC_STATIC)
-  endif()
-endif()
-
-set_target_properties(${target_name}
+set_target_properties(tinyxml2
     PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
-    FOLDER "External"
 )
+

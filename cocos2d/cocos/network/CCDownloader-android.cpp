@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2015-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2015-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -31,7 +30,6 @@
 #include <mutex>
 
 #define JCLS_DOWNLOADER "org/cocos2dx/lib/Cocos2dxDownloader"
-#define J_BINARY_CLS_DOWNLOADER "org.cocos2dx.lib.Cocos2dxDownloader"
 #define JCLS_TASK       "com/loopj/android/http/RequestHandle"
 #define JARG_STR        "Ljava/lang/String;"
 #define JARG_DOWNLOADER "L" JCLS_DOWNLOADER ";"
@@ -99,7 +97,7 @@ namespace cocos2d { namespace network {
             DLLOG("Construct DownloaderAndroid: %p", this);
             JniMethodInfo methodInfo;
             if (JniHelper::getStaticMethodInfo(methodInfo,
-                                               J_BINARY_CLS_DOWNLOADER,
+                                               JCLS_DOWNLOADER,
                                                "createDownloader",
                                                "(II" JARG_STR "I)" JARG_DOWNLOADER))
             {
@@ -129,7 +127,7 @@ namespace cocos2d { namespace network {
             {
                 JniMethodInfo methodInfo;
                 if (JniHelper::getStaticMethodInfo(methodInfo,
-                                                   J_BINARY_CLS_DOWNLOADER,
+                                                   JCLS_DOWNLOADER,
                                                    "cancelAllRequests",
                                                    "(" JARG_DOWNLOADER ")V"))
                 {
@@ -155,7 +153,7 @@ namespace cocos2d { namespace network {
 
             JniMethodInfo methodInfo;
             if (JniHelper::getStaticMethodInfo(methodInfo,
-                                               J_BINARY_CLS_DOWNLOADER,
+                                               JCLS_DOWNLOADER,
                                                "createTask",
                                                "(" JARG_DOWNLOADER "I" JARG_STR JARG_STR")V"))
             {

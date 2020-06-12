@@ -1,9 +1,9 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := ccb
+LOCAL_MODULE := cocosbuilder_static
 
-LOCAL_MODULE_FILENAME := libccb
+LOCAL_MODULE_FILENAME := libcocosbuilder
 
 LOCAL_ARM_MODE := arm
 
@@ -36,6 +36,6 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/.. \
                     $(LOCAL_PATH)/../../2d \
                     
 
-LOCAL_STATIC_LIBRARIES := ccets
+LOCAL_STATIC_LIBRARIES := cocos_extension_static
 
 include $(BUILD_STATIC_LIBRARY)

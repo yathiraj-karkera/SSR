@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2013-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2013-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -54,9 +53,9 @@ const IndexBuffer* Primitive::getIndexData() const
 Primitive::Primitive()
 : _verts(nullptr)
 , _indices(nullptr)
+, _type(GL_POINTS)
 , _start(0)
 , _count(0)
-, _type(GL_POINTS)
 {
 }
 

@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -92,14 +91,8 @@ public final class Cocos2dxBitmap {
         int length = text.length();
 
         while(index < length) {
-            final int charsToAdvance = paint.breakText(text, index, length, true, maxWidth, null);
-            if(charsToAdvance == 0) {
-                index++;
-            }
-            else {
-                index += charsToAdvance;
-                lineCount++;
-            }
+            index += paint.breakText(text, index, length, true, maxWidth, null);
+            lineCount++;
         }
 
         float actualHeight = (Math.abs(paint.ascent()) + Math.abs(paint.descent()));
@@ -151,7 +144,7 @@ public final class Cocos2dxBitmap {
 
     public static boolean createTextBitmapShadowStroke(byte[] bytes,  final String fontName, int fontSize,
                                                     int fontTintR, int fontTintG, int fontTintB, int fontTintA,
-                                                    int alignment, int width, int height, float lineSpacing,
+                                                    int alignment, int width, int height, 
                                                     boolean shadow, float shadowDX, float shadowDY, float shadowBlur, float shadowOpacity, 
                                                     boolean stroke, int strokeR, int strokeG, int strokeB, int strokeA, float strokeSize, boolean enableWrap, int overflow) {
         String string;
@@ -196,12 +189,12 @@ public final class Cocos2dxBitmap {
 
         if (overflow == 1 && !enableWrap){
             int widthBoundary = (int)Math.ceil( StaticLayout.getDesiredWidth(string, paint));
-            layout = new StaticLayout(string, paint, widthBoundary, hAlignment, 1.0f, lineSpacing, false);
+            layout = new StaticLayout(string, paint, widthBoundary , hAlignment,1.0f,0.0f,false);
         }else {
             if (overflow == 2) {
                 calculateShrinkTypeFace(string, width, height, hAlignment, fontSize, paint, enableWrap);
             }
-            layout = new StaticLayout(string, paint, maxWidth, hAlignment, 1.0f, lineSpacing, false);
+            layout = new StaticLayout(string, paint, maxWidth , hAlignment,1.0f,0.0f,false);
         }
 
         layoutWidth = layout.getWidth();

@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -44,7 +43,7 @@ THE SOFTWARE.
 #include "tinyxml2.h"
 #endif
 
-static const std::string helperClassName = "org.cocos2dx.lib.Cocos2dxHelper";
+static const std::string helperClassName = "org/cocos2dx/lib/Cocos2dxHelper";
 
 using namespace std;
 NS_CC_BEGIN
@@ -390,7 +389,7 @@ Data UserDefault::getDataForKey(const char* pKey, const Data& defaultValue)
     if (encodedDefaultData)
         free(encodedDefaultData);
 
-    CCLOG("ENCODED STRING: --%s--%d", encodedStr.c_str(), (int)encodedStr.length());
+    CCLOG("ENCODED STRING: --%s--%d", encodedStr.c_str(), encodedStr.length());
 
     unsigned char * decodedData = NULL;
     int decodedDataLen = base64Decode((unsigned char*)encodedStr.c_str(), (unsigned int)encodedStr.length(), &decodedData);

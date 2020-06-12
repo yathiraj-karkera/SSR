@@ -1,8 +1,7 @@
 /****************************************************************************
 Copyright (c) 2010      Ricardo Quesada
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -50,9 +49,9 @@ Configuration::Configuration()
 , _supportsBGRA8888(false)
 , _supportsDiscardFramebuffer(false)
 , _supportsShareableVAO(false)
-, _supportsOESMapBuffer(false)
 , _supportsOESDepth24(false)
 , _supportsOESPackedDepthStencil(false)
+, _supportsOESMapBuffer(false)
 , _maxSamplesAllowed(0)
 , _maxTextureUnits(0)
 , _glExtensions(nullptr)
@@ -334,7 +333,7 @@ const Value& Configuration::getValue(const std::string& key, const Value& defaul
 {
     auto iter = _valueDict.find(key);
     if (iter != _valueDict.cend())
-        return iter->second;
+        return _valueDict.at(key);
 
     return defaultValue;
 }

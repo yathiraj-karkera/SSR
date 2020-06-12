@@ -1,10 +1,11 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion PROP_COMPILE_SDK_VERSION.toInteger()
+    compileSdkVersion 26
+    buildToolsVersion '26.0.3'
 
     defaultConfig {
-        minSdkVersion PROP_MIN_SDK_VERSION
+        minSdkVersion 15
         targetSdkVersion PROP_TARGET_SDK_VERSION
         versionCode 1
         versionName "1.0"
@@ -18,12 +19,14 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    implementation fileTree(dir: '../java/libs', include: ['*.jar'])
+    implementation project(':gps')
+    implementation project(':facebook_lib')
+    implementation fileTree(dir: '../java/libs', include: ['*.jar']).exclude(['android-support-v4.jar', 'android_support_v7/appcompat/libs/android-support-v4.jar']).exclude(['twitter.jar', 'fabric.jar'])
 }

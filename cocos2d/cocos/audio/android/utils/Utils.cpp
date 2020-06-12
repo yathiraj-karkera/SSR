@@ -1,6 +1,5 @@
 /****************************************************************************
-Copyright (c) 2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2016-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -29,7 +28,7 @@ namespace cocos2d { namespace experimental {
 
 int getSDKVersion()
 {
-    return JniHelper::callStaticIntMethod("org.cocos2dx.lib.Cocos2dxHelper", "getSDKVersion");
+    return JniHelper::callStaticIntMethod("org/cocos2dx/lib/Cocos2dxHelper", "getSDKVersion");
 }
 
 }} // end of namespace cocos2d { namespace experimental

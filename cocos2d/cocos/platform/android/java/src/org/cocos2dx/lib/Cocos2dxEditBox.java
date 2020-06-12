@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -122,21 +121,11 @@ public class Cocos2dxEditBox extends EditText {
 
     private static final int kTextVerticalAlignmentTop = 0;
     private static final int kTextVerticalAlignmentCenter = 1;
-    private static final int kTextVerticalAlignmentBottom = 2;
+    private static final int getkTextVerticalAlignmentBottom = 2;
 
     private int mInputFlagConstraints; 
     private int mInputModeConstraints;
     private  int mMaxLength;
-
-    public Boolean getChangedTextProgrammatically() {
-        return changedTextProgrammatically;
-    }
-
-    public void setChangedTextProgrammatically(Boolean changedTextProgrammatically) {
-        this.changedTextProgrammatically = changedTextProgrammatically;
-    }
-
-    private Boolean changedTextProgrammatically = false;
 
     //OpenGL view scaleX
     private  float mScaleX;
@@ -209,40 +198,35 @@ public class Cocos2dxEditBox extends EditText {
         int gravity = this.getGravity();
         switch (alignment) {
             case kTextHorizontalAlignmentLeft:
-                gravity = (gravity & ~Gravity.RIGHT) | Gravity.LEFT ;
+                gravity = gravity | Gravity.LEFT;
                 break;
             case kTextHorizontalAlignmentCenter:
-                gravity =(gravity & ~Gravity.RIGHT & ~Gravity.LEFT) | Gravity.CENTER_HORIZONTAL;
+                gravity = gravity | Gravity.CENTER;
                 break;
             case kTextHorizontalAlignmentRight:
-                gravity = (gravity & ~Gravity.LEFT) | Gravity.RIGHT ;
+                gravity = gravity | Gravity.RIGHT;
                 break;
             default:
-                gravity = (gravity & ~Gravity.RIGHT) | Gravity.LEFT ;
+                gravity = gravity | Gravity.LEFT;
                 break;
         }
         this.setGravity(gravity);
     }
-    
+
     public void setTextVerticalAlignment(int alignment) {
         int gravity = this.getGravity();
-        int padding = Cocos2dxEditBoxHelper.getPadding(mScaleX);
         switch (alignment) {
             case kTextVerticalAlignmentTop:
-                setPadding(padding, padding*3/4, 0, 0);
-                gravity = (gravity & ~Gravity.BOTTOM) | Gravity.TOP ;
+                gravity = gravity | Gravity.TOP;
                 break;
             case kTextVerticalAlignmentCenter:
-                setPadding(padding, 0, 0, padding/2);
-                gravity =(gravity & ~Gravity.TOP & ~Gravity.BOTTOM) | Gravity.CENTER_VERTICAL;
+                gravity = gravity | Gravity.CENTER_VERTICAL;
                 break;
-            case kTextVerticalAlignmentBottom:
-                //TODO: Add appropriate padding when this alignment is used
-                gravity = (gravity & ~Gravity.TOP) | Gravity.BOTTOM ;
+            case getkTextVerticalAlignmentBottom:
+                gravity = gravity | Gravity.BOTTOM;
                 break;
             default:
-                setPadding(padding, 0, 0, padding/2);
-                gravity =(gravity & ~Gravity.TOP & ~Gravity.BOTTOM) | Gravity.CENTER_VERTICAL;
+                gravity = gravity | Gravity.CENTER_VERTICAL;
                 break;
         }
 
@@ -281,6 +265,7 @@ public class Cocos2dxEditBox extends EditText {
         }
 
         this.setInputType(this.mInputModeConstraints | this.mInputFlagConstraints);
+
     }
 
     @Override

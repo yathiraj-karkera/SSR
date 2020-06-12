@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2013      Zynga Inc.
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
  
 http://www.cocos2d-x.org
 
@@ -64,7 +63,6 @@ FontFreeType * FontFreeType::create(const std::string &fontName, float fontSize,
         delete tempFont;
         return nullptr;
     }
-    tempFont->autorelease();
     return tempFont;
 }
 
@@ -101,11 +99,11 @@ FT_Library FontFreeType::getFTLibrary()
 FontFreeType::FontFreeType(bool distanceFieldEnabled /* = false */, float outline /* = 0 */)
 : _fontRef(nullptr)
 , _stroker(nullptr)
-, _encoding(FT_ENCODING_UNICODE)
 , _distanceFieldEnabled(distanceFieldEnabled)
 , _outlineSize(0.0f)
 , _lineHeight(0)
 , _fontAtlas(nullptr)
+, _encoding(FT_ENCODING_UNICODE)
 , _usedGlyphs(GlyphCollection::ASCII)
 {
     if (outline > 0.0f)
@@ -221,7 +219,7 @@ FontAtlas * FontFreeType::createFontAtlas()
                 _fontAtlas->prepareLetterDefinitions(utf32);
             }
         }
-//        this->autorelease();
+        this->autorelease();
     }
     
     return _fontAtlas;

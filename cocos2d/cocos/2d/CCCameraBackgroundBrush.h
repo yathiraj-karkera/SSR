@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2015-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2015-2017 Chukong Technologies Inc.
  
  http://www.cocos2d-x.org
  
@@ -152,22 +151,13 @@ CC_CONSTRUCTOR_ACCESS:
     virtual ~CameraBackgroundDepthBrush();
 
     virtual bool init() override;
-
-protected:
-#if CC_ENABLE_CACHE_TEXTURE_DATA
-    EventListenerCustom* _backToForegroundListener;
-#endif
-    void initBuffer();
-
+    
 protected:
     float _depth;
     
     GLboolean _clearColor;
     
     V3F_C4B_T2F_Quad _quad;
-    GLuint      _vao;
-    GLuint      _vertexBuffer;
-    GLuint      _indexBuffer;
 };
 
 /**
@@ -191,16 +181,11 @@ public:
     static CameraBackgroundColorBrush* create(const Color4F& color, float depth);
     
     /**
-     * Draw background
-     */
-    virtual void drawBackground(Camera* camera) override;
-    
-    /**
      * Set clear color
      * @param color Color used to clear the color buffer
      */
     void setColor(const Color4F& color);
-
+    
 CC_CONSTRUCTOR_ACCESS:
     CameraBackgroundColorBrush();
     virtual ~CameraBackgroundColorBrush();
@@ -277,7 +262,7 @@ protected:
     
     TextureCube*  _texture;
     
-#if CC_ENABLE_CACHE_TEXTURE_DATA
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
     EventListenerCustom* _backToForegroundListener;
 #endif
 

@@ -1,6 +1,5 @@
 /****************************************************************************
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
 http://www.cocos2d-x.org
 
@@ -710,7 +709,7 @@ Widget* Widget::getAncestorWidget(Node* node)
     }
     else
     {
-        return this->getAncestorWidget(parent);
+        return this->getAncestorWidget(parent->getParent());
     }
 }
 
@@ -1126,22 +1125,22 @@ bool Widget::isEnabled() const
 
 float Widget::getLeftBoundary() const
 {
-    return getBoundingBox().origin.x;
+    return getPosition().x - getAnchorPoint().x * _contentSize.width;
 }
 
 float Widget::getBottomBoundary() const
 {
-    return getBoundingBox().origin.y;
+    return getPosition().y - getAnchorPoint().y * _contentSize.height;
 }
 
 float Widget::getRightBoundary() const
 {
-    return getLeftBoundary() + getBoundingBox().size.width;
+    return getLeftBoundary() + _contentSize.width;
 }
 
 float Widget::getTopBoundary() const
 {
-    return getBottomBoundary() + getBoundingBox().size.height;
+    return getBottomBoundary() + _contentSize.height;
 }
 
 const Vec2& Widget::getTouchBeganPosition()const

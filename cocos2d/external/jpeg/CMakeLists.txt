@@ -1,23 +1,12 @@
-cmake_minimum_required(VERSION 3.6)
+set(SOURCE CCModuleJPEG.cpp)
 
-set(lib_name jpeg)
-set(target_name ext_${lib_name})
+add_library(cocosjpeg STATIC ${SOURCE})
 
-project(${lib_name})
+target_link_libraries(cocosjpeg jpeg cocos2d)
 
-include(../cmake/CocosExternalConfig.cmake)
-
-add_library(${target_name} STATIC IMPORTED GLOBAL)
-
-set_target_properties(${target_name} PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_SOURCE_DIR}/include/${platform_name}"
+set_target_properties(cocosjpeg
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
 )
-if(WINDOWS)
-  set_target_properties(${target_name} PROPERTIES
-    IMPORTED_LOCATION "${platform_spec_path}/lib${lib_name}.lib"
-  )
-else()
-  set_target_properties(${target_name} PROPERTIES
-    IMPORTED_LOCATION "${platform_spec_path}/lib${lib_name}.a"
-  )
-endif()
+

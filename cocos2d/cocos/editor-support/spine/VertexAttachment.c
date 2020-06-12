@@ -28,15 +28,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *****************************************************************************/
 
-#include "spine/VertexAttachment.h"
-#include "spine/extension.h"
-
-/* FIXME this is not thread-safe */
-static int nextID = 0;
-
-void _spVertexAttachment_init (spVertexAttachment* attachment) {
-	attachment->id = (nextID++ & 65535) << 11;
-}
+#include <spine/VertexAttachment.h>
+#include <spine/extension.h>
 
 void _spVertexAttachment_deinit (spVertexAttachment* attachment) {
 	_spAttachment_deinit(SUPER(attachment));
@@ -44,7 +37,11 @@ void _spVertexAttachment_deinit (spVertexAttachment* attachment) {
 	FREE(attachment->vertices);
 }
 
-void spVertexAttachment_computeWorldVertices (spVertexAttachment* self, spSlot* slot, int start, int count, float* worldVertices, int offset, int stride) {
+void spVertexAttachment_computeWorldVertices (spVertexAttachment* self, spSlot* slot, float* worldVertices) {
+	spVertexAttachment_computeWorldVertices1(self, 0, self->worldVerticesLength, slot, worldVertices, 0);
+}
+
+void spVertexAttachment_computeWorldVertices1 (spVertexAttachment* self, int start, int count, spSlot* slot, float* worldVertices, int offset) {
 	spSkeleton* skeleton;
 	int deformLength;
 	float* deform;
@@ -65,7 +62,7 @@ void spVertexAttachment_computeWorldVertices (spVertexAttachment* self, spSlot* 
 		bone = slot->bone;
 		x = bone->worldX;
 		y = bone->worldY;
-		for (v = start, w = offset; w < count; v += 2, w += stride) {
+		for (v = start, w = offset; w < count; v += 2, w += 2) {
 			float vx = vertices[v], vy = vertices[v + 1];
 			worldVertices[w] = vx * bone->a + vy * bone->b + x;
 			worldVertices[w + 1] = vx * bone->c + vy * bone->d + y;
@@ -81,7 +78,7 @@ void spVertexAttachment_computeWorldVertices (spVertexAttachment* self, spSlot* 
 		skeletonBones = skeleton->bones;
 		if (deformLength == 0) {
 			int w, b;
-			for (w = offset, b = skip * 3; w < count; w += stride) {
+			for (w = offset, b = skip * 3; w < count; w += 2) {
 				float wx = 0, wy = 0;
 				int n = bones[v++];
 				n += v;
@@ -96,7 +93,7 @@ void spVertexAttachment_computeWorldVertices (spVertexAttachment* self, spSlot* 
 			}
 		} else {
 			int w, b, f;
-			for (w = offset, b = skip * 3, f = skip << 1; w < count; w += stride) {
+			for (w = offset, b = skip * 3, f = skip << 1; w < count; w += 2) {
 				float wx = 0, wy = 0;
 				int n = bones[v++];
 				n += v;

@@ -1,7 +1,6 @@
 /****************************************************************************
 Copyright (c) 2010-2012 cocos2d-x.org
-Copyright (c) 2013-2016 Chukong Technologies Inc.
-Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+Copyright (c) 2013-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -34,8 +33,6 @@ Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
 #include "base/ccTypes.h"
 #include <string>
 #include <vector>
-#include <unordered_map>
-#include <memory>
 #include "jni.h"
 #include "android/asset_manager.h"
 
@@ -69,13 +66,11 @@ public:
 
     virtual std::string getNewFilename(const std::string &filename) const override;
 
-    virtual FileUtils::Status getContents(const std::string& filename, ResizableBuffer* buffer) const override;
+    virtual FileUtils::Status getContents(const std::string& filename, ResizableBuffer* buffer) override;
 
     virtual std::string getWritablePath() const override;
     virtual bool isAbsolutePath(const std::string& strPath) const override;
-    
-    virtual long getFileSize(const std::string& filepath) const override;
-    virtual std::vector<std::string> listFiles(const std::string& dirPath) const override;
+
 private:
     virtual bool isFileExistInternal(const std::string& strFilePath) const override;
     virtual bool isDirectoryExistInternal(const std::string& dirPath) const override;

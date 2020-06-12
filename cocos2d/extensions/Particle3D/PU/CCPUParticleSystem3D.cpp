@@ -1,7 +1,6 @@
 /****************************************************************************
  Copyright (C) 2013 Henry van Merode. All rights reserved.
- Copyright (c) 2015-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2015-2017 Chukong Technologies Inc.
  
  http://www.cocos2d-x.org
  
@@ -277,11 +276,11 @@ bool PUParticleSystem3D::initWithFilePath( const std::string &filePath )
 {
     std::string fullPath = FileUtils::getInstance()->fullPathForFilename(filePath);
     convertToUnixStylePath(fullPath);
-    std::string::size_type pos = fullPath.find_last_of('/');
+    std::string::size_type pos = fullPath.find_last_of("/");
     std::string materialFolder = "materials";
     if (pos != std::string::npos){
         std::string temp = fullPath.substr(0, pos);
-        pos = temp.find_last_of('/');
+        pos = temp.find_last_of("/");
         if (pos != std::string::npos){
             materialFolder = temp.substr(0, pos + 1) + materialFolder;
         }

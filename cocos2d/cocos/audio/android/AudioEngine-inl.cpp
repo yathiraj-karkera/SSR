@@ -1,6 +1,5 @@
 /****************************************************************************
- Copyright (c) 2014-2016 Chukong Technologies Inc.
- Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ Copyright (c) 2014-2017 Chukong Technologies Inc.
 
  http://www.cocos2d-x.org
 
@@ -24,7 +23,7 @@
  ****************************************************************************/
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 
-#define LOG_TAG "AudioEngineImpl"
+#define LOG_TAG "cocos2d-x debug info"
 
 #include "audio/android/AudioEngine-inl.h"
 
@@ -44,7 +43,6 @@
 #include "base/CCEventDispatcher.h"
 #include "base/CCEventType.h"
 #include "base/CCEventListenerCustom.h"
-#include "base/ccUTF8.h"
 #include "platform/android/CCFileUtils-android.h"
 #include "platform/android/jni/Java_org_cocos2dx_lib_Cocos2dxHelper.h"
 
@@ -57,14 +55,8 @@
 using namespace cocos2d;
 using namespace cocos2d::experimental;
 
-// Audio focus values synchronized with which in cocos/platform/android/java/src/org/cocos2dx/lib/Cocos2dxActivity.java
-static const int AUDIOFOCUS_GAIN = 0;
-static const int AUDIOFOCUS_LOST = 1;
-static const int AUDIOFOCUS_LOST_TRANSIENT = 2;
-static const int AUDIOFOCUS_LOST_TRANSIENT_CAN_DUCK = 3;
+#define DELAY_TIME_TO_REMOVE 0.5f
 
-static int __currentAudioFocus = AUDIOFOCUS_GAIN;
-static AudioEngineImpl* __impl = nullptr;
 
 class CallerThreadUtils : public ICallerThreadUtils
 {
@@ -125,7 +117,6 @@ AudioEngineImpl::AudioEngineImpl()
     , _lazyInitLoop(true)
 {
     __callerThreadUtils.setCallerThreadId(std::this_thread::get_id());
-    __impl = this;
 }
 
 AudioEngineImpl::~AudioEngineImpl()
@@ -154,8 +145,6 @@ AudioEngineImpl::~AudioEngineImpl()
     {
         Director::getInstance()->getEventDispatcher()->removeEventListener(_onResumeListener);
     }
-
-    __impl = nullptr;
 }
 
 bool AudioEngineImpl::init()
@@ -213,7 +202,7 @@ void AudioEngineImpl::onEnterBackground(EventCustom* event)
         if (dynamic_cast<UrlAudioPlayer*>(player) != nullptr
             && player->getState() == IAudioPlayer::State::PLAYING)
         {
-            _urlAudioPlayersNeedResume.emplace(e.first, player);
+            _urlAudioPlayersNeedResume.push_back(player);
             player->pause();
         }
     }
@@ -229,19 +218,11 @@ void AudioEngineImpl::onEnterForeground(EventCustom* event)
     }
 
     // resume UrlAudioPlayers
-    for (auto&& iter : _urlAudioPlayersNeedResume)
+    for (auto&& player : _urlAudioPlayersNeedResume)
     {
-        iter.second->resume();
+        player->resume();
     }
     _urlAudioPlayersNeedResume.clear();
-}
-
-void AudioEngineImpl::setAudioFocusForAllPlayers(bool isFocus)
-{
-    for (const auto& e : _audioPlayers)
-    {
-        e.second->setAudioFocus(isFocus);
-    }
 }
 
 int AudioEngineImpl::play2d(const std::string &filePath ,bool loop ,float volume)
@@ -264,7 +245,7 @@ int AudioEngineImpl::play2d(const std::string &filePath ,bool loop ,float volume
             player->setId(audioId);
             _audioPlayers.insert(std::make_pair(audioId, player));
 
-            player->setPlayEventCallback([this, player, filePath](IAudioPlayer::State state){
+            player->setPlayEventCallback([this, player](IAudioPlayer::State state){
 
                 if (state != IAudioPlayer::State::OVER && state != IAudioPlayer::State::STOPPED)
                 {
@@ -273,18 +254,12 @@ int AudioEngineImpl::play2d(const std::string &filePath ,bool loop ,float volume
                 }
 
                 int id = player->getId();
+                std::string filePath = *AudioEngine::_audioIDInfoMap[id].filePath;
 
                 ALOGV("Removing player id=%d, state:%d", id, (int)state);
 
                 AudioEngine::remove(id);
-                if (_audioPlayers.find(id) != _audioPlayers.end())
-                {
-                    _audioPlayers.erase(id);
-                }
-                if (_urlAudioPlayersNeedResume.find(id) != _urlAudioPlayersNeedResume.end())
-                {
-                    _urlAudioPlayersNeedResume.erase(id);
-                }
+                _audioPlayers.erase(id);
 
                 auto iter = _callbackMap.find(id);
                 if (iter != _callbackMap.end())
@@ -299,7 +274,6 @@ int AudioEngineImpl::play2d(const std::string &filePath ,bool loop ,float volume
 
             player->setLoop(loop);
             player->setVolume(volume);
-            player->setAudioFocus(__currentAudioFocus == AUDIOFOCUS_GAIN);
             player->play();
         } 
         else
@@ -462,33 +436,6 @@ void AudioEngineImpl::uncacheAll()
     if (_audioPlayerProvider != nullptr)
     {
         _audioPlayerProvider->clearAllPcmCaches();
-    }
-}
-
-// It's invoked from javaactivity-android.cpp
-void cocos_audioengine_focus_change(int focusChange)
-{
-    if (focusChange < AUDIOFOCUS_GAIN || focusChange > AUDIOFOCUS_LOST_TRANSIENT_CAN_DUCK)
-    {
-        CCLOGERROR("cocos_audioengine_focus_change: unknown value: %d", focusChange);
-        return;
-    }
-    CCLOG("cocos_audioengine_focus_change: %d", focusChange);
-    __currentAudioFocus = focusChange;
-
-    if (__impl == nullptr)
-    {
-        CCLOGWARN("cocos_audioengine_focus_change: AudioEngineImpl isn't ready!");
-        return;
-    }
-
-    if (__currentAudioFocus == AUDIOFOCUS_GAIN)
-    {
-        __impl->setAudioFocusForAllPlayers(true);
-    }
-    else
-    {
-        __impl->setAudioFocusForAllPlayers(false);
     }
 }
 
