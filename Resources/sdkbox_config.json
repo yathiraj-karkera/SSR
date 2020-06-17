@@ -1,174 +1,5 @@
 {
     "android": {
-        "UnityAds": {
-            "gameId": "1493045", 
-            "testMode": true
-        }, 
-        "Appodeal": {
-            "app_key": "7acb75c06e543c3c49452f4acb0711377d77b63993cbad49"
-        }, 
-        "SdkboxAds": {
-            "units": [
-                "AdColony", 
-                "AdMob", 
-                "Chartboost", 
-                "Appnext", 
-                "UnityAds"
-            ], 
-            "placements": [
-                {
-                    "units": [
-                        {
-                            "weight": 30, 
-                            "name": "video", 
-                            "unit": "AdColony"
-                        }, 
-                        {
-                            "weight": 20, 
-                            "name": "Default", 
-                            "unit": "Chartboost"
-                        }
-                    ], 
-                    "id": "placement-1", 
-                    "strategy": "weight"
-                }, 
-                {
-                    "units": [
-                        {
-                            "name": "v4vc", 
-                            "unit": "AdColony"
-                        }, 
-                        {
-                            "name": "Level Complete", 
-                            "unit": "Chartboost"
-                        }
-                    ], 
-                    "id": "placement-2", 
-                    "strategy": "round-robin"
-                }, 
-                {
-                    "units": [
-                        {
-                            "name": "gameover", 
-                            "unit": "AdMob"
-                        }
-                    ], 
-                    "id": "placement-admob", 
-                    "strategy": "round-robin"
-                }, 
-                {
-                    "units": [
-                        {
-                            "name": "", 
-                            "unit": "UnityAds"
-                        }
-                    ], 
-                    "id": "placement-unity", 
-                    "strategy": "round-robin"
-                }
-            ]
-        }, 
-        "Share": {
-            "platforms": {
-                "Facebook": {}, 
-                "Twitter": {
-                    "params": {
-                        "secret": "nlmUdPNcFGLWhyLu9cD794EDuDrVQnjd0YjTpB6sX8oHIQRrne", 
-                        "key": "EuovpLL0UhSGB7Jv5eKFJNMqO"
-                    }
-                }, 
-                "SMS": {}, 
-                "Mail": {}
-            }
-        }, 
-        "AdColony": {
-            "debug": true, 
-            "id": "app185a7e71e1714831a49ec7", 
-            "ads": {
-                "v4vc": {
-                    "v4vc": true, 
-                    "pre_popup": true, 
-                    "zone": "vz1fd5a8b2bf6841a0a4b826", 
-                    "post_popup": true
-                }, 
-                "video": {
-                    "v4vc": false, 
-                    "zone": "vz06e8c32a037749699e7050"
-                }
-            }
-        }, 
-        "Appnext": {
-            "debug": true, 
-            "ads": {
-                "default": {
-                    "creative_type": "managed", 
-                    "postback": "postback", 
-                    "can_close": false, 
-                    "mute": false, 
-                    "skip_text": "Skip Text", 
-                    "cache": true, 
-                    "button_text": "Button Text", 
-                    "button_color": "#6AB344", 
-                    "type": "interstitial", 
-                    "id": "2f6850dd-190a-499d-aa50-1f4a3dd1ed5f", 
-                    "categories": "Action,Puzzle", 
-                    "autoplay": true
-                }, 
-                "fullscreen": {
-                    "postback": "postback", 
-                    "can_close": false, 
-                    "progress_color": "#ffffff", 
-                    "show_close_button": true, 
-                    "progress_type": "clock", 
-                    "cache": true, 
-                    "button_text": "Button Text", 
-                    "button_color": "#6AB344", 
-                    "kVideoLength": "short", 
-                    "type": "fullscreen", 
-                    "id": "17322152-1ef3-4e72-9677-eaf7c09f1054", 
-                    "categories": "Action,Puzzle"
-                }
-            }
-        }, 
-        "AdMob": {
-            "test": false, 
-            "testdevice": "FE20924C46522E2E204587EB339897C6,kGADSimulatorID", 
-            "ads": {
-                "next_level": {
-                    "type": "interstitial", 
-                    "id": "ca-app-pub-1329374026572143/4564434111"
-                }, 
-                "rewarded2": {
-                    "type": "rewarded_video", 
-                    "id": "ca-app-pub-3940256099942544/5224354917"
-                }, 
-                "gameover": {
-                    "type": "interstitial", 
-                    "id": "ca-app-pub-2651571553765116/5309661228"
-                }, 
-                "home": {
-                    "width": 300, 
-                    "type": "banner", 
-                    "id": "ca-app-pub-1329374026572143/2685130917", 
-                    "alignment": "bottom", 
-                    "height": 50
-                }, 
-                "rewarded": {
-                    "type": "rewarded_video", 
-                    "id": "ca-app-pub-2651571553765116/8158475407"
-                }, 
-                "top_banner": {
-                    "type": "banner", 
-                    "id": "ca-app-pub-1329374026572143/3087700911", 
-                    "alignment": "top"
-                }
-            }, 
-            "appid": "ca-app-pub-1329374026572143~7139010117"
-        }, 
-        "Firebase": {}, 
-        "Facebook": {
-            "debug": false
-        }, 
         "sdkboxplay": {
             "leaderboards": [
                 {
@@ -301,23 +132,61 @@
             "clound_save": false, 
             "connect_on_start": false, 
             "show_achievement_notification": true, 
-            "cloud_save": false, 
             "debug": true
         }, 
-        "Chartboost": {
-            "id": "4f7b433509b6025804000002", 
+        "Share": {
+            "platforms": {
+                "SMS": {}, 
+                "Twitter": {
+                    "params": {
+                        "secret": "nlmUdPNcFGLWhyLu9cD794EDuDrVQnjd0YjTpB6sX8oHIQRrne", 
+                        "key": "EuovpLL0UhSGB7Jv5eKFJNMqO"
+                    }
+                }, 
+                "Facebook": {}, 
+                "Mail": {}
+            }
+        }, 
+        "AdMob": {
+            "test": false, 
             "ads": {
-                "Default": {
-                    "type": "interstitial"
+                "gameover": {
+                    "type": "interstitial", 
+                    "id": "ca-app-pub-2651571553765116/5309661228"
                 }, 
-                "Level Complete": {
-                    "type": "rewarded_video"
+                "home": {
+                    "width": 300, 
+                    "type": "banner", 
+                    "id": "ca-app-pub-1329374026572143/2685130917", 
+                    "alignment": "bottom", 
+                    "height": 50
                 }, 
-                "MoreApp": {
-                    "type": "more_app"
+                "next_level": {
+                    "type": "interstitial", 
+                    "id": "ca-app-pub-1329374026572143/4564434111"
+                }, 
+                "top_banner": {
+                    "type": "banner", 
+                    "id": "ca-app-pub-1329374026572143/3087700911", 
+                    "alignment": "top"
+                }, 
+                "rewarded": {
+                    "type": "rewarded_video", 
+                    "id": "ca-app-pub-2651571553765116/8158475407"
                 }
-            }, 
-            "signature": "dd2d41b69ac01b80f443f5b6cf06096d457f82bd"
+            }
+        }, 
+        "Firebase": {}, 
+        "Facebook": {
+            "debug": false
+        }, 
+        "OneSignal": {
+            "sound": false, 
+            "vibrate": false, 
+            "project_number": "4179762520",
+            "debug": true, 
+            "notifications_when_active": false, 
+            "id": "e11b19ec-0f89-48e1-b83f-2c9083e409bb"
         }, 
         "iap": {
             "items": {
@@ -325,17 +194,13 @@
                     "type": "non_consumable", 
                     "id": "com.ghostchillies.superswitchrun.bg6"
                 }, 
-                "Unlock_Retard_Potato": {
+                "Unlock_Barren_Land": {
                     "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.character2"
+                    "id": "com.ghostchillies.superswitchrun.bg5"
                 }, 
-                "double_coin": {
+                "Unlock_Super_Sausage": {
                     "type": "non_consumable", 
-                    "id": "com.cocos2dx.non2"
-                }, 
-                "subs": {
-                    "type": "subs", 
-                    "id": "subscription1"
+                    "id": "com.ghostchillies.superswitchrun.character4"
                 }, 
                 "coin_package2": {
                     "id": "com.ghostchillies.testapp.testconsumable"
@@ -352,13 +217,13 @@
                     "type": "non_consumable", 
                     "id": "com.ghostchillies.superswitchrun.removeads"
                 }, 
-                "Unlock_Barren_Land": {
+                "Unlock_megalopolis": {
                     "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.bg5"
+                    "id": "com.ghostchillies.superswitchrun.bg2"
                 }, 
-                "Unlock_Super_Sausage": {
+                "Unlock_Spooky_Pooky": {
                     "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.character4"
+                    "id": "com.ghostchillies.superswitchrun.character3"
                 }, 
                 "Unlock_Crazy_Cub": {
                     "type": "non_consumable", 
@@ -372,170 +237,18 @@
                     "type": "non_consumable", 
                     "id": "com.ghostchillies.superswitchrun.bg3"
                 }, 
-                "Unlock_Spooky_Pooky": {
-                    "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.character3"
-                }, 
                 "coin_package": {
                     "id": "com.ghostchillies.testapp.testconsumable"
                 }, 
-                "Unlock_megalopolis": {
+                "Unlock_Retard_Potato": {
                     "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.bg2"
+                    "id": "com.ghostchillies.superswitchrun.character2"
                 }
             }, 
             "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3a4K09YDtrUoTHNQTdpKCUbPlZEpfOdRClzNBKEMCPrWi1KlhRGzq9VZe7nrRgcUSh+UhBp5kAkbRgPB8HMUv+qwjslsVYD/9Z1W9y5NyN9fhisKHc1wiTzq80Gx2z/mmi7PVU+ENrxiwEFfsgo0FaTMi8kMcwhyj6ash2EJdkalRtoDHIxWmokyj3Nn7pV+/RPGL8Vl76izp0jVKYadOgdPqr3kG6FUHONXg17nqkW0RvcW0MUZ+v5XF7NfeGoxL5QAValkFu8eysCdhsRKnBYLVm+KowmmZp4OSh3ctlRFDSquROO9vCnfqEHnxn1lpm/ks/FuA3fFhlGnorBduwIDAQAB"
         }
     }, 
     "ios": {
-        "UnityAds": {
-            "gameId": "1493044", 
-            "testMode": true
-        }, 
-        "Appodeal": {
-            "app_key": "2cfc9cc638980eb7f5ff35d6eb63dbe404503151ccc451ed"
-        }, 
-        "SdkboxAds": {
-            "debug": true, 
-            "units": [
-                "AdColony", 
-                "Fyber", 
-                "Chartboost", 
-                "AdMob", 
-                "Appnext", 
-                "UnityAds"
-            ], 
-            "placements": [
-                {
-                    "units": [
-                        {
-                            "weight": 30, 
-                            "name": "video", 
-                            "unit": "AdColony"
-                        }, 
-                        {
-                            "weight": 20, 
-                            "name": "Default", 
-                            "unit": "Chartboost"
-                        }
-                    ], 
-                    "id": "placement-1", 
-                    "strategy": "weight"
-                }, 
-                {
-                    "units": [
-                        {
-                            "name": "v4vc", 
-                            "unit": "AdColony"
-                        }, 
-                        {
-                            "name": "Level Complete", 
-                            "unit": "Chartboost"
-                        }
-                    ], 
-                    "id": "placement-2", 
-                    "strategy": "round-robin"
-                }, 
-                {
-                    "units": [
-                        {
-                            "name": "gameover", 
-                            "unit": "AdMob"
-                        }
-                    ], 
-                    "id": "placement-admob", 
-                    "strategy": "round-robin"
-                }, 
-                {
-                    "units": [
-                        {
-                            "name": "video", 
-                            "unit": "UnityAds"
-                        }
-                    ], 
-                    "id": "placement-unity", 
-                    "strategy": "round-robin"
-                }
-            ]
-        }, 
-        "Share": {
-            "platforms": {
-                "Facebook": {}, 
-                "Twitter": {
-                    "params": {
-                        "secret": "7lZUXBv5M06VQOjf57sGHJlrCt8DYXEBuYSyO9GalewIJCPKfF", 
-                        "key": "g8sSLNExrCTMLou8MDxl5n3lC"
-                    }
-                }, 
-                "SMS": {}, 
-                "Mail": {}
-            }
-        }, 
-        "AdColony": {
-            "id": "appbdee68ae27024084bb334a", 
-            "ads": {
-                "v4vc": {
-                    "v4vc": true, 
-                    "pre_popup": true, 
-                    "zone": "vzf8e4e97704c4445c87504e", 
-                    "post_popup": true
-                }, 
-                "video": {
-                    "v4vc": false, 
-                    "zone": "vzf8fb4670a60e4a139d01b5"
-                }
-            }
-        }, 
-        "Appnext": {
-            "debug": true, 
-            "ads": {
-                "default": {
-                    "cache": true, 
-                    "type": "interstitial", 
-                    "id": "6d596bc5-b4c1-48ca-be95-3758fd29a3a5"
-                }
-            }
-        }, 
-        "AdMob": {
-            "test": false, 
-            "testdevice": "kGADSimulatorID", 
-            "safearea": true, 
-            "ads": {
-                "next_level": {
-                    "type": "interstitial", 
-                    "id": "ca-app-pub-1329374026572143/9390403312"
-                }, 
-                "rewarded2": {
-                    "type": "rewarded_video", 
-                    "id": "ca-app-pub-3940256099942544/1712485313"
-                }, 
-                "gameover": {
-                    "type": "interstitial", 
-                    "id": "ca-app-pub-2651571553765116/8179367143"
-                }, 
-                "home": {
-                    "width": 300, 
-                    "type": "banner", 
-                    "id": "ca-app-pub-1329374026572143/3847466511", 
-                    "alignment": "bottom", 
-                    "height": 50
-                }, 
-                "rewarded": {
-                    "type": "rewarded_video", 
-                    "id": "ca-app-pub-2651571553765116/6099998718"
-                }, 
-                "top_banner": {
-                    "type": "banner", 
-                    "id": "ca-app-pub-1329374026572143/6690628914", 
-                    "alignment": "top"
-                }
-            }, 
-            "appid": "ca-app-pub-1329374026572143~2708810518"
-        }, 
-        "Firebase": {}, 
-        "Facebook": {
-            "debug": true
-        }, 
         "sdkboxplay": {
             "leaderboards": [
                 {
@@ -665,24 +378,60 @@
                     "name": "Seeker"
                 }
             ], 
-            "debug": true, 
             "connect_on_start": false, 
-            "show_achievement_notification": true
+            "show_achievement_notification": true, 
+            "debug": true
         }, 
-        "Chartboost": {
-            "id": "4f21c409cd1cb2fb7000001b", 
+        "Share": {
+            "platforms": {
+                "SMS": {}, 
+                "Twitter": {
+                    "params": {
+                        "secret": "7lZUXBv5M06VQOjf57sGHJlrCt8DYXEBuYSyO9GalewIJCPKfF", 
+                        "key": "g8sSLNExrCTMLou8MDxl5n3lC"
+                    }
+                }, 
+                "Facebook": {}, 
+                "Mail": {}
+            }
+        }, 
+        "AdMob": {
+            "test": false, 
             "ads": {
-                "Default": {
-                    "type": "interstitial"
+                "gameover": {
+                    "type": "interstitial", 
+                    "id": "ca-app-pub-2651571553765116/8179367143"
                 }, 
-                "Level Complete": {
-                    "type": "rewarded_video"
+                "home": {
+                    "width": 300, 
+                    "type": "banner", 
+                    "id": "ca-app-pub-1329374026572143/3847466511", 
+                    "alignment": "bottom", 
+                    "height": 50
                 }, 
-                "MoreApp": {
-                    "type": "more_app"
+                "next_level": {
+                    "type": "interstitial", 
+                    "id": "ca-app-pub-1329374026572143/9390403312"
+                }, 
+                "top_banner": {
+                    "type": "banner", 
+                    "id": "ca-app-pub-1329374026572143/6690628914", 
+                    "alignment": "top"
+                }, 
+                "rewarded": {
+                    "type": "rewarded_video", 
+                    "id": "ca-app-pub-2651571553765116/6099998718"
                 }
-            }, 
-            "signature": "92e2de2fd7070327bdeb54c15a5295309c6fcd2d"
+            }
+        }, 
+        "Firebase": {}, 
+        "Facebook": {
+            "debug": true
+        }, 
+        "OneSignal": {
+            "debug": false, 
+            "id": "e11b19ec-0f89-48e1-b83f-2c9083e409bb",
+            "auto_register": true
         }, 
         "iap": {
             "items": {
@@ -690,17 +439,13 @@
                     "type": "non_consumable", 
                     "id": "com.ghostchillies.superswitchrun.bg6"
                 }, 
-                "Unlock_Retard_Potato": {
+                "Unlock_Barren_Land": {
                     "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.character2"
+                    "id": "com.ghostchillies.superswitchrun.bg5"
                 }, 
-                "double_coin": {
+                "Unlock_Super_Sausage": {
                     "type": "non_consumable", 
-                    "id": "com.cocos2dx.non2"
-                }, 
-                "Unlock_Spooky_Pooky": {
-                    "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.character3"
+                    "id": "com.ghostchillies.superswitchrun.character4"
                 }, 
                 "coin_package2": {
                     "id": "com.ghostchillies.testapp.testconsumable"
@@ -717,13 +462,13 @@
                     "type": "non_consumable", 
                     "id": "com.ghostchillies.superswitchrun.removeads"
                 }, 
-                "Unlock_Barren_Land": {
+                "Unlock_megalopolis": {
                     "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.bg5"
+                    "id": "com.ghostchillies.superswitchrun.bg2"
                 }, 
-                "Unlock_Super_Sausage": {
+                "Unlock_Spooky_Pooky": {
                     "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.character4"
+                    "id": "com.ghostchillies.superswitchrun.character3"
                 }, 
                 "Unlock_Crazy_Cub": {
                     "type": "non_consumable", 
@@ -740,9 +485,9 @@
                 "coin_package": {
                     "id": "com.ghostchillies.testapp.testconsumable"
                 }, 
-                "Unlock_megalopolis": {
+                "Unlock_Retard_Potato": {
                     "type": "non_consumable", 
-                    "id": "com.ghostchillies.superswitchrun.bg2"
+                    "id": "com.ghostchillies.superswitchrun.character2"
                 }
             }
         }
