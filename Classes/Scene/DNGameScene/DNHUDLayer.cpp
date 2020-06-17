@@ -17,7 +17,6 @@
 #include "ui/CocosGUI.h"
 #include "SimpleAudioEngine.h"
 #include  "DNGameUtility.hpp"
-//#include "PluginFirebase/PluginFirebase.h"
 #include "PluginAdMob/PluginAdMob.h"
 #include "audio/include/AudioEngine.h"
 

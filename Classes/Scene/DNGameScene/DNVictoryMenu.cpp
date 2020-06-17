@@ -17,7 +17,7 @@
 #include "DNGameUtility.hpp"
 #include "DNGameSceneLayer.hpp"
 #include "DNAcheivementManager.hpp"
-//#include "PluginFirebase/PluginFirebase.h"
+#include "PluginFirebase/PluginFirebase.h"
 
 #pragma -mark Constructor
 DNVictoryMenu::DNVictoryMenu() {
@@ -110,7 +110,7 @@ bool DNVictoryMenu::init() {
 //            params[sdkbox::Firebase::Analytics::kFIRParameterScore] =  (int)DNDataManager::sharedManager()->_score;
             if(DNGameUtility::checkIsNetworkAvailable())
             {
-//                sdkbox::Firebase::Analytics::logEvent("GamePlayHighScore", params);
+                sdkbox::Firebase::Analytics::logEvent("GamePlayHighScore", params);
             }
         }
     }

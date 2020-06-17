@@ -18,9 +18,6 @@
 #include "PluginSdkboxPlay/PluginSdkboxPlay.h"
 #include   "DNGameUtility.hpp"
 
-//#include "PluginFirebase/PluginFirebase.h"
-
-
 static std::function<void(const std::string &)> showText = nullptr;
 
 #ifdef SDKBOX_ENABLED

@@ -17,7 +17,8 @@
           <task>generateDebugSources</task>
         </afterSyncTasks>
         <option name="ALLOW_USER_CONFIGURATION" value="false" />
-        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/res;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/debug/res;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/build/generated/res/rs/debug;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/build/generated/res/resValues/debug" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/main/res;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/res;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/debug/res;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/build/generated/res/rs/debug;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/build/generated/res/resValues/debug" />
         <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/androidTest/res;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/test/res;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/androidTestDebug/res;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/testDebug/res;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/build/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/build/generated/res/resValues/androidTest/debug" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
         <option name="PROJECT_TYPE" value="1" />
@@ -63,10 +64,12 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/testDebug/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/testDebug/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/testDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/main/assets" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/main/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/main/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/main/shaders" isTestSource="false" />
@@ -86,7 +89,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/src/test/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../../cocos2d/cocos/platform/android/java/libs/gps/build" />
     </content>
-    <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/gps/libs/google-play-services.jar" level="project" />
   </component>

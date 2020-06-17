@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\PROJECTS\\Company\\SuperSwitchRun\\cocos2d\\cocos\\platform\\android\\java\\libs\\facebook_lib\\build\\intermediates\\res\\merged\\release\\values-port\\values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yathi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\f49baaff6ef5abffece22dda254b48e8\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\PROJECTS\\Company\\SuperSwitchRun\\cocos2d\\cocos\\platform\\android\\java\\libs\\facebook_lib\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-port\\values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yathi\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-1.0.0.aar\\f49baaff6ef5abffece22dda254b48e8\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

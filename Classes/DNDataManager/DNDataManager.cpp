@@ -7,7 +7,7 @@
 //
 
 #include "DNDataManager.h"
-//#include "PluginFirebase/PluginFirebase.h"
+#include "PluginFirebase/PluginFirebase.h"
 #include "DNGameUtility.hpp"
 #include "cocos2d.h"
 
@@ -87,12 +87,12 @@ void DNDataManager::play2dSound(std::string soundName)
 void DNDataManager::callAnalytics(std::string parameter,std::string action, std::string logText,int kFIRParameterValue)
 {
     //calling analytics
-//    if(DNGameUtility::checkIsNetworkAvailable())
-//    {
-//        std::map<std::string, std::string> params;
-//        params["Parameter"] = parameter;
-//        params["Action"] = action;
-//        params[sdkbox::Firebase::Analytics::kFIRParameterValue] = kFIRParameterValue;
-//        sdkbox::Firebase::Analytics::logEvent(logText, params);
- //   }
+    if(DNGameUtility::checkIsNetworkAvailable())
+    {
+        std::map<std::string, std::string> params;
+        params["Parameter"] = parameter;
+        params["Action"] = action;
+        params[sdkbox::Firebase::Analytics::kFIRParameterValue] = kFIRParameterValue;
+        sdkbox::Firebase::Analytics::logEvent(logText, params);
+    }
 }

@@ -1,36 +1,18 @@
-//buildscript {
-//    repositories {
-//        maven {
-//            jcenter()
-//            url 'https://maven.fabric.io/public'
-//        }
-//    }
-//
-//    dependencies {
-//        classpath 'com.android.tools.build:gradle:2.2.0'
-//        classpath 'io.fabric.tools:gradle:1.24.4'
-//
-//    }
-//}
+
 import org.apache.tools.ant.taskdefs.condition.Os
 
 apply plugin: 'com.android.application'
-//repositories {
-//    jcenter()
-//    maven { url 'https://maven.fabric.io/public' }
-//}
-
 
 android {
 
-    compileSdkVersion 26
+    compileSdkVersion 29
     buildToolsVersion '26.0.3'
 
     defaultConfig {
         // applicationId "com.MyCompany.MyGame3"
-        minSdkVersion 15
+        minSdkVersion 18
         // targetSdkVersion PROP_TARGET_SDK_VERSION
-        targetSdkVersion 26
+        targetSdkVersion 29
         versionCode 10
         versionName "1.0"
 
@@ -132,21 +114,11 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':libcocos2dx')
     implementation 'androidx.multidex:multidex:2.0.0'
-}
-dependencies {
+
+    implementation('com.twitter.sdk.android:twitter:1.13.0@aar') { transitive = true; exclude module: 'support-v4' exclude module: 'retrofit' }
     implementation project(path: ':gps')
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.fragment:fragment:1.2.4'
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    compile 'com.twitter.sdk.android:twitter-core:3.1.1'
-    compile 'com.twitter.sdk.android:tweet-composer:3.1.1'
-    compile 'com.facebook.android:facebook-android-sdk:5.+'
     
 }
-//apply plugin: 'com.google.gms.google-services'
-
-
-repositories {
-    google()
-}
-

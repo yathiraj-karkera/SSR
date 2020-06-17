@@ -12,5 +12,4 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
     <string name="google_app_id">google_app_id</string>
-    <string name="fb_login_protocol_scheme">fbyour_app_id</string>
 </resources>

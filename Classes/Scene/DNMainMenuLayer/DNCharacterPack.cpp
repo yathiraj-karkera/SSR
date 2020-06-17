@@ -15,8 +15,6 @@
 #include "PluginIAP/PluginIAP.h"
 #include "DNGameUtility.hpp"
 
-//#include "PluginFirebase/PluginFirebase.h"
-
 #pragma -mark Constructor
 
 template <typename T> std::string tostr(const T& t) { std::ostringstream os; os<<t; return os.str(); }

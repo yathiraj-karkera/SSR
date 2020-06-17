@@ -35,10 +35,6 @@ namespace sdkbox
         FB_PHOTO = 2
     };
 
-    static const int FBSDKLoginBehaviorNative = 0;
-    static const int FBSDKLoginBehaviorBrowser = 1;
-    static const int FBSDKLoginBehaviorSystemAccount = 2;
-
     typedef std::map<std::string, std::string> FBAPIParam;
 
     struct FBShareInfo
@@ -227,20 +223,12 @@ namespace sdkbox
         virtual void onGetUserInfo( const FBGraphUser& userInfo ) = 0;
         virtual void onRequestGiftResult(bool result, const std::string& msg) {}
         virtual void onSendGiftResult(bool result, const std::string& msg) {}
-        virtual void onGameRequest(bool result, const std::string& msg) {}
     };
 
     class PluginFacebook
     {
 
     public:
-
-        /**
-         * Set GDPR
-         *
-         * **NOTE**: please call before 'init' function
-         */
-        static void setGDPR(bool enabled);
 
         /*!
          * initialize the plugin instance.
@@ -261,12 +249,6 @@ namespace sdkbox
          * Remove the listener, and can't listen to events anymore
          */
         static void removeListener();
-
-        /**
-         * @brief login
-         *
-         */
-        static void setLoginBehavior(int loginBehavior);
 
         /**
          * @brief log in
@@ -386,9 +368,6 @@ namespace sdkbox
 
         /**
          * Use the default FB dialog to invite friends.
-         * https://developers.facebook.com/docs/archive/docs/app-invites/ios/
-         * With the release of the Facebook SDK version 4.28.0, App Invites is deprecated.
-         * It will be supported until February 5, 2018.
          */
         static void inviteFriends( const std::string& app_link_url, const std::string& preview_image_url );
 
@@ -426,13 +405,6 @@ namespace sdkbox
          * Log purchase event
          */
         static void logPurchase(float mount, const std::string& currency);
-
-        /**
-         * Launching the request dialog using the friend selector provided
-         *
-         * https://developers.facebook.com/docs/games/services/gamerequests/
-         */
-        static void gameRequest(const std::string& title, const std::string& text);
     };
 }
 

@@ -52,8 +52,7 @@ PluginShare \
 PluginAdMob \
 PluginSdkboxPlay \
 PluginFirebase \
-PluginSdkboxAds \
-PluginOneSignal
+PluginSdkboxAds
 
 # _COCOS_HEADER_ANDROID_BEGIN
 # _COCOS_HEADER_ANDROID_END
@@ -68,14 +67,13 @@ include $(BUILD_SHARED_LIBRARY)
 
 $(call import-module,.)
 $(call import-module, ./sdkbox)
-$(call import-module, ./PluginSdkboxPlay)
-$(call import-module, ./PluginShare)
+$(call import-module, ./pluginfacebook)
+$(call import-module, ./pluginshare)
 $(call import-module, ./PluginSdkboxAds)
 $(call import-module, ./PluginAdMob)
-$(call import-module, ./PluginFirebase)
-$(call import-module, ./PluginFacebook)
-$(call import-module, ./PluginOneSignal)
+$(call import-module, ./PluginSdkboxPlay)
 $(call import-module, ./PluginIAP)
+$(call import-module, ./PluginFirebase)
 
 # _COCOS_LIB_IMPORT_ANDROID_BEGIN
 # _COCOS_LIB_IMPORT_ANDROID_END

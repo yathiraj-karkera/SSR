@@ -9,7 +9,7 @@
 #include "PluginAdMob/PluginAdMob.h"
 #include "PluginSdkboxPlay/PluginSdkboxPlay.h"
 #include "DNAcheivementManager/DNAcheivementManager.hpp"
-//#include "PluginFirebase/PluginFirebase.h"
+#include "PluginFirebase/PluginFirebase.h"
 #include "LVJniCommunicator.hpp"
 #include "DNAcheivementManager.hpp"
 
@@ -70,10 +70,11 @@ bool AppDelegate::applicationDidFinishLaunching()
 {
     sdkbox::PluginShare::init();
     sdkbox::PluginFacebook::init();
-    sdkbox::PluginAdMob::init();
     sdkbox::IAP::init();
     sdkbox::PluginSdkboxPlay::init();
-//    sdkbox::Firebase::Analytics::init();
+    sdkbox::Firebase::Analytics::init();
+    sdkbox::PluginAdMob::init();
+
 
     this->onGameLaunchCheckForTime();
 

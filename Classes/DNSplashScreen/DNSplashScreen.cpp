@@ -13,7 +13,7 @@
 #include "DNDataManager.h"
 #include "SimpleAudioEngine.h"
 #include "LVJniCommunicator.hpp"
-//#include "PluginFirebase/PluginFirebase.h"
+#include "PluginFirebase/PluginFirebase.h"
 #include "DNGameUtility.hpp"
 
 USING_NS_CC;

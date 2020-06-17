@@ -93,6 +93,7 @@
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/android-async-http-1.4.9.jar" level="project" />
+    <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/billing-2.0.1.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/com.android.vending.expansion.zipfile.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/EngineDataManager.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/httpclient-4.4.1.1.jar" level="project" />
@@ -101,17 +102,19 @@
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/PluginAdMob.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/PluginFacebook.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/PluginFirebase.jar" level="project" />
-    <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/PluginGooglePlay.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/PluginIAP.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/PluginOneSignal.jar" level="project" />
+    <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/PluginSdkboxAds.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/PluginSdkboxPlay.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/PluginShare.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/retrofit-1.8.0.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/sdkbox-firebase.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/sdkbox.jar" level="project" />
+    <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/support-annotations-27.1.1.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/gps/libs/google-play-services.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/facebook_lib/libs/bolts-android-1.1.2.jar" level="project" />
     <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/facebook_lib/libs/facebook-android-4.20.0.jar" level="project" />
+    <orderEntry type="library" name="Gradle: ./../cocos2d/cocos/platform/android/java/libs/facebook_lib/libs/facebook.jar" level="project" />
     <orderEntry type="module" module-name="proj.android-studio-gps" />
     <orderEntry type="module" module-name="proj.android-studio-facebook_lib" />
   </component>

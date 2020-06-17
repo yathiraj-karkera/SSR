@@ -11,7 +11,6 @@
 #include "DNDataManager.h"
 #include "cocos2d.h"
 #include "SimpleAudioEngine.h"
-//#include "PluginFirebase/PluginFirebase.h"
 #include    "DNConstants.h"
 #include "DNGameUtility.hpp"
 

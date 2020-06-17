@@ -10,7 +10,6 @@
 #include "ui/CocosGUI.h"
 #include "DNDataManager.h"
 #include "cocos2d.h"
-//#include "PluginFirebase/PluginFirebase.h"
 #include    "DNConstants.h"
 #include "DNPauseMenu.hpp"
 #include "audio/include/AudioEngine.h"

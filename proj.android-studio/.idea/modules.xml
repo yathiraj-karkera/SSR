@@ -9,9 +9,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/1071592563/libcocos2dx.iml" filepath="$PROJECT_DIR$/.idea/modules/1071592563/libcocos2dx.iml" group="proj.android-studio/libcocos2dx" />
       <module fileurl="file://$PROJECT_DIR$/.idea/proj.android-studio.iml" filepath="$PROJECT_DIR$/.idea/proj.android-studio.iml" group="proj.android-studio" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/proj.android-studio-MyGame3.iml" filepath="$PROJECT_DIR$/.idea/modules/app/proj.android-studio-MyGame3.iml" group="proj.android-studio/MyGame3" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2016363330/proj.android-studio-facebook_lib.iml" filepath="$PROJECT_DIR$/.idea/modules/-2016363330/proj.android-studio-facebook_lib.iml" group="proj.android-studio/facebook_lib" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/520400184/proj.android-studio-gps.iml" filepath="$PROJECT_DIR$/.idea/modules/520400184/proj.android-studio-gps.iml" group="proj.android-studio/gps" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-2086006510/proj.android-studio-libcocos2dx.iml" filepath="$PROJECT_DIR$/.idea/modules/-2086006510/proj.android-studio-libcocos2dx.iml" group="proj.android-studio/libcocos2dx" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1423842388/proj.android-studio-facebook_lib.iml" filepath="$PROJECT_DIR$/.idea/modules/-1423842388/proj.android-studio-facebook_lib.iml" group="proj.android-studio/facebook_lib" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1043686026/proj.android-studio-gps.iml" filepath="$PROJECT_DIR$/.idea/modules/1043686026/proj.android-studio-gps.iml" group="proj.android-studio/gps" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/600568548/proj.android-studio-libcocos2dx.iml" filepath="$PROJECT_DIR$/.idea/modules/600568548/proj.android-studio-libcocos2dx.iml" group="proj.android-studio/libcocos2dx" />
     </modules>
   </component>
 </project>
